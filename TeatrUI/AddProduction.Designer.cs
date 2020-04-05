@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pageTitle = new System.Windows.Forms.Label();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.addProductionPanel = new System.Windows.Forms.Panel();
             this.archiveBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label7
+            // pageTitle
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.label7.Location = new System.Drawing.Point(0, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(510, 29);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "ДОБАВЯНЕ/ РЕДАКТИРАНЕ НА СПЕКТАКЪЛ\r\n";
+            this.pageTitle.AutoSize = true;
+            this.pageTitle.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.pageTitle.Location = new System.Drawing.Point(0, 10);
+            this.pageTitle.Name = "pageTitle";
+            this.pageTitle.Size = new System.Drawing.Size(465, 24);
+            this.pageTitle.TabIndex = 29;
+            this.pageTitle.Text = "ДОБАВЯНЕ/ РЕДАКТИРАНЕ НА СПЕКТАКЪЛ\r\n";
             // 
-            // button1
+            // saveBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(349, 610);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "ЗАПИС";
-            this.button1.UseVisualStyleBackColor = false;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
+            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveBtn.FlatAppearance.BorderSize = 0;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(349, 610);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(100, 30);
+            this.saveBtn.TabIndex = 27;
+            this.saveBtn.Text = "ЗАПИС";
+            this.saveBtn.UseVisualStyleBackColor = false;
             // 
             // addProductionPanel
             // 
@@ -71,6 +72,7 @@
             // archiveBtn
             // 
             this.archiveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.archiveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.archiveBtn.FlatAppearance.BorderSize = 0;
             this.archiveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.archiveBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -84,13 +86,13 @@
             // 
             // AddProduction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
             this.Controls.Add(this.archiveBtn);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pageTitle);
+            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.addProductionPanel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -104,8 +106,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label pageTitle;
+        private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Panel addProductionPanel;
         private System.Windows.Forms.Button archiveBtn;
     }

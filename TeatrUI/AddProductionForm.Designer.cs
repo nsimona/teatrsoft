@@ -28,315 +28,321 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.addedActors = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.addDate = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.addTime = new System.Windows.Forms.DateTimePicker();
-            this.addedDates = new System.Windows.Forms.FlowLayoutPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.continueBtn = new System.Windows.Forms.Button();
-            this.poster = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.name = new System.Windows.Forms.TextBox();
-            this.author = new System.Windows.Forms.TextBox();
-            this.actorsCombo = new System.Windows.Forms.ComboBox();
-            this.addScene = new System.Windows.Forms.ComboBox();
+            this.actorsLabel = new System.Windows.Forms.Label();
+            this.directorLabel = new System.Windows.Forms.Label();
+            this.premiereLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.addedActorsLabel = new System.Windows.Forms.Label();
+            this.addedActorsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.posterLabel = new System.Windows.Forms.Label();
+            this.authorLabel = new System.Windows.Forms.Label();
+            this.dateLabel = new System.Windows.Forms.Label();
+            this.addDateControl = new System.Windows.Forms.DateTimePicker();
+            this.addedScenesLabel = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.addTimeControl = new System.Windows.Forms.DateTimePicker();
+            this.addedDatesPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.addedDatesLabel = new System.Windows.Forms.Label();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.addActorBtn = new System.Windows.Forms.Button();
+            this.posterField = new System.Windows.Forms.PictureBox();
+            this.addDateBtn = new System.Windows.Forms.Button();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.authorTextBox = new System.Windows.Forms.TextBox();
+            this.actorsComboBox = new System.Windows.Forms.ComboBox();
+            this.addSceneComboBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.description = new System.Windows.Forms.RichTextBox();
-            this.premiere = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.descriptionTextBox = new System.Windows.Forms.RichTextBox();
+            this.premiereDateControl = new System.Windows.Forms.DateTimePicker();
+            this.durationTextBox = new System.Windows.Forms.TextBox();
+            this.durationLabel = new System.Windows.Forms.Label();
+            this.posterDescLabel = new System.Windows.Forms.Label();
             this.direcotrComboBox = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.poster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posterField)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label5
+            // actorsLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label5.Location = new System.Drawing.Point(6, 252);
-            this.label5.Margin = new System.Windows.Forms.Padding(3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 22);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Актьори";
+            this.actorsLabel.AutoSize = true;
+            this.actorsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.actorsLabel.Location = new System.Drawing.Point(6, 252);
+            this.actorsLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.actorsLabel.Name = "actorsLabel";
+            this.actorsLabel.Size = new System.Drawing.Size(78, 18);
+            this.actorsLabel.TabIndex = 41;
+            this.actorsLabel.Text = "Актьори";
             // 
-            // label3
+            // directorLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(6, 191);
-            this.label3.Margin = new System.Windows.Forms.Padding(3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 22);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Режисьор";
+            this.directorLabel.AutoSize = true;
+            this.directorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.directorLabel.Location = new System.Drawing.Point(6, 191);
+            this.directorLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.directorLabel.Name = "directorLabel";
+            this.directorLabel.Size = new System.Drawing.Size(92, 18);
+            this.directorLabel.TabIndex = 40;
+            this.directorLabel.Text = "Режисьор";
             // 
-            // label2
+            // premiereLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label2.Location = new System.Drawing.Point(2, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 22);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Премиера";
+            this.premiereLabel.AutoSize = true;
+            this.premiereLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.premiereLabel.Location = new System.Drawing.Point(2, 69);
+            this.premiereLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.premiereLabel.Name = "premiereLabel";
+            this.premiereLabel.Size = new System.Drawing.Size(96, 18);
+            this.premiereLabel.TabIndex = 39;
+            this.premiereLabel.Text = "Премиера";
             // 
-            // label1
+            // nameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label1.Location = new System.Drawing.Point(2, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 22);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Име";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.nameLabel.Location = new System.Drawing.Point(2, 7);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(44, 18);
+            this.nameLabel.TabIndex = 38;
+            this.nameLabel.Text = "Име";
             // 
-            // label4
+            // addedActorsLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label4.Location = new System.Drawing.Point(6, 316);
-            this.label4.Margin = new System.Windows.Forms.Padding(3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 22);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "Добавени актьори";
+            this.addedActorsLabel.AutoSize = true;
+            this.addedActorsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.addedActorsLabel.Location = new System.Drawing.Point(6, 316);
+            this.addedActorsLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.addedActorsLabel.Name = "addedActorsLabel";
+            this.addedActorsLabel.Size = new System.Drawing.Size(164, 18);
+            this.addedActorsLabel.TabIndex = 47;
+            this.addedActorsLabel.Text = "Добавени актьори";
             // 
-            // addedActors
+            // addedActorsPanel
             // 
-            this.addedActors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addedActors.Location = new System.Drawing.Point(10, 344);
-            this.addedActors.Name = "addedActors";
-            this.addedActors.Size = new System.Drawing.Size(315, 102);
-            this.addedActors.TabIndex = 48;
+            this.addedActorsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addedActorsPanel.Location = new System.Drawing.Point(10, 344);
+            this.addedActorsPanel.Name = "addedActorsPanel";
+            this.addedActorsPanel.Size = new System.Drawing.Size(315, 102);
+            this.addedActorsPanel.TabIndex = 48;
             // 
-            // label6
+            // posterLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label6.Location = new System.Drawing.Point(352, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 22);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Постер";
+            this.posterLabel.AutoSize = true;
+            this.posterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.posterLabel.Location = new System.Drawing.Point(352, 7);
+            this.posterLabel.Name = "posterLabel";
+            this.posterLabel.Size = new System.Drawing.Size(69, 18);
+            this.posterLabel.TabIndex = 49;
+            this.posterLabel.Text = "Постер";
             // 
-            // label7
+            // authorLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label7.Location = new System.Drawing.Point(6, 130);
-            this.label7.Margin = new System.Windows.Forms.Padding(3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 22);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "Автор";
+            this.authorLabel.AutoSize = true;
+            this.authorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.authorLabel.Location = new System.Drawing.Point(6, 130);
+            this.authorLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.authorLabel.Name = "authorLabel";
+            this.authorLabel.Size = new System.Drawing.Size(59, 18);
+            this.authorLabel.TabIndex = 50;
+            this.authorLabel.Text = "Автор";
             // 
-            // label9
+            // dateLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label9.Location = new System.Drawing.Point(6, 452);
-            this.label9.Margin = new System.Windows.Forms.Padding(3);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 22);
-            this.label9.TabIndex = 53;
-            this.label9.Text = "Дата";
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.dateLabel.Location = new System.Drawing.Point(6, 452);
+            this.dateLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(47, 18);
+            this.dateLabel.TabIndex = 53;
+            this.dateLabel.Text = "Дата";
             // 
-            // addDate
+            // addDateControl
             // 
-            this.addDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.addDate.Location = new System.Drawing.Point(10, 479);
-            this.addDate.Name = "addDate";
-            this.addDate.Size = new System.Drawing.Size(123, 27);
-            this.addDate.TabIndex = 54;
+            this.addDateControl.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.addDateControl.Location = new System.Drawing.Point(10, 479);
+            this.addDateControl.Name = "addDateControl";
+            this.addDateControl.Size = new System.Drawing.Size(123, 27);
+            this.addDateControl.TabIndex = 54;
             // 
-            // label10
+            // addedScenesLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label10.Location = new System.Drawing.Point(306, 452);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 22);
-            this.label10.TabIndex = 55;
-            this.label10.Text = "Сцена";
+            this.addedScenesLabel.AutoSize = true;
+            this.addedScenesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.addedScenesLabel.Location = new System.Drawing.Point(327, 452);
+            this.addedScenesLabel.Name = "addedScenesLabel";
+            this.addedScenesLabel.Size = new System.Drawing.Size(60, 18);
+            this.addedScenesLabel.TabIndex = 55;
+            this.addedScenesLabel.Text = "Сцена";
             // 
-            // label11
+            // timeLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label11.Location = new System.Drawing.Point(150, 452);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 22);
-            this.label11.TabIndex = 56;
-            this.label11.Text = "Час";
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.timeLabel.Location = new System.Drawing.Point(150, 452);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(38, 18);
+            this.timeLabel.TabIndex = 56;
+            this.timeLabel.Text = "Час";
             // 
-            // addTime
+            // addTimeControl
             // 
-            this.addTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.addTime.Location = new System.Drawing.Point(154, 479);
-            this.addTime.Name = "addTime";
-            this.addTime.Size = new System.Drawing.Size(135, 27);
-            this.addTime.TabIndex = 59;
+            this.addTimeControl.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.addTimeControl.Location = new System.Drawing.Point(154, 479);
+            this.addTimeControl.Name = "addTimeControl";
+            this.addTimeControl.Size = new System.Drawing.Size(153, 27);
+            this.addTimeControl.TabIndex = 59;
             // 
-            // addedDates
+            // addedDatesPanel
             // 
-            this.addedDates.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addedDates.Location = new System.Drawing.Point(10, 542);
-            this.addedDates.Name = "addedDates";
-            this.addedDates.Size = new System.Drawing.Size(546, 117);
-            this.addedDates.TabIndex = 61;
+            this.addedDatesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addedDatesPanel.Location = new System.Drawing.Point(10, 542);
+            this.addedDatesPanel.Name = "addedDatesPanel";
+            this.addedDatesPanel.Size = new System.Drawing.Size(546, 117);
+            this.addedDatesPanel.TabIndex = 61;
             // 
-            // label12
+            // addedDatesLabel
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label12.Location = new System.Drawing.Point(6, 514);
-            this.label12.Margin = new System.Windows.Forms.Padding(3);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 22);
-            this.label12.TabIndex = 60;
-            this.label12.Text = "Добавени дати";
+            this.addedDatesLabel.AutoSize = true;
+            this.addedDatesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.addedDatesLabel.Location = new System.Drawing.Point(6, 514);
+            this.addedDatesLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.addedDatesLabel.Name = "addedDatesLabel";
+            this.addedDatesLabel.Size = new System.Drawing.Size(135, 18);
+            this.addedDatesLabel.TabIndex = 60;
+            this.addedDatesLabel.Text = "Добавени дати";
             // 
-            // label13
+            // descriptionLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label13.Location = new System.Drawing.Point(7, 703);
-            this.label13.Margin = new System.Windows.Forms.Padding(3);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(96, 22);
-            this.label13.TabIndex = 62;
-            this.label13.Text = "Описание";
+            this.descriptionLabel.AutoSize = true;
+            this.descriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.descriptionLabel.Location = new System.Drawing.Point(7, 703);
+            this.descriptionLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(94, 18);
+            this.descriptionLabel.TabIndex = 62;
+            this.descriptionLabel.Text = "Описание";
             // 
-            // continueBtn
+            // addActorBtn
             // 
-            this.continueBtn.BackColor = System.Drawing.Color.White;
-            this.continueBtn.FlatAppearance.BorderSize = 0;
-            this.continueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.continueBtn.Image = global::TeatrUI.Properties.Resources.addGreen;
-            this.continueBtn.Location = new System.Drawing.Point(291, 283);
-            this.continueBtn.Name = "continueBtn";
-            this.continueBtn.Size = new System.Drawing.Size(34, 27);
-            this.continueBtn.TabIndex = 64;
-            this.continueBtn.UseVisualStyleBackColor = false;
+            this.addActorBtn.BackColor = System.Drawing.Color.White;
+            this.addActorBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addActorBtn.FlatAppearance.BorderSize = 0;
+            this.addActorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addActorBtn.Image = global::TeatrUI.Properties.Resources.addGreen;
+            this.addActorBtn.Location = new System.Drawing.Point(291, 283);
+            this.addActorBtn.Name = "addActorBtn";
+            this.addActorBtn.Size = new System.Drawing.Size(34, 27);
+            this.addActorBtn.TabIndex = 64;
+            this.addActorBtn.UseVisualStyleBackColor = false;
             // 
-            // poster
+            // posterField
             // 
-            this.poster.Location = new System.Drawing.Point(356, 34);
-            this.poster.Name = "poster";
-            this.poster.Size = new System.Drawing.Size(200, 274);
-            this.poster.TabIndex = 0;
-            this.poster.TabStop = false;
+            this.posterField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.posterField.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.posterField.Location = new System.Drawing.Point(356, 34);
+            this.posterField.Name = "posterField";
+            this.posterField.Size = new System.Drawing.Size(200, 274);
+            this.posterField.TabIndex = 0;
+            this.posterField.TabStop = false;
             // 
-            // button1
+            // addDateBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::TeatrUI.Properties.Resources.addGreen;
-            this.button1.Location = new System.Drawing.Point(522, 479);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 30);
-            this.button1.TabIndex = 65;
-            this.button1.UseVisualStyleBackColor = false;
+            this.addDateBtn.BackColor = System.Drawing.Color.White;
+            this.addDateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addDateBtn.FlatAppearance.BorderSize = 0;
+            this.addDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addDateBtn.Image = global::TeatrUI.Properties.Resources.addGreen;
+            this.addDateBtn.Location = new System.Drawing.Point(522, 479);
+            this.addDateBtn.Name = "addDateBtn";
+            this.addDateBtn.Size = new System.Drawing.Size(34, 30);
+            this.addDateBtn.TabIndex = 65;
+            this.addDateBtn.UseVisualStyleBackColor = false;
             // 
-            // name
+            // nameTextBox
             // 
-            this.name.Location = new System.Drawing.Point(6, 36);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(319, 27);
-            this.name.TabIndex = 66;
+            this.nameTextBox.Location = new System.Drawing.Point(6, 36);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(319, 27);
+            this.nameTextBox.TabIndex = 66;
             // 
-            // author
+            // authorTextBox
             // 
-            this.author.Location = new System.Drawing.Point(6, 158);
-            this.author.Name = "author";
-            this.author.Size = new System.Drawing.Size(319, 27);
-            this.author.TabIndex = 68;
+            this.authorTextBox.Location = new System.Drawing.Point(6, 158);
+            this.authorTextBox.Name = "authorTextBox";
+            this.authorTextBox.Size = new System.Drawing.Size(319, 27);
+            this.authorTextBox.TabIndex = 68;
             // 
-            // actorsCombo
+            // actorsComboBox
             // 
-            this.actorsCombo.FormattingEnabled = true;
-            this.actorsCombo.Location = new System.Drawing.Point(6, 280);
-            this.actorsCombo.Name = "actorsCombo";
-            this.actorsCombo.Size = new System.Drawing.Size(279, 30);
-            this.actorsCombo.TabIndex = 70;
+            this.actorsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.actorsComboBox.FormattingEnabled = true;
+            this.actorsComboBox.Location = new System.Drawing.Point(6, 280);
+            this.actorsComboBox.Name = "actorsComboBox";
+            this.actorsComboBox.Size = new System.Drawing.Size(279, 30);
+            this.actorsComboBox.TabIndex = 70;
             // 
-            // addScene
+            // addSceneComboBox
             // 
-            this.addScene.FormattingEnabled = true;
-            this.addScene.Location = new System.Drawing.Point(310, 479);
-            this.addScene.Name = "addScene";
-            this.addScene.Size = new System.Drawing.Size(206, 30);
-            this.addScene.TabIndex = 71;
+            this.addSceneComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.addSceneComboBox.FormattingEnabled = true;
+            this.addSceneComboBox.Location = new System.Drawing.Point(330, 479);
+            this.addSceneComboBox.Name = "addSceneComboBox";
+            this.addSceneComboBox.Size = new System.Drawing.Size(186, 30);
+            this.addSceneComboBox.TabIndex = 71;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.description);
+            this.panel1.Controls.Add(this.descriptionTextBox);
             this.panel1.Location = new System.Drawing.Point(10, 731);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(546, 160);
             this.panel1.TabIndex = 72;
             // 
-            // description
+            // descriptionTextBox
             // 
-            this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.description.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.description.Location = new System.Drawing.Point(0, 0);
-            this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(544, 158);
-            this.description.TabIndex = 0;
-            this.description.Text = "";
+            this.descriptionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descriptionTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.descriptionTextBox.Location = new System.Drawing.Point(0, 0);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(544, 158);
+            this.descriptionTextBox.TabIndex = 0;
+            this.descriptionTextBox.Text = "";
             // 
-            // premiere
+            // premiereDateControl
             // 
-            this.premiere.Location = new System.Drawing.Point(6, 97);
-            this.premiere.Name = "premiere";
-            this.premiere.Size = new System.Drawing.Size(319, 27);
-            this.premiere.TabIndex = 73;
+            this.premiereDateControl.Location = new System.Drawing.Point(6, 97);
+            this.premiereDateControl.Name = "premiereDateControl";
+            this.premiereDateControl.Size = new System.Drawing.Size(319, 27);
+            this.premiereDateControl.TabIndex = 73;
             // 
-            // textBox1
+            // durationTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(443, 673);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(113, 27);
-            this.textBox1.TabIndex = 75;
+            this.durationTextBox.Location = new System.Drawing.Point(443, 673);
+            this.durationTextBox.Name = "durationTextBox";
+            this.durationTextBox.Size = new System.Drawing.Size(113, 27);
+            this.durationTextBox.TabIndex = 75;
             // 
-            // label14
+            // durationLabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label14.Location = new System.Drawing.Point(7, 675);
-            this.label14.Margin = new System.Windows.Forms.Padding(3);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(424, 22);
-            this.label14.TabIndex = 74;
-            this.label14.Text = "Продължителност на представлението в минути:";
+            this.durationLabel.AutoSize = true;
+            this.durationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.durationLabel.Location = new System.Drawing.Point(7, 675);
+            this.durationLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.durationLabel.Name = "durationLabel";
+            this.durationLabel.Size = new System.Drawing.Size(422, 18);
+            this.durationLabel.TabIndex = 74;
+            this.durationLabel.Text = "Продължителност на представлението в минути:";
             // 
-            // label8
+            // posterDescLabel
             // 
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label8.Location = new System.Drawing.Point(356, 322);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(200, 130);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "Постерът може да бъде .png, .jpg, .jpeg и трябва да е с размери 340/200";
+            this.posterDescLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.posterDescLabel.Location = new System.Drawing.Point(356, 322);
+            this.posterDescLabel.Name = "posterDescLabel";
+            this.posterDescLabel.Size = new System.Drawing.Size(200, 130);
+            this.posterDescLabel.TabIndex = 52;
+            this.posterDescLabel.Text = "Постерът може да бъде .png, .jpg, .jpeg и трябва да е с размери 340/200";
             // 
             // direcotrComboBox
             // 
@@ -353,40 +359,40 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(570, 903);
             this.Controls.Add(this.direcotrComboBox);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.premiere);
+            this.Controls.Add(this.durationTextBox);
+            this.Controls.Add(this.durationLabel);
+            this.Controls.Add(this.premiereDateControl);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.addScene);
-            this.Controls.Add(this.actorsCombo);
-            this.Controls.Add(this.author);
-            this.Controls.Add(this.name);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.continueBtn);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.addedDates);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.addTime);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.addDate);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.poster);
-            this.Controls.Add(this.addedActors);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.addSceneComboBox);
+            this.Controls.Add(this.actorsComboBox);
+            this.Controls.Add(this.authorTextBox);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.addDateBtn);
+            this.Controls.Add(this.addActorBtn);
+            this.Controls.Add(this.descriptionLabel);
+            this.Controls.Add(this.addedDatesPanel);
+            this.Controls.Add(this.addedDatesLabel);
+            this.Controls.Add(this.addTimeControl);
+            this.Controls.Add(this.timeLabel);
+            this.Controls.Add(this.addedScenesLabel);
+            this.Controls.Add(this.addDateControl);
+            this.Controls.Add(this.dateLabel);
+            this.Controls.Add(this.posterDescLabel);
+            this.Controls.Add(this.authorLabel);
+            this.Controls.Add(this.posterLabel);
+            this.Controls.Add(this.posterField);
+            this.Controls.Add(this.addedActorsPanel);
+            this.Controls.Add(this.addedActorsLabel);
+            this.Controls.Add(this.actorsLabel);
+            this.Controls.Add(this.directorLabel);
+            this.Controls.Add(this.premiereLabel);
+            this.Controls.Add(this.nameLabel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddProductionForm";
             this.Text = "AddProductionForm";
-            ((System.ComponentModel.ISupportInitialize)(this.poster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posterField)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -394,35 +400,35 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel addedActors;
-        private System.Windows.Forms.PictureBox poster;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker addDate;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker addTime;
-        private System.Windows.Forms.FlowLayoutPanel addedDates;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button continueBtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.TextBox author;
-        private System.Windows.Forms.ComboBox actorsCombo;
-        private System.Windows.Forms.ComboBox addScene;
+        private System.Windows.Forms.Label actorsLabel;
+        private System.Windows.Forms.Label directorLabel;
+        private System.Windows.Forms.Label premiereLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label addedActorsLabel;
+        private System.Windows.Forms.FlowLayoutPanel addedActorsPanel;
+        private System.Windows.Forms.PictureBox posterField;
+        private System.Windows.Forms.Label posterLabel;
+        private System.Windows.Forms.Label authorLabel;
+        private System.Windows.Forms.Label dateLabel;
+        private System.Windows.Forms.DateTimePicker addDateControl;
+        private System.Windows.Forms.Label addedScenesLabel;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.DateTimePicker addTimeControl;
+        private System.Windows.Forms.FlowLayoutPanel addedDatesPanel;
+        private System.Windows.Forms.Label addedDatesLabel;
+        private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.Button addActorBtn;
+        private System.Windows.Forms.Button addDateBtn;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox authorTextBox;
+        private System.Windows.Forms.ComboBox actorsComboBox;
+        private System.Windows.Forms.ComboBox addSceneComboBox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox description;
-        private System.Windows.Forms.DateTimePicker premiere;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox descriptionTextBox;
+        private System.Windows.Forms.DateTimePicker premiereDateControl;
+        private System.Windows.Forms.TextBox durationTextBox;
+        private System.Windows.Forms.Label durationLabel;
+        private System.Windows.Forms.Label posterDescLabel;
         private System.Windows.Forms.ComboBox direcotrComboBox;
     }
 }

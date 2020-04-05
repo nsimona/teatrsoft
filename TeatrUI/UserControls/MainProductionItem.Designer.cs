@@ -28,58 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PosterImg = new System.Windows.Forms.PictureBox();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.sceneLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.PosterImg)).BeginInit();
+            this.PosterField = new System.Windows.Forms.PictureBox();
+            this.titleField = new System.Windows.Forms.Label();
+            this.sceneField = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.PosterField)).BeginInit();
             this.SuspendLayout();
             // 
-            // PosterImg
+            // PosterField
             // 
-            this.PosterImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PosterImg.Location = new System.Drawing.Point(7, 25);
-            this.PosterImg.Name = "PosterImg";
-            this.PosterImg.Size = new System.Drawing.Size(110, 140);
-            this.PosterImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PosterImg.TabIndex = 0;
-            this.PosterImg.TabStop = false;
-            this.PosterImg.Click += new System.EventHandler(this.PosterImg_Click);
+            this.PosterField.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PosterField.Location = new System.Drawing.Point(7, 25);
+            this.PosterField.Name = "PosterField";
+            this.PosterField.Size = new System.Drawing.Size(110, 140);
+            this.PosterField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PosterField.TabIndex = 0;
+            this.PosterField.TabStop = false;
+            this.PosterField.Click += new System.EventHandler(this.PosterImg_Click);
             // 
-            // titleLabel
+            // titleField
             // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
-            this.titleLabel.Location = new System.Drawing.Point(3, 177);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(39, 20);
-            this.titleLabel.TabIndex = 1;
-            this.titleLabel.Text = "Title\r\n";
-            this.titleLabel.Click += new System.EventHandler(this.titleLabel_Click);
+            this.titleField.AutoSize = true;
+            this.titleField.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
+            this.titleField.Location = new System.Drawing.Point(3, 177);
+            this.titleField.Name = "titleField";
+            this.titleField.Size = new System.Drawing.Size(34, 16);
+            this.titleField.TabIndex = 1;
+            this.titleField.Text = "Title\r\n";
+            this.titleField.Click += new System.EventHandler(this.titleLabel_Click);
             // 
-            // sceneLabel
+            // sceneField
             // 
-            this.sceneLabel.AutoSize = true;
-            this.sceneLabel.Location = new System.Drawing.Point(3, 0);
-            this.sceneLabel.Name = "sceneLabel";
-            this.sceneLabel.Size = new System.Drawing.Size(60, 22);
-            this.sceneLabel.TabIndex = 2;
-            this.sceneLabel.Text = "Scene";
-            this.sceneLabel.Click += new System.EventHandler(this.sceneLabel_Click);
+            this.sceneField.AutoSize = true;
+            this.sceneField.Location = new System.Drawing.Point(3, 0);
+            this.sceneField.Name = "sceneField";
+            this.sceneField.Size = new System.Drawing.Size(55, 22);
+            this.sceneField.TabIndex = 2;
+            this.sceneField.Text = "Scene";
+            this.sceneField.Click += new System.EventHandler(this.sceneLabel_Click);
             // 
             // MainProductionItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.sceneLabel);
-            this.Controls.Add(this.titleLabel);
-            this.Controls.Add(this.PosterImg);
+            this.Controls.Add(this.sceneField);
+            this.Controls.Add(this.titleField);
+            this.Controls.Add(this.PosterField);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MainProductionItem";
             this.Size = new System.Drawing.Size(125, 236);
             this.Load += new System.EventHandler(this.productionItem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PosterImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PosterField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,8 +87,8 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox PosterImg;
-        private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Label sceneLabel;
+        private System.Windows.Forms.PictureBox PosterField;
+        private System.Windows.Forms.Label titleField;
+        private System.Windows.Forms.Label sceneField;
     }
 }

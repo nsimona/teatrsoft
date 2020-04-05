@@ -28,28 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.monthBtn = new System.Windows.Forms.Button();
             this.productionLabel = new System.Windows.Forms.Label();
             this.sceneLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.programDateControl1 = new TeatrUI.UserControls.ProgramDateControl();
-            this.panel = new System.Windows.Forms.Panel();
+            this.programPanel = new System.Windows.Forms.Panel();
+            this.monthComboBox = new System.Windows.Forms.ComboBox();
+            this.pageTitle = new System.Windows.Forms.Label();
+            this.saveToFileBtn = new System.Windows.Forms.Button();
+            this.printBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // monthBtn
-            // 
-            this.monthBtn.FlatAppearance.BorderSize = 0;
-            this.monthBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.monthBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.monthBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.monthBtn.Location = new System.Drawing.Point(0, 12);
-            this.monthBtn.Name = "monthBtn";
-            this.monthBtn.Size = new System.Drawing.Size(115, 39);
-            this.monthBtn.TabIndex = 2;
-            this.monthBtn.Text = "Март 2020";
-            this.monthBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.monthBtn.UseVisualStyleBackColor = true;
             // 
             // productionLabel
             // 
@@ -69,7 +57,7 @@
             this.sceneLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
             this.sceneLabel.Location = new System.Drawing.Point(24, 153);
             this.sceneLabel.Name = "sceneLabel";
-            this.sceneLabel.Size = new System.Drawing.Size(123, 18);
+            this.sceneLabel.Size = new System.Drawing.Size(123, 16);
             this.sceneLabel.TabIndex = 5;
             this.sceneLabel.Text = "ГОЛЯМА СЦЕНА";
             // 
@@ -84,20 +72,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "19:00 Ромео и Жулиета, автор: Иван Иванов, режисьор: А.Ангелова";
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button1.Location = new System.Drawing.Point(121, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 39);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Април 2020";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // programDateControl1
             // 
             this.programDateControl1.BackColor = System.Drawing.Color.White;
@@ -108,12 +82,61 @@
             this.programDateControl1.Size = new System.Drawing.Size(212, 45);
             this.programDateControl1.TabIndex = 3;
             // 
-            // panel
+            // programPanel
             // 
-            this.panel.Location = new System.Drawing.Point(0, 90);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(591, 576);
-            this.panel.TabIndex = 9;
+            this.programPanel.Location = new System.Drawing.Point(0, 90);
+            this.programPanel.Name = "programPanel";
+            this.programPanel.Size = new System.Drawing.Size(591, 552);
+            this.programPanel.TabIndex = 9;
+            // 
+            // monthComboBox
+            // 
+            this.monthComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.monthComboBox.FormattingEnabled = true;
+            this.monthComboBox.Items.AddRange(new object[] {
+            "Април",
+            "Май",
+            "Юни"});
+            this.monthComboBox.Location = new System.Drawing.Point(199, 12);
+            this.monthComboBox.Name = "monthComboBox";
+            this.monthComboBox.Size = new System.Drawing.Size(201, 30);
+            this.monthComboBox.TabIndex = 10;
+            // 
+            // pageTitle
+            // 
+            this.pageTitle.AutoSize = true;
+            this.pageTitle.BackColor = System.Drawing.Color.White;
+            this.pageTitle.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.pageTitle.Location = new System.Drawing.Point(0, 10);
+            this.pageTitle.Name = "pageTitle";
+            this.pageTitle.Size = new System.Drawing.Size(193, 29);
+            this.pageTitle.TabIndex = 48;
+            this.pageTitle.Text = "ИЗБЕРИ МЕСЕЦ";
+            // 
+            // saveToFileBtn
+            // 
+            this.saveToFileBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveToFileBtn.FlatAppearance.BorderSize = 0;
+            this.saveToFileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveToFileBtn.Image = global::TeatrUI.Properties.Resources.save;
+            this.saveToFileBtn.Location = new System.Drawing.Point(548, 54);
+            this.saveToFileBtn.Name = "saveToFileBtn";
+            this.saveToFileBtn.Size = new System.Drawing.Size(30, 30);
+            this.saveToFileBtn.TabIndex = 50;
+            this.saveToFileBtn.UseVisualStyleBackColor = true;
+            // 
+            // printBtn
+            // 
+            this.printBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.printBtn.FlatAppearance.BorderSize = 0;
+            this.printBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.printBtn.Image = global::TeatrUI.Properties.Resources.print;
+            this.printBtn.Location = new System.Drawing.Point(512, 54);
+            this.printBtn.Name = "printBtn";
+            this.printBtn.Size = new System.Drawing.Size(30, 30);
+            this.printBtn.TabIndex = 49;
+            this.printBtn.UseVisualStyleBackColor = true;
             // 
             // MonthProgram
             // 
@@ -121,13 +144,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.saveToFileBtn);
+            this.Controls.Add(this.printBtn);
+            this.Controls.Add(this.pageTitle);
+            this.Controls.Add(this.monthComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sceneLabel);
             this.Controls.Add(this.productionLabel);
             this.Controls.Add(this.programDateControl1);
-            this.Controls.Add(this.monthBtn);
-            this.Controls.Add(this.panel);
+            this.Controls.Add(this.programPanel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -139,13 +164,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button monthBtn;
         private UserControls.ProgramDateControl programDateControl1;
         private System.Windows.Forms.Label productionLabel;
         private System.Windows.Forms.Label sceneLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel programPanel;
+        private System.Windows.Forms.ComboBox monthComboBox;
+        private System.Windows.Forms.Label pageTitle;
+        private System.Windows.Forms.Button saveToFileBtn;
+        private System.Windows.Forms.Button printBtn;
     }
 }

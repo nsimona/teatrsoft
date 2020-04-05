@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.nameLabel = new System.Windows.Forms.Label();
             this.currentTimeLabel = new System.Windows.Forms.Label();
+            this.timerDate = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // nameLabel
@@ -48,12 +50,19 @@
             this.currentTimeLabel.AutoSize = true;
             this.currentTimeLabel.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.currentTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.currentTimeLabel.Location = new System.Drawing.Point(517, 9);
+            this.currentTimeLabel.Location = new System.Drawing.Point(470, 9);
             this.currentTimeLabel.Name = "currentTimeLabel";
-            this.currentTimeLabel.Size = new System.Drawing.Size(100, 20);
+            this.currentTimeLabel.Size = new System.Drawing.Size(120, 20);
             this.currentTimeLabel.TabIndex = 1;
-            this.currentTimeLabel.Text = "21/21/20 19:14";
-            this.currentTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.currentTimeLabel.Text = "21/21/20 19:14:55";
+            this.currentTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.currentTimeLabel.Click += new System.EventHandler(this.currentTimeLabel_Click);
+            // 
+            // timerDate
+            // 
+            this.timerDate.Enabled = true;
+            this.timerDate.Interval = 1000;
+            this.timerDate.Tick += new System.EventHandler(this.timerDate_Tick);
             // 
             // FooterControl
             // 
@@ -75,5 +84,6 @@
 
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label currentTimeLabel;
+        private System.Windows.Forms.Timer timerDate;
     }
 }

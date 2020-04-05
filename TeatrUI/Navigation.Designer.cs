@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.userName = new System.Windows.Forms.Label();
-            this.userRole = new System.Windows.Forms.Label();
+            this.userPhotoField = new System.Windows.Forms.PictureBox();
+            this.userNameField = new System.Windows.Forms.Label();
+            this.userRoleField = new System.Windows.Forms.Label();
             this.homeNavBtn = new System.Windows.Forms.Button();
             this.selector = new System.Windows.Forms.Panel();
             this.programNavBtn = new System.Windows.Forms.Button();
@@ -40,39 +40,39 @@
             this.usersNavBtn = new System.Windows.Forms.Button();
             this.infoBtnNav = new System.Windows.Forms.Button();
             this.scenesNavBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userPhotoField)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // userPhotoField
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(29, 29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(20, 20, 10, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.userPhotoField.Location = new System.Drawing.Point(29, 29);
+            this.userPhotoField.Margin = new System.Windows.Forms.Padding(20, 20, 10, 20);
+            this.userPhotoField.Name = "userPhotoField";
+            this.userPhotoField.Size = new System.Drawing.Size(100, 100);
+            this.userPhotoField.TabIndex = 0;
+            this.userPhotoField.TabStop = false;
             // 
-            // userName
+            // userNameField
             // 
-            this.userName.AutoSize = true;
-            this.userName.BackColor = System.Drawing.Color.Transparent;
-            this.userName.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userName.Location = new System.Drawing.Point(142, 40);
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(98, 22);
-            this.userName.TabIndex = 1;
-            this.userName.Text = "Симона Н.";
+            this.userNameField.AutoSize = true;
+            this.userNameField.BackColor = System.Drawing.Color.Transparent;
+            this.userNameField.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userNameField.Location = new System.Drawing.Point(142, 40);
+            this.userNameField.Name = "userNameField";
+            this.userNameField.Size = new System.Drawing.Size(91, 19);
+            this.userNameField.TabIndex = 1;
+            this.userNameField.Text = "Симона Н.";
             // 
-            // userRole
+            // userRoleField
             // 
-            this.userRole.AutoSize = true;
-            this.userRole.BackColor = System.Drawing.Color.Transparent;
-            this.userRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.userRole.Location = new System.Drawing.Point(142, 62);
-            this.userRole.Name = "userRole";
-            this.userRole.Size = new System.Drawing.Size(141, 22);
-            this.userRole.TabIndex = 2;
-            this.userRole.Text = "администратор";
+            this.userRoleField.AutoSize = true;
+            this.userRoleField.BackColor = System.Drawing.Color.Transparent;
+            this.userRoleField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.userRoleField.Location = new System.Drawing.Point(142, 62);
+            this.userRoleField.Name = "userRoleField";
+            this.userRoleField.Size = new System.Drawing.Size(119, 18);
+            this.userRoleField.TabIndex = 2;
+            this.userRoleField.Text = "администратор";
             // 
             // homeNavBtn
             // 
@@ -262,7 +262,7 @@
             // 
             // Navigation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::TeatrUI.Properties.Resources.navBg;
@@ -277,15 +277,15 @@
             this.Controls.Add(this.programNavBtn);
             this.Controls.Add(this.selector);
             this.Controls.Add(this.homeNavBtn);
-            this.Controls.Add(this.userRole);
-            this.Controls.Add(this.userName);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.userRoleField);
+            this.Controls.Add(this.userNameField);
+            this.Controls.Add(this.userPhotoField);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Navigation";
             this.Text = "Navigation";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userPhotoField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,9 +293,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label userName;
-        private System.Windows.Forms.Label userRole;
+        private System.Windows.Forms.PictureBox userPhotoField;
+        private System.Windows.Forms.Label userNameField;
+        private System.Windows.Forms.Label userRoleField;
         private System.Windows.Forms.Button homeNavBtn;
         private System.Windows.Forms.Panel selector;
         private System.Windows.Forms.Button programNavBtn;

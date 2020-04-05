@@ -15,6 +15,18 @@ namespace TeatrUI.UserControls
         public FooterControl()
         {
             InitializeComponent();
+            currentTimeLabel.Text = DateTime.Now.ToString("dd/MM/yy HH:mm:ss");
+
+        }
+
+        private void currentTimeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerDate_Tick(object sender, EventArgs e)
+        {
+            currentTimeLabel.Text = DateTime.Now.ToString("dd/MM/yy HH:mm:ss");
         }
     }
 }

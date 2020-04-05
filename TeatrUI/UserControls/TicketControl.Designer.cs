@@ -28,106 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.price = new System.Windows.Forms.Label();
-            this.productionDate = new System.Windows.Forms.Label();
-            this.seat = new System.Windows.Forms.Label();
-            this.row = new System.Windows.Forms.Label();
-            this.sceneAddress = new System.Windows.Forms.Label();
+            this.ticketPanel = new System.Windows.Forms.Panel();
+            this.produtctionTitleField = new System.Windows.Forms.Label();
+            this.priceField = new System.Windows.Forms.Label();
+            this.dateField = new System.Windows.Forms.Label();
+            this.seatField = new System.Windows.Forms.Label();
+            this.rowField = new System.Windows.Forms.Label();
+            this.sceneAddressField = new System.Windows.Forms.Label();
             this.seatLabel = new System.Windows.Forms.Label();
             this.rowLabel = new System.Windows.Forms.Label();
-            this.scene = new System.Windows.Forms.Label();
+            this.sceneField = new System.Windows.Forms.Label();
             this.theaterAddress = new System.Windows.Forms.Label();
             this.theaterName = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.ticketPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // ticketPanel
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.price);
-            this.panel1.Controls.Add(this.productionDate);
-            this.panel1.Controls.Add(this.seat);
-            this.panel1.Controls.Add(this.row);
-            this.panel1.Controls.Add(this.sceneAddress);
-            this.panel1.Controls.Add(this.seatLabel);
-            this.panel1.Controls.Add(this.rowLabel);
-            this.panel1.Controls.Add(this.scene);
-            this.panel1.Controls.Add(this.theaterAddress);
-            this.panel1.Controls.Add(this.theaterName);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 222);
-            this.panel1.TabIndex = 0;
+            this.ticketPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ticketPanel.Controls.Add(this.produtctionTitleField);
+            this.ticketPanel.Controls.Add(this.priceField);
+            this.ticketPanel.Controls.Add(this.dateField);
+            this.ticketPanel.Controls.Add(this.seatField);
+            this.ticketPanel.Controls.Add(this.rowField);
+            this.ticketPanel.Controls.Add(this.sceneAddressField);
+            this.ticketPanel.Controls.Add(this.seatLabel);
+            this.ticketPanel.Controls.Add(this.rowLabel);
+            this.ticketPanel.Controls.Add(this.sceneField);
+            this.ticketPanel.Controls.Add(this.theaterAddress);
+            this.ticketPanel.Controls.Add(this.theaterName);
+            this.ticketPanel.Location = new System.Drawing.Point(3, 3);
+            this.ticketPanel.Name = "ticketPanel";
+            this.ticketPanel.Size = new System.Drawing.Size(584, 222);
+            this.ticketPanel.TabIndex = 0;
             // 
-            // label1
+            // produtctionTitleField
             // 
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(15, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(546, 74);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Поп-фолк хроники: Бели птици и кушруми";
+            this.produtctionTitleField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.produtctionTitleField.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.produtctionTitleField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.produtctionTitleField.Location = new System.Drawing.Point(15, 43);
+            this.produtctionTitleField.Name = "produtctionTitleField";
+            this.produtctionTitleField.Size = new System.Drawing.Size(546, 74);
+            this.produtctionTitleField.TabIndex = 11;
+            this.produtctionTitleField.Text = "Поп-фолк хроники: Бели птици и кушруми";
             // 
-            // price
+            // priceField
             // 
-            this.price.AutoSize = true;
-            this.price.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.price.ForeColor = System.Drawing.Color.Black;
-            this.price.Location = new System.Drawing.Point(474, 181);
-            this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(101, 29);
-            this.price.TabIndex = 10;
-            this.price.Text = "15,00 лв";
+            this.priceField.AutoSize = true;
+            this.priceField.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.priceField.ForeColor = System.Drawing.Color.Black;
+            this.priceField.Location = new System.Drawing.Point(474, 181);
+            this.priceField.Name = "priceField";
+            this.priceField.Size = new System.Drawing.Size(96, 24);
+            this.priceField.TabIndex = 10;
+            this.priceField.Text = "15,00 лв";
             // 
-            // productionDate
+            // dateField
             // 
-            this.productionDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productionDate.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.productionDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.productionDate.Location = new System.Drawing.Point(17, 177);
-            this.productionDate.Name = "productionDate";
-            this.productionDate.Size = new System.Drawing.Size(139, 37);
-            this.productionDate.TabIndex = 9;
-            this.productionDate.Text = "ПЕТЪК, 20.04.2020, 20:00ч";
-            this.productionDate.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dateField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dateField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dateField.Location = new System.Drawing.Point(17, 177);
+            this.dateField.Name = "dateField";
+            this.dateField.Size = new System.Drawing.Size(139, 37);
+            this.dateField.TabIndex = 9;
+            this.dateField.Text = "ПЕТЪК, 20.04.2020, 20:00ч";
+            this.dateField.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // seat
+            // seatField
             // 
-            this.seat.AutoSize = true;
-            this.seat.Font = new System.Drawing.Font("Montserrat", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.seat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
-            this.seat.Location = new System.Drawing.Point(357, 143);
-            this.seat.Name = "seat";
-            this.seat.Size = new System.Drawing.Size(30, 25);
-            this.seat.TabIndex = 8;
-            this.seat.Text = "12";
+            this.seatField.AutoSize = true;
+            this.seatField.Font = new System.Drawing.Font("Montserrat", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.seatField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
+            this.seatField.Location = new System.Drawing.Point(357, 143);
+            this.seatField.Name = "seatField";
+            this.seatField.Size = new System.Drawing.Size(30, 21);
+            this.seatField.TabIndex = 8;
+            this.seatField.Text = "12";
             // 
-            // row
+            // rowField
             // 
-            this.row.AutoSize = true;
-            this.row.Font = new System.Drawing.Font("Montserrat", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.row.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
-            this.row.Location = new System.Drawing.Point(232, 143);
-            this.row.Name = "row";
-            this.row.Size = new System.Drawing.Size(24, 25);
-            this.row.TabIndex = 7;
-            this.row.Text = "4";
+            this.rowField.AutoSize = true;
+            this.rowField.Font = new System.Drawing.Font("Montserrat", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rowField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
+            this.rowField.Location = new System.Drawing.Point(232, 143);
+            this.rowField.Name = "rowField";
+            this.rowField.Size = new System.Drawing.Size(20, 21);
+            this.rowField.TabIndex = 7;
+            this.rowField.Text = "4";
             // 
-            // sceneAddress
+            // sceneAddressField
             // 
-            this.sceneAddress.AutoSize = true;
-            this.sceneAddress.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sceneAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.sceneAddress.Location = new System.Drawing.Point(18, 143);
-            this.sceneAddress.Name = "sceneAddress";
-            this.sceneAddress.Size = new System.Drawing.Size(67, 18);
-            this.sceneAddress.TabIndex = 6;
-            this.sceneAddress.Text = "партер 2";
+            this.sceneAddressField.AutoSize = true;
+            this.sceneAddressField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sceneAddressField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.sceneAddressField.Location = new System.Drawing.Point(18, 143);
+            this.sceneAddressField.Name = "sceneAddressField";
+            this.sceneAddressField.Size = new System.Drawing.Size(59, 16);
+            this.sceneAddressField.TabIndex = 6;
+            this.sceneAddressField.Text = "партер 2";
             // 
             // seatLabel
             // 
@@ -136,7 +136,7 @@
             this.seatLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.seatLabel.Location = new System.Drawing.Point(359, 126);
             this.seatLabel.Name = "seatLabel";
-            this.seatLabel.Size = new System.Drawing.Size(59, 18);
+            this.seatLabel.Size = new System.Drawing.Size(53, 16);
             this.seatLabel.TabIndex = 5;
             this.seatLabel.Text = "МЯСТО";
             this.seatLabel.Click += new System.EventHandler(this.label6_Click);
@@ -148,21 +148,21 @@
             this.rowLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.rowLabel.Location = new System.Drawing.Point(234, 126);
             this.rowLabel.Name = "rowLabel";
-            this.rowLabel.Size = new System.Drawing.Size(36, 18);
+            this.rowLabel.Size = new System.Drawing.Size(35, 16);
             this.rowLabel.TabIndex = 4;
             this.rowLabel.Text = "РЕД";
             // 
-            // scene
+            // sceneField
             // 
-            this.scene.AutoSize = true;
-            this.scene.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.scene.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.scene.Location = new System.Drawing.Point(17, 126);
-            this.scene.Name = "scene";
-            this.scene.Size = new System.Drawing.Size(121, 18);
-            this.scene.TabIndex = 3;
-            this.scene.Text = "ГОЛЯМА СЦЕНА";
-            this.scene.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sceneField.AutoSize = true;
+            this.sceneField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sceneField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.sceneField.Location = new System.Drawing.Point(17, 126);
+            this.sceneField.Name = "sceneField";
+            this.sceneField.Size = new System.Drawing.Size(112, 16);
+            this.sceneField.TabIndex = 3;
+            this.sceneField.Text = "ГОЛЯМА СЦЕНА";
+            this.sceneField.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // theaterAddress
             // 
@@ -187,33 +187,33 @@
             // 
             // TicketControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ticketPanel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TicketControl";
             this.Size = new System.Drawing.Size(590, 230);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ticketPanel.ResumeLayout(false);
+            this.ticketPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ticketPanel;
         private System.Windows.Forms.Label theaterName;
-        private System.Windows.Forms.Label price;
-        private System.Windows.Forms.Label productionDate;
-        private System.Windows.Forms.Label seat;
-        private System.Windows.Forms.Label row;
-        private System.Windows.Forms.Label sceneAddress;
+        private System.Windows.Forms.Label priceField;
+        private System.Windows.Forms.Label dateField;
+        private System.Windows.Forms.Label seatField;
+        private System.Windows.Forms.Label rowField;
+        private System.Windows.Forms.Label sceneAddressField;
         private System.Windows.Forms.Label seatLabel;
         private System.Windows.Forms.Label rowLabel;
-        private System.Windows.Forms.Label scene;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label sceneField;
+        private System.Windows.Forms.Label produtctionTitleField;
         private System.Windows.Forms.Label theaterAddress;
     }
 }

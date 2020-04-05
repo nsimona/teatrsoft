@@ -21,19 +21,19 @@ namespace TeatrUI
             InitializeComponent();
             // Get all positions
             List<Position> categoryPositions = GlobalConfig.Connection.GetPositions();
-            category.DataSource = new BindingSource(categoryPositions, null);
-            category.DisplayMember = "Name";
-            category.ValueMember = "Id";
+            categoryComboBox.DataSource = new BindingSource(categoryPositions, null);
+            categoryComboBox.DisplayMember = "Name";
+            categoryComboBox.ValueMember = "Id";
 
         }
 
         private bool ValidateForm()
         {
-            if(name.Text == "")
+            if(nameTextBox.Text == "")
             {
                 return false;
             }
-            if (category.Text == "")
+            if (categoryComboBox.Text == "")
             {
                 return false;
             }
@@ -74,16 +74,16 @@ namespace TeatrUI
                 //  }
 
                 string currentDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
-                string sourcePath = personPic.Text;
+                string sourcePath = photoField.Text;
                 string directionPath = 
                     Path.Combine(
                         Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName).Parent.FullName, 
-                        "PhotoLibrary\\" + personPic.AccessibleName
+                        "PhotoLibrary\\" + photoField.AccessibleName
                     );
                 File.Copy(sourcePath, directionPath, true);
 
-                PersonModel person = new PersonModel(name.Text, category.Text, phone.Text, mail.Text, personPic.AccessibleName);
-                GlobalConfig.Connection.AddPerson(person, personPic.AccessibleName);
+                PersonModel person = new PersonModel(nameTextBox.Text, categoryComboBox.Text, phoneTextBox.Text, mailTextBox.Text, photoField.AccessibleName);
+                GlobalConfig.Connection.AddPerson(person, photoField.AccessibleName);
             }
             else
             {
@@ -97,9 +97,9 @@ namespace TeatrUI
             opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
-                personPic.Text = opnfd.FileName;
-                personPic.Image = new Bitmap(opnfd.FileName);
-                personPic.AccessibleName = opnfd.SafeFileName;
+                photoField.Text = opnfd.FileName;
+                photoField.Image = new Bitmap(opnfd.FileName);
+                photoField.AccessibleName = opnfd.SafeFileName;
             }
         }
     }

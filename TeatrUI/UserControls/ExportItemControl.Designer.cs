@@ -28,64 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.date = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.Label();
-            this.scene = new System.Windows.Forms.Label();
-            this.seats = new System.Windows.Forms.Label();
-            this.total = new System.Windows.Forms.Label();
+            this.dateField = new System.Windows.Forms.Label();
+            this.nameField = new System.Windows.Forms.Label();
+            this.sceneField = new System.Windows.Forms.Label();
+            this.seatsField = new System.Windows.Forms.Label();
+            this.totalField = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // date
+            // dateField
             // 
-            this.date.AutoEllipsis = true;
-            this.date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.date.Location = new System.Drawing.Point(3, 6);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(96, 50);
-            this.date.TabIndex = 99;
-            this.date.Text = "01.03.20 19:00";
+            this.dateField.AutoEllipsis = true;
+            this.dateField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.dateField.Location = new System.Drawing.Point(3, 6);
+            this.dateField.Name = "dateField";
+            this.dateField.Size = new System.Drawing.Size(96, 50);
+            this.dateField.TabIndex = 99;
+            this.dateField.Text = "01.03.20 19:00";
             // 
-            // name
+            // nameField
             // 
-            this.name.AutoEllipsis = true;
-            this.name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.name.Location = new System.Drawing.Point(118, 6);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(151, 50);
-            this.name.TabIndex = 100;
-            this.name.Text = "Ромео и Жулиета и Ромео и Жулиета";
+            this.nameField.AutoEllipsis = true;
+            this.nameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.nameField.Location = new System.Drawing.Point(118, 6);
+            this.nameField.Name = "nameField";
+            this.nameField.Size = new System.Drawing.Size(151, 50);
+            this.nameField.TabIndex = 100;
+            this.nameField.Text = "Ромео и Жулиета и Ромео и Жулиета";
             // 
-            // scene
+            // sceneField
             // 
-            this.scene.AutoEllipsis = true;
-            this.scene.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.scene.Location = new System.Drawing.Point(287, 6);
-            this.scene.Name = "scene";
-            this.scene.Size = new System.Drawing.Size(109, 50);
-            this.scene.TabIndex = 101;
-            this.scene.Text = "Голяма сцена";
+            this.sceneField.AutoEllipsis = true;
+            this.sceneField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.sceneField.Location = new System.Drawing.Point(287, 6);
+            this.sceneField.Name = "sceneField";
+            this.sceneField.Size = new System.Drawing.Size(109, 50);
+            this.sceneField.TabIndex = 101;
+            this.sceneField.Text = "Голяма сцена";
             // 
-            // seats
+            // seatsField
             // 
-            this.seats.AutoEllipsis = true;
-            this.seats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.seats.Location = new System.Drawing.Point(413, 6);
-            this.seats.Name = "seats";
-            this.seats.Size = new System.Drawing.Size(88, 50);
-            this.seats.TabIndex = 102;
-            this.seats.Text = "250/800";
+            this.seatsField.AutoEllipsis = true;
+            this.seatsField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.seatsField.Location = new System.Drawing.Point(413, 6);
+            this.seatsField.Name = "seatsField";
+            this.seatsField.Size = new System.Drawing.Size(88, 50);
+            this.seatsField.TabIndex = 102;
+            this.seatsField.Text = "250/800";
             // 
-            // total
+            // totalField
             // 
-            this.total.AutoEllipsis = true;
-            this.total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.total.Location = new System.Drawing.Point(497, 6);
-            this.total.Name = "total";
-            this.total.Size = new System.Drawing.Size(83, 50);
-            this.total.TabIndex = 103;
-            this.total.Text = "10,000";
-            this.total.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.totalField.AutoEllipsis = true;
+            this.totalField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.totalField.Location = new System.Drawing.Point(497, 6);
+            this.totalField.Name = "totalField";
+            this.totalField.Size = new System.Drawing.Size(83, 50);
+            this.totalField.TabIndex = 103;
+            this.totalField.Text = "10,000";
+            this.totalField.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel1
             // 
@@ -98,17 +98,17 @@
             // 
             // ExportItemControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.total);
-            this.Controls.Add(this.seats);
-            this.Controls.Add(this.scene);
-            this.Controls.Add(this.name);
-            this.Controls.Add(this.date);
+            this.Controls.Add(this.totalField);
+            this.Controls.Add(this.seatsField);
+            this.Controls.Add(this.sceneField);
+            this.Controls.Add(this.nameField);
+            this.Controls.Add(this.dateField);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ExportItemControl";
             this.Size = new System.Drawing.Size(580, 63);
             this.ResumeLayout(false);
@@ -117,11 +117,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label date;
-        private System.Windows.Forms.Label name;
-        private System.Windows.Forms.Label scene;
-        private System.Windows.Forms.Label seats;
-        private System.Windows.Forms.Label total;
+        private System.Windows.Forms.Label dateField;
+        private System.Windows.Forms.Label nameField;
+        private System.Windows.Forms.Label sceneField;
+        private System.Windows.Forms.Label seatsField;
+        private System.Windows.Forms.Label totalField;
         private System.Windows.Forms.Panel panel1;
     }
 }

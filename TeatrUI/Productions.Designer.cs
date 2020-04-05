@@ -36,7 +36,7 @@
             this.ticketsPanel = new System.Windows.Forms.Panel();
             this.addNewBtn = new System.Windows.Forms.Button();
             this.sortBtn = new System.Windows.Forms.Button();
-            this.headingLabel = new System.Windows.Forms.Label();
+            this.pageTitle = new System.Windows.Forms.Label();
             this.productionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +96,7 @@
             // 
             // addNewBtn
             // 
+            this.addNewBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addNewBtn.FlatAppearance.BorderSize = 0;
             this.addNewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewBtn.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -113,6 +114,7 @@
             // 
             // sortBtn
             // 
+            this.sortBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sortBtn.FlatAppearance.BorderSize = 0;
             this.sortBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortBtn.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -126,25 +128,26 @@
             this.sortBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.sortBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.sortBtn.UseVisualStyleBackColor = true;
+            this.sortBtn.Click += new System.EventHandler(this.sortBtn_Click);
             // 
-            // headingLabel
+            // pageTitle
             // 
-            this.headingLabel.AutoSize = true;
-            this.headingLabel.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.headingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.headingLabel.Location = new System.Drawing.Point(0, 10);
-            this.headingLabel.Name = "headingLabel";
-            this.headingLabel.Size = new System.Drawing.Size(151, 29);
-            this.headingLabel.TabIndex = 13;
-            this.headingLabel.Text = "СПЕКТАКЛИ";
+            this.pageTitle.AutoSize = true;
+            this.pageTitle.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.pageTitle.Location = new System.Drawing.Point(0, 10);
+            this.pageTitle.Name = "pageTitle";
+            this.pageTitle.Size = new System.Drawing.Size(137, 24);
+            this.pageTitle.TabIndex = 13;
+            this.pageTitle.Text = "СПЕКТАКЛИ";
             // 
             // Productions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
-            this.Controls.Add(this.headingLabel);
+            this.Controls.Add(this.pageTitle);
             this.Controls.Add(this.addNewBtn);
             this.Controls.Add(this.productionDateTicketControl2);
             this.Controls.Add(this.productionDateTicketControl1);
@@ -171,6 +174,6 @@
         private System.Windows.Forms.Panel productionSubPanel;
         private System.Windows.Forms.Panel ticketsPanel;
         private System.Windows.Forms.Button addNewBtn;
-        private System.Windows.Forms.Label headingLabel;
+        private System.Windows.Forms.Label pageTitle;
     }
 }

@@ -28,35 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.headingLabel = new System.Windows.Forms.Label();
+            this.pageTitle = new System.Windows.Forms.Label();
             this.editPhotoBtn = new System.Windows.Forms.Button();
-            this.profilePic = new System.Windows.Forms.PictureBox();
-            this.name = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.mail = new System.Windows.Forms.TextBox();
-            this.newPassRepeat = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.photoField = new System.Windows.Forms.PictureBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.mailLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.mailTextBox = new System.Windows.Forms.TextBox();
+            this.newPassRepeatTextBox = new System.Windows.Forms.TextBox();
+            this.repeatNewPassLabel = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.newPass = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.profilePic)).BeginInit();
+            this.newPassTextBox = new System.Windows.Forms.TextBox();
+            this.newPassLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.photoField)).BeginInit();
             this.SuspendLayout();
             // 
-            // headingLabel
+            // pageTitle
             // 
-            this.headingLabel.AutoSize = true;
-            this.headingLabel.BackColor = System.Drawing.Color.White;
-            this.headingLabel.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.headingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.headingLabel.Location = new System.Drawing.Point(0, 10);
-            this.headingLabel.Name = "headingLabel";
-            this.headingLabel.Size = new System.Drawing.Size(117, 29);
-            this.headingLabel.TabIndex = 16;
-            this.headingLabel.Text = "ПРОФИЛ";
+            this.pageTitle.AutoSize = true;
+            this.pageTitle.BackColor = System.Drawing.Color.White;
+            this.pageTitle.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.pageTitle.Location = new System.Drawing.Point(0, 10);
+            this.pageTitle.Name = "pageTitle";
+            this.pageTitle.Size = new System.Drawing.Size(103, 24);
+            this.pageTitle.TabIndex = 16;
+            this.pageTitle.Text = "ПРОФИЛ";
             // 
             // editPhotoBtn
             // 
+            this.editPhotoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editPhotoBtn.FlatAppearance.BorderSize = 0;
             this.editPhotoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editPhotoBtn.Image = global::TeatrUI.Properties.Resources.edituser;
@@ -66,72 +67,73 @@
             this.editPhotoBtn.TabIndex = 86;
             this.editPhotoBtn.UseVisualStyleBackColor = true;
             // 
-            // profilePic
+            // photoField
             // 
-            this.profilePic.Location = new System.Drawing.Point(0, 90);
-            this.profilePic.Name = "profilePic";
-            this.profilePic.Size = new System.Drawing.Size(130, 130);
-            this.profilePic.TabIndex = 17;
-            this.profilePic.TabStop = false;
+            this.photoField.Location = new System.Drawing.Point(0, 90);
+            this.photoField.Name = "photoField";
+            this.photoField.Size = new System.Drawing.Size(130, 130);
+            this.photoField.TabIndex = 17;
+            this.photoField.TabStop = false;
             // 
-            // name
+            // nameTextBox
             // 
-            this.name.Location = new System.Drawing.Point(177, 118);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(300, 27);
-            this.name.TabIndex = 89;
+            this.nameTextBox.Location = new System.Drawing.Point(177, 118);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(300, 27);
+            this.nameTextBox.TabIndex = 89;
             // 
-            // label3
+            // mailLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(172, 151);
-            this.label3.Margin = new System.Windows.Forms.Padding(3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 22);
-            this.label3.TabIndex = 88;
-            this.label3.Text = "Имейл";
+            this.mailLabel.AutoSize = true;
+            this.mailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.mailLabel.Location = new System.Drawing.Point(172, 151);
+            this.mailLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.mailLabel.Name = "mailLabel";
+            this.mailLabel.Size = new System.Drawing.Size(56, 18);
+            this.mailLabel.TabIndex = 88;
+            this.mailLabel.Text = "Имейл";
             // 
-            // label4
+            // nameLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label4.Location = new System.Drawing.Point(173, 90);
-            this.label4.Margin = new System.Windows.Forms.Padding(3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 22);
-            this.label4.TabIndex = 87;
-            this.label4.Text = "Име";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.nameLabel.Location = new System.Drawing.Point(173, 90);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(40, 18);
+            this.nameLabel.TabIndex = 87;
+            this.nameLabel.Text = "Име";
             // 
-            // mail
+            // mailTextBox
             // 
-            this.mail.Location = new System.Drawing.Point(177, 177);
-            this.mail.Name = "mail";
-            this.mail.ReadOnly = true;
-            this.mail.Size = new System.Drawing.Size(300, 27);
-            this.mail.TabIndex = 91;
+            this.mailTextBox.Location = new System.Drawing.Point(177, 177);
+            this.mailTextBox.Name = "mailTextBox";
+            this.mailTextBox.ReadOnly = true;
+            this.mailTextBox.Size = new System.Drawing.Size(300, 27);
+            this.mailTextBox.TabIndex = 91;
             // 
-            // newPassRepeat
+            // newPassRepeatTextBox
             // 
-            this.newPassRepeat.Location = new System.Drawing.Point(176, 299);
-            this.newPassRepeat.Name = "newPassRepeat";
-            this.newPassRepeat.Size = new System.Drawing.Size(300, 27);
-            this.newPassRepeat.TabIndex = 96;
+            this.newPassRepeatTextBox.Location = new System.Drawing.Point(176, 299);
+            this.newPassRepeatTextBox.Name = "newPassRepeatTextBox";
+            this.newPassRepeatTextBox.Size = new System.Drawing.Size(300, 27);
+            this.newPassRepeatTextBox.TabIndex = 96;
             // 
-            // label1
+            // repeatNewPassLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label1.Location = new System.Drawing.Point(173, 271);
-            this.label1.Margin = new System.Windows.Forms.Padding(3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 22);
-            this.label1.TabIndex = 95;
-            this.label1.Text = "Повтори нова парола";
+            this.repeatNewPassLabel.AutoSize = true;
+            this.repeatNewPassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.repeatNewPassLabel.Location = new System.Drawing.Point(173, 271);
+            this.repeatNewPassLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.repeatNewPassLabel.Name = "repeatNewPassLabel";
+            this.repeatNewPassLabel.Size = new System.Drawing.Size(165, 18);
+            this.repeatNewPassLabel.TabIndex = 95;
+            this.repeatNewPassLabel.Text = "Повтори нова парола";
             // 
             // saveBtn
             // 
             this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
+            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -143,48 +145,48 @@
             this.saveBtn.Text = "ЗАПИС";
             this.saveBtn.UseVisualStyleBackColor = false;
             // 
-            // newPass
+            // newPassTextBox
             // 
-            this.newPass.Location = new System.Drawing.Point(176, 238);
-            this.newPass.Name = "newPass";
-            this.newPass.Size = new System.Drawing.Size(300, 27);
-            this.newPass.TabIndex = 93;
+            this.newPassTextBox.Location = new System.Drawing.Point(176, 238);
+            this.newPassTextBox.Name = "newPassTextBox";
+            this.newPassTextBox.Size = new System.Drawing.Size(300, 27);
+            this.newPassTextBox.TabIndex = 93;
             // 
-            // label5
+            // newPassLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label5.Location = new System.Drawing.Point(172, 210);
-            this.label5.Margin = new System.Windows.Forms.Padding(3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 22);
-            this.label5.TabIndex = 92;
-            this.label5.Text = "Нова парола";
+            this.newPassLabel.AutoSize = true;
+            this.newPassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.newPassLabel.Location = new System.Drawing.Point(172, 210);
+            this.newPassLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.newPassLabel.Name = "newPassLabel";
+            this.newPassLabel.Size = new System.Drawing.Size(102, 18);
+            this.newPassLabel.TabIndex = 92;
+            this.newPassLabel.Text = "Нова парола";
             // 
             // Account
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
-            this.Controls.Add(this.newPassRepeat);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.newPassRepeatTextBox);
+            this.Controls.Add(this.repeatNewPassLabel);
             this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.newPass);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.mail);
-            this.Controls.Add(this.name);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.newPassTextBox);
+            this.Controls.Add(this.newPassLabel);
+            this.Controls.Add(this.mailTextBox);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.mailLabel);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.editPhotoBtn);
-            this.Controls.Add(this.profilePic);
-            this.Controls.Add(this.headingLabel);
+            this.Controls.Add(this.photoField);
+            this.Controls.Add(this.pageTitle);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Account";
             this.Text = "Account";
-            ((System.ComponentModel.ISupportInitialize)(this.profilePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.photoField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,17 +194,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label headingLabel;
-        private System.Windows.Forms.PictureBox profilePic;
+        private System.Windows.Forms.Label pageTitle;
+        private System.Windows.Forms.PictureBox photoField;
         private System.Windows.Forms.Button editPhotoBtn;
-        private System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox mail;
-        private System.Windows.Forms.TextBox newPassRepeat;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label mailLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox mailTextBox;
+        private System.Windows.Forms.TextBox newPassRepeatTextBox;
+        private System.Windows.Forms.Label repeatNewPassLabel;
         private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.TextBox newPass;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox newPassTextBox;
+        private System.Windows.Forms.Label newPassLabel;
     }
 }

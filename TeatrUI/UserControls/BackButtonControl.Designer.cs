@@ -33,6 +33,8 @@
             // 
             // backButton
             // 
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -44,14 +46,14 @@
             this.backButton.Size = new System.Drawing.Size(129, 30);
             this.backButton.TabIndex = 0;
             this.backButton.Text = "  ОБРАТНО";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // BackButtonControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.backButton);
             this.Name = "BackButtonControl";
             this.Size = new System.Drawing.Size(135, 36);

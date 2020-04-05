@@ -32,5 +32,10 @@ namespace TeatrUI
         {
             OnAddButtonClicked(sender, e);
         }
+
+        private void sortBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,5 +21,15 @@ namespace TeatrUI
         {
 
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pageTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

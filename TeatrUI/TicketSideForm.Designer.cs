@@ -28,145 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.author = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.director = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.actors = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.duration = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.title = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.Label();
-            this.scene = new System.Windows.Forms.Label();
+            this.authorField = new System.Windows.Forms.Label();
+            this.authorLabel = new System.Windows.Forms.Label();
+            this.directorField = new System.Windows.Forms.Label();
+            this.directorLabel = new System.Windows.Forms.Label();
+            this.actorsField = new System.Windows.Forms.Label();
+            this.actorsLabel = new System.Windows.Forms.Label();
+            this.durationField = new System.Windows.Forms.Label();
+            this.durationLabel = new System.Windows.Forms.Label();
+            this.titleField = new System.Windows.Forms.Label();
+            this.dateField = new System.Windows.Forms.Label();
+            this.sceneField = new System.Windows.Forms.Label();
             this.seatsPanel = new System.Windows.Forms.Panel();
             this.reservedTicketControl2 = new TeatrUI.UserControls.ReservedTicketControl();
             this.reservedTicketControl1 = new TeatrUI.UserControls.ReservedTicketControl();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.total = new System.Windows.Forms.Label();
+            this.payBtn = new System.Windows.Forms.Button();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.totalField = new System.Windows.Forms.Label();
+            this.backButtonControl1 = new TeatrUI.UserControls.BackButtonControl();
             this.seatsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // author
+            // authorField
             // 
-            this.author.AutoSize = true;
-            this.author.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.author.ForeColor = System.Drawing.Color.Gray;
-            this.author.Location = new System.Drawing.Point(13, 135);
-            this.author.Name = "author";
-            this.author.Size = new System.Drawing.Size(155, 18);
-            this.author.TabIndex = 32;
-            this.author.Text = "Костадин Костадинов";
+            this.authorField.AutoSize = true;
+            this.authorField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.authorField.ForeColor = System.Drawing.Color.Gray;
+            this.authorField.Location = new System.Drawing.Point(13, 135);
+            this.authorField.Name = "authorField";
+            this.authorField.Size = new System.Drawing.Size(138, 16);
+            this.authorField.TabIndex = 32;
+            this.authorField.Text = "Костадин Костадинов";
             // 
-            // label8
+            // authorLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(12, 117);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 18);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Автор:";
+            this.authorLabel.AutoSize = true;
+            this.authorLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.authorLabel.Location = new System.Drawing.Point(12, 117);
+            this.authorLabel.Name = "authorLabel";
+            this.authorLabel.Size = new System.Drawing.Size(47, 16);
+            this.authorLabel.TabIndex = 31;
+            this.authorLabel.Text = "Автор:";
             // 
-            // director
+            // directorField
             // 
-            this.director.AutoSize = true;
-            this.director.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.director.ForeColor = System.Drawing.Color.Gray;
-            this.director.Location = new System.Drawing.Point(13, 175);
-            this.director.Name = "director";
-            this.director.Size = new System.Drawing.Size(155, 18);
-            this.director.TabIndex = 30;
-            this.director.Text = "Костадин Костадинов";
+            this.directorField.AutoSize = true;
+            this.directorField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorField.ForeColor = System.Drawing.Color.Gray;
+            this.directorField.Location = new System.Drawing.Point(13, 175);
+            this.directorField.Name = "directorField";
+            this.directorField.Size = new System.Drawing.Size(138, 16);
+            this.directorField.TabIndex = 30;
+            this.directorField.Text = "Костадин Костадинов";
             // 
-            // label6
+            // directorLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(12, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 18);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Режисьор";
+            this.directorLabel.AutoSize = true;
+            this.directorLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorLabel.Location = new System.Drawing.Point(12, 157);
+            this.directorLabel.Name = "directorLabel";
+            this.directorLabel.Size = new System.Drawing.Size(67, 16);
+            this.directorLabel.TabIndex = 29;
+            this.directorLabel.Text = "Режисьор";
             // 
-            // actors
+            // actorsField
             // 
-            this.actors.AutoEllipsis = true;
-            this.actors.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.actors.ForeColor = System.Drawing.Color.Gray;
-            this.actors.Location = new System.Drawing.Point(13, 211);
-            this.actors.Name = "actors";
-            this.actors.Size = new System.Drawing.Size(289, 40);
-            this.actors.TabIndex = 28;
-            this.actors.Text = "Костадин Костадинов Костадин Костадинов Костадин Костадинов Костадин Костадинов К" +
+            this.actorsField.AutoEllipsis = true;
+            this.actorsField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.actorsField.ForeColor = System.Drawing.Color.Gray;
+            this.actorsField.Location = new System.Drawing.Point(13, 211);
+            this.actorsField.Name = "actorsField";
+            this.actorsField.Size = new System.Drawing.Size(289, 40);
+            this.actorsField.TabIndex = 28;
+            this.actorsField.Text = "Костадин Костадинов Костадин Костадинов Костадин Костадинов Костадин Костадинов К" +
     "остадин Костадинов Костадин Костадинов ";
             // 
-            // label4
+            // actorsLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(12, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 18);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Актьори";
+            this.actorsLabel.AutoSize = true;
+            this.actorsLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.actorsLabel.Location = new System.Drawing.Point(12, 193);
+            this.actorsLabel.Name = "actorsLabel";
+            this.actorsLabel.Size = new System.Drawing.Size(56, 16);
+            this.actorsLabel.TabIndex = 27;
+            this.actorsLabel.Text = "Актьори";
             // 
-            // duration
+            // durationField
             // 
-            this.duration.AutoSize = true;
-            this.duration.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.duration.ForeColor = System.Drawing.Color.Gray;
-            this.duration.Location = new System.Drawing.Point(14, 269);
-            this.duration.Name = "duration";
-            this.duration.Size = new System.Drawing.Size(52, 18);
-            this.duration.TabIndex = 26;
-            this.duration.Text = "96мин";
+            this.durationField.AutoSize = true;
+            this.durationField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.durationField.ForeColor = System.Drawing.Color.Gray;
+            this.durationField.Location = new System.Drawing.Point(14, 269);
+            this.durationField.Name = "durationField";
+            this.durationField.Size = new System.Drawing.Size(45, 16);
+            this.durationField.TabIndex = 26;
+            this.durationField.Text = "96мин";
             // 
-            // label1
+            // durationLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(13, 251);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 18);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Продължителност";
+            this.durationLabel.AutoSize = true;
+            this.durationLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.durationLabel.Location = new System.Drawing.Point(13, 251);
+            this.durationLabel.Name = "durationLabel";
+            this.durationLabel.Size = new System.Drawing.Size(115, 16);
+            this.durationLabel.TabIndex = 25;
+            this.durationLabel.Text = "Продължителност";
             // 
-            // title
+            // titleField
             // 
-            this.title.AutoEllipsis = true;
-            this.title.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.title.Location = new System.Drawing.Point(12, 25);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(294, 92);
-            this.title.TabIndex = 24;
-            this.title.Text = "Ромео и Жулиета";
-            this.title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.titleField.AutoEllipsis = true;
+            this.titleField.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.titleField.Location = new System.Drawing.Point(12, 25);
+            this.titleField.Name = "titleField";
+            this.titleField.Size = new System.Drawing.Size(294, 92);
+            this.titleField.TabIndex = 24;
+            this.titleField.Text = "Ромео и Жулиета";
+            this.titleField.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // date
+            // dateField
             // 
-            this.date.AutoSize = true;
-            this.date.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.date.Location = new System.Drawing.Point(14, 301);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(238, 44);
-            this.date.TabIndex = 33;
-            this.date.Text = "01.01.20 19:00";
+            this.dateField.AutoSize = true;
+            this.dateField.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.dateField.Location = new System.Drawing.Point(14, 301);
+            this.dateField.Name = "dateField";
+            this.dateField.Size = new System.Drawing.Size(234, 37);
+            this.dateField.TabIndex = 33;
+            this.dateField.Text = "01.01.20 19:00";
             // 
-            // scene
+            // sceneField
             // 
-            this.scene.AutoSize = true;
-            this.scene.Font = new System.Drawing.Font("Montserrat SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.scene.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.scene.Location = new System.Drawing.Point(14, 345);
-            this.scene.Name = "scene";
-            this.scene.Size = new System.Drawing.Size(195, 29);
-            this.scene.TabIndex = 34;
-            this.scene.Text = "ГОЛЯМА СЦЕНА";
+            this.sceneField.AutoSize = true;
+            this.sceneField.Font = new System.Drawing.Font("Montserrat SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sceneField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.sceneField.Location = new System.Drawing.Point(14, 345);
+            this.sceneField.Name = "sceneField";
+            this.sceneField.Size = new System.Drawing.Size(178, 24);
+            this.sceneField.TabIndex = 34;
+            this.sceneField.Text = "ГОЛЯМА СЦЕНА";
             // 
             // seatsPanel
             // 
@@ -200,6 +201,7 @@
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBtn.Enabled = false;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -212,64 +214,75 @@
             this.cancelBtn.Text = "ОТКАЗ";
             this.cancelBtn.UseVisualStyleBackColor = false;
             // 
-            // saveBtn
+            // payBtn
             // 
-            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
-            this.saveBtn.FlatAppearance.BorderSize = 0;
-            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(12, 660);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(100, 30);
-            this.saveBtn.TabIndex = 35;
-            this.saveBtn.Text = "ПЛАТИ";
-            this.saveBtn.UseVisualStyleBackColor = false;
+            this.payBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
+            this.payBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.payBtn.FlatAppearance.BorderSize = 0;
+            this.payBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.payBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.payBtn.ForeColor = System.Drawing.Color.White;
+            this.payBtn.Location = new System.Drawing.Point(12, 660);
+            this.payBtn.Name = "payBtn";
+            this.payBtn.Size = new System.Drawing.Size(100, 30);
+            this.payBtn.TabIndex = 35;
+            this.payBtn.Text = "ПЛАТИ";
+            this.payBtn.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // totalLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label5.Location = new System.Drawing.Point(10, 618);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 29);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "ОБЩО:";
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.totalLabel.Location = new System.Drawing.Point(10, 618);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(82, 24);
+            this.totalLabel.TabIndex = 37;
+            this.totalLabel.Text = "ОБЩО:";
             // 
-            // total
+            // totalField
             // 
-            this.total.AutoSize = true;
-            this.total.Font = new System.Drawing.Font("Montserrat SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.total.Location = new System.Drawing.Point(93, 618);
-            this.total.Name = "total";
-            this.total.Size = new System.Drawing.Size(64, 29);
-            this.total.TabIndex = 38;
-            this.total.Text = "52лв";
+            this.totalField.AutoSize = true;
+            this.totalField.Font = new System.Drawing.Font("Montserrat SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.totalField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.totalField.Location = new System.Drawing.Point(93, 618);
+            this.totalField.Name = "totalField";
+            this.totalField.Size = new System.Drawing.Size(60, 24);
+            this.totalField.TabIndex = 38;
+            this.totalField.Text = "52лв";
+            // 
+            // backButtonControl1
+            // 
+            this.backButtonControl1.BackColor = System.Drawing.Color.White;
+            this.backButtonControl1.Location = new System.Drawing.Point(12, 13);
+            this.backButtonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backButtonControl1.Name = "backButtonControl1";
+            this.backButtonControl1.Size = new System.Drawing.Size(135, 36);
+            this.backButtonControl1.TabIndex = 39;
             // 
             // TickerSideForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(330, 710);
-            this.Controls.Add(this.total);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.backButtonControl1);
+            this.Controls.Add(this.totalField);
+            this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.seatsPanel);
-            this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.scene);
-            this.Controls.Add(this.date);
-            this.Controls.Add(this.author);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.director);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.actors);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.duration);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.title);
+            this.Controls.Add(this.payBtn);
+            this.Controls.Add(this.sceneField);
+            this.Controls.Add(this.dateField);
+            this.Controls.Add(this.authorField);
+            this.Controls.Add(this.authorLabel);
+            this.Controls.Add(this.directorField);
+            this.Controls.Add(this.directorLabel);
+            this.Controls.Add(this.actorsField);
+            this.Controls.Add(this.actorsLabel);
+            this.Controls.Add(this.durationField);
+            this.Controls.Add(this.durationLabel);
+            this.Controls.Add(this.titleField);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -283,23 +296,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Label author;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label director;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label actors;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label duration;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label title;
-        private System.Windows.Forms.Label date;
-        private System.Windows.Forms.Label scene;
+        private System.Windows.Forms.Label authorField;
+        private System.Windows.Forms.Label authorLabel;
+        private System.Windows.Forms.Label directorField;
+        private System.Windows.Forms.Label directorLabel;
+        private System.Windows.Forms.Label actorsField;
+        private System.Windows.Forms.Label actorsLabel;
+        private System.Windows.Forms.Label durationField;
+        private System.Windows.Forms.Label durationLabel;
+        private System.Windows.Forms.Label titleField;
+        private System.Windows.Forms.Label dateField;
+        private System.Windows.Forms.Label sceneField;
         private System.Windows.Forms.Panel seatsPanel;
         private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label total;
+        private System.Windows.Forms.Button payBtn;
+        private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Label totalField;
         private UserControls.ReservedTicketControl reservedTicketControl1;
         private UserControls.ReservedTicketControl reservedTicketControl2;
+        private UserControls.BackButtonControl backButtonControl1;
     }
 }

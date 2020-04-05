@@ -21,5 +21,10 @@ namespace TeatrUI
         {
 
         }
+
+        private void headingLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
