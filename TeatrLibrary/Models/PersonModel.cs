@@ -20,7 +20,7 @@ namespace TeatrLibrary.Models
             return true;
         }
         public PersonModel() { }
-        public PersonModel(string name, string position, string phone="", string mail="", string photo = null, bool active=true)
+        public PersonModel(string name, string position = "", int id = 0, string phone="", string mail="", string photo = null, bool active=true)
         {
             if(name != "")
             {
@@ -32,6 +32,7 @@ namespace TeatrLibrary.Models
                 Position = position;
                 return;
             }
+            Id = id;
             Phone = phone;
             Mail = mail;
             Photo = photo;

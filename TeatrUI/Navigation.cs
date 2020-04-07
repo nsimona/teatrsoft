@@ -76,5 +76,10 @@ namespace TeatrUI
             selector_move(infoBtnNav.Location.Y);
             NavigationClicked("info");
         }
+
+        private void userPhotoField_Click(object sender, EventArgs e)
+        {
+            NavigationClicked("account");
+        }
     }
 }

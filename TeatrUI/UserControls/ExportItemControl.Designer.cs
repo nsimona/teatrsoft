@@ -42,7 +42,7 @@
             this.dateField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.dateField.Location = new System.Drawing.Point(3, 6);
             this.dateField.Name = "dateField";
-            this.dateField.Size = new System.Drawing.Size(96, 50);
+            this.dateField.Size = new System.Drawing.Size(84, 50);
             this.dateField.TabIndex = 99;
             this.dateField.Text = "01.03.20 19:00";
             // 
@@ -50,7 +50,7 @@
             // 
             this.nameField.AutoEllipsis = true;
             this.nameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.nameField.Location = new System.Drawing.Point(118, 6);
+            this.nameField.Location = new System.Drawing.Point(107, 6);
             this.nameField.Name = "nameField";
             this.nameField.Size = new System.Drawing.Size(151, 50);
             this.nameField.TabIndex = 100;
@@ -62,7 +62,7 @@
             this.sceneField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.sceneField.Location = new System.Drawing.Point(287, 6);
             this.sceneField.Name = "sceneField";
-            this.sceneField.Size = new System.Drawing.Size(109, 50);
+            this.sceneField.Size = new System.Drawing.Size(97, 50);
             this.sceneField.TabIndex = 101;
             this.sceneField.Text = "Голяма сцена";
             // 
@@ -70,7 +70,7 @@
             // 
             this.seatsField.AutoEllipsis = true;
             this.seatsField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.seatsField.Location = new System.Drawing.Point(413, 6);
+            this.seatsField.Location = new System.Drawing.Point(390, 6);
             this.seatsField.Name = "seatsField";
             this.seatsField.Size = new System.Drawing.Size(88, 50);
             this.seatsField.TabIndex = 102;
@@ -80,9 +80,9 @@
             // 
             this.totalField.AutoEllipsis = true;
             this.totalField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.totalField.Location = new System.Drawing.Point(497, 6);
+            this.totalField.Location = new System.Drawing.Point(482, 6);
             this.totalField.Name = "totalField";
-            this.totalField.Size = new System.Drawing.Size(83, 50);
+            this.totalField.Size = new System.Drawing.Size(71, 50);
             this.totalField.TabIndex = 103;
             this.totalField.Text = "10,000";
             this.totalField.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -93,12 +93,12 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(580, 2);
+            this.panel1.Size = new System.Drawing.Size(556, 2);
             this.panel1.TabIndex = 104;
             // 
             // ExportItemControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
@@ -110,7 +110,7 @@
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ExportItemControl";
-            this.Size = new System.Drawing.Size(580, 63);
+            this.Size = new System.Drawing.Size(556, 63);
             this.ResumeLayout(false);
 
         }

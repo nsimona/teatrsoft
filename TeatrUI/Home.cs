@@ -24,10 +24,16 @@ namespace TeatrUI
 
         private void Home_Load(object sender, EventArgs e)
         {
-
+            todayField.Text = DateTime.Now.ToString("dd.MM.yyyy");
+            tomorrowField.Text = DateTime.Now.AddDays(1).ToString("dd.MM.yyyy");
         }
 
         private void pageTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void todayField_Click(object sender, EventArgs e)
         {
 
         }

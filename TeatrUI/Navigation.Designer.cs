@@ -45,12 +45,14 @@
             // 
             // userPhotoField
             // 
+            this.userPhotoField.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userPhotoField.Location = new System.Drawing.Point(29, 29);
             this.userPhotoField.Margin = new System.Windows.Forms.Padding(20, 20, 10, 20);
             this.userPhotoField.Name = "userPhotoField";
             this.userPhotoField.Size = new System.Drawing.Size(100, 100);
             this.userPhotoField.TabIndex = 0;
             this.userPhotoField.TabStop = false;
+            this.userPhotoField.Click += new System.EventHandler(this.userPhotoField_Click);
             // 
             // userNameField
             // 
@@ -59,7 +61,7 @@
             this.userNameField.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.userNameField.Location = new System.Drawing.Point(142, 40);
             this.userNameField.Name = "userNameField";
-            this.userNameField.Size = new System.Drawing.Size(91, 19);
+            this.userNameField.Size = new System.Drawing.Size(98, 22);
             this.userNameField.TabIndex = 1;
             this.userNameField.Text = "Симона Н.";
             // 
@@ -70,7 +72,7 @@
             this.userRoleField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.userRoleField.Location = new System.Drawing.Point(142, 62);
             this.userRoleField.Name = "userRoleField";
-            this.userRoleField.Size = new System.Drawing.Size(119, 18);
+            this.userRoleField.Size = new System.Drawing.Size(141, 22);
             this.userRoleField.TabIndex = 2;
             this.userRoleField.Text = "администратор";
             // 
@@ -262,7 +264,7 @@
             // 
             // Navigation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::TeatrUI.Properties.Resources.navBg;

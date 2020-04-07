@@ -12,12 +12,13 @@ namespace TeatrLibrary.Models
 {
     public class ProductionModel
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Premiere { get; set; }
         public string Author { get; set; }
         public string Director { get; set; }
         public string Description { get; set; }
-        public byte[] Poster { get; set; }
+        public string PosterFileName { get; set; }
         public string Scene { get; set; }
         public List<PersonModel> Actors { get; set; } = new List<PersonModel>();
         public List<Plays> Dates { get; set; } = new List<Plays>();

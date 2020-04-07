@@ -41,7 +41,7 @@
             this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
             this.pageTitle.Location = new System.Drawing.Point(0, 10);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(465, 24);
+            this.pageTitle.Size = new System.Drawing.Size(510, 29);
             this.pageTitle.TabIndex = 29;
             this.pageTitle.Text = "ДОБАВЯНЕ/ РЕДАКТИРАНЕ НА СПЕКТАКЪЛ\r\n";
             // 
@@ -59,6 +59,7 @@
             this.saveBtn.TabIndex = 27;
             this.saveBtn.Text = "ЗАПИС";
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // addProductionPanel
             // 
@@ -86,7 +87,7 @@
             // 
             // AddProduction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);

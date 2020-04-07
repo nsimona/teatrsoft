@@ -12,10 +12,10 @@ namespace TeatrUI
 {
     public partial class AddProduction : Form
     {
+        AddProductionForm production = new AddProductionForm();
         public AddProduction()
         {
             InitializeComponent();
-            AddProductionForm production = new AddProductionForm();
             production.TopLevel = false;
             addProductionPanel.Controls.Add(production);
             production.Show();
@@ -24,6 +24,15 @@ namespace TeatrUI
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in production.Controls)
+            {
+                
+            }
+            
         }
     }
 }

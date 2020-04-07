@@ -16,5 +16,17 @@ namespace TeatrUI
         {
             InitializeComponent();
         }
+
+        private void editPhotoBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                photoField.Text = opnfd.FileName;
+                photoField.Image = new Bitmap(opnfd.FileName);
+                photoField.AccessibleName = opnfd.SafeFileName;
+            }
+        }
     }
 }

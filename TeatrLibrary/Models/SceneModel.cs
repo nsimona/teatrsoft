@@ -6,6 +6,12 @@ namespace TeatrLibrary.Models
 {
     public class SceneModel
     {
+        public SceneModel(string name)
+        {
+            Name = name;
+        }
+
+        public int Id{ get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public decimal TicketPrice { get; set; }

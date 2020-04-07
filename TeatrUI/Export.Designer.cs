@@ -43,7 +43,6 @@
             this.datesField = new System.Windows.Forms.Label();
             this.forProductionField = new System.Windows.Forms.Label();
             this.resultPanel = new System.Windows.Forms.Panel();
-            this.exportItemControl2 = new TeatrUI.UserControls.ExportItemControl();
             this.tableDateLabel = new System.Windows.Forms.Label();
             this.tableProductionLabel = new System.Windows.Forms.Label();
             this.tableTicketLabel = new System.Windows.Forms.Label();
@@ -54,6 +53,9 @@
             this.sumResultLabel = new System.Windows.Forms.Label();
             this.sumResultField = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.exportItemControl3 = new TeatrUI.UserControls.ExportItemControl();
+            this.exportItemControl2 = new TeatrUI.UserControls.ExportItemControl();
+            this.exportItemControl1 = new TeatrUI.UserControls.ExportItemControl();
             this.resultPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,18 +95,22 @@
             // 
             // fromDateControl
             // 
-            this.fromDateControl.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fromDateControl.CustomFormat = "dd/MM/yyyy";
+            this.fromDateControl.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromDateControl.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fromDateControl.Location = new System.Drawing.Point(43, 69);
             this.fromDateControl.Name = "fromDateControl";
-            this.fromDateControl.Size = new System.Drawing.Size(147, 27);
+            this.fromDateControl.Size = new System.Drawing.Size(147, 29);
             this.fromDateControl.TabIndex = 74;
             // 
             // toDateControl
             // 
-            this.toDateControl.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.toDateControl.CustomFormat = "dd/MM/yyyy";
+            this.toDateControl.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toDateControl.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.toDateControl.Location = new System.Drawing.Point(257, 69);
             this.toDateControl.Name = "toDateControl";
-            this.toDateControl.Size = new System.Drawing.Size(147, 27);
+            this.toDateControl.Size = new System.Drawing.Size(147, 29);
             this.toDateControl.TabIndex = 75;
             // 
             // productionLabel
@@ -172,7 +178,7 @@
             this.datesLabel.AutoSize = true;
             this.datesLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.datesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.datesLabel.Location = new System.Drawing.Point(0, 259);
+            this.datesLabel.Location = new System.Drawing.Point(0, 260);
             this.datesLabel.Name = "datesLabel";
             this.datesLabel.Size = new System.Drawing.Size(131, 22);
             this.datesLabel.TabIndex = 81;
@@ -194,7 +200,7 @@
             this.datesField.AutoSize = true;
             this.datesField.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.datesField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.datesField.Location = new System.Drawing.Point(137, 259);
+            this.datesField.Location = new System.Drawing.Point(137, 260);
             this.datesField.Name = "datesField";
             this.datesField.Size = new System.Drawing.Size(184, 22);
             this.datesField.TabIndex = 83;
@@ -213,28 +219,21 @@
             // 
             // resultPanel
             // 
+            this.resultPanel.AutoScroll = true;
+            this.resultPanel.Controls.Add(this.exportItemControl3);
             this.resultPanel.Controls.Add(this.exportItemControl2);
+            this.resultPanel.Controls.Add(this.exportItemControl1);
             this.resultPanel.Location = new System.Drawing.Point(6, 359);
             this.resultPanel.Name = "resultPanel";
             this.resultPanel.Size = new System.Drawing.Size(579, 247);
             this.resultPanel.TabIndex = 87;
-            // 
-            // exportItemControl2
-            // 
-            this.exportItemControl2.BackColor = System.Drawing.Color.White;
-            this.exportItemControl2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exportItemControl2.Location = new System.Drawing.Point(1, 0);
-            this.exportItemControl2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.exportItemControl2.Name = "exportItemControl2";
-            this.exportItemControl2.Size = new System.Drawing.Size(581, 69);
-            this.exportItemControl2.TabIndex = 1;
             // 
             // tableDateLabel
             // 
             this.tableDateLabel.AutoSize = true;
             this.tableDateLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.tableDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableDateLabel.Location = new System.Drawing.Point(12, 320);
+            this.tableDateLabel.Location = new System.Drawing.Point(10, 320);
             this.tableDateLabel.Name = "tableDateLabel";
             this.tableDateLabel.Size = new System.Drawing.Size(52, 22);
             this.tableDateLabel.TabIndex = 88;
@@ -245,7 +244,7 @@
             this.tableProductionLabel.AutoSize = true;
             this.tableProductionLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.tableProductionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableProductionLabel.Location = new System.Drawing.Point(122, 320);
+            this.tableProductionLabel.Location = new System.Drawing.Point(119, 320);
             this.tableProductionLabel.Name = "tableProductionLabel";
             this.tableProductionLabel.Size = new System.Drawing.Size(104, 22);
             this.tableProductionLabel.TabIndex = 90;
@@ -256,7 +255,7 @@
             this.tableTicketLabel.AutoSize = true;
             this.tableTicketLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.tableTicketLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableTicketLabel.Location = new System.Drawing.Point(421, 320);
+            this.tableTicketLabel.Location = new System.Drawing.Point(398, 320);
             this.tableTicketLabel.Name = "tableTicketLabel";
             this.tableTicketLabel.Size = new System.Drawing.Size(74, 22);
             this.tableTicketLabel.TabIndex = 91;
@@ -267,7 +266,7 @@
             this.tableAmountLabel.AutoSize = true;
             this.tableAmountLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.tableAmountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableAmountLabel.Location = new System.Drawing.Point(522, 320);
+            this.tableAmountLabel.Location = new System.Drawing.Point(505, 320);
             this.tableAmountLabel.Name = "tableAmountLabel";
             this.tableAmountLabel.Size = new System.Drawing.Size(55, 22);
             this.tableAmountLabel.TabIndex = 92;
@@ -278,7 +277,7 @@
             this.tableSceneLabel.AutoSize = true;
             this.tableSceneLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.tableSceneLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableSceneLabel.Location = new System.Drawing.Point(292, 320);
+            this.tableSceneLabel.Location = new System.Drawing.Point(294, 320);
             this.tableSceneLabel.Name = "tableSceneLabel";
             this.tableSceneLabel.Size = new System.Drawing.Size(64, 22);
             this.tableSceneLabel.TabIndex = 93;
@@ -310,7 +309,7 @@
             // 
             this.sumResultLabel.AutoSize = true;
             this.sumResultLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.sumResultLabel.Location = new System.Drawing.Point(355, 609);
+            this.sumResultLabel.Location = new System.Drawing.Point(341, 611);
             this.sumResultLabel.Name = "sumResultLabel";
             this.sumResultLabel.Size = new System.Drawing.Size(63, 22);
             this.sumResultLabel.TabIndex = 94;
@@ -318,9 +317,9 @@
             // 
             // sumResultField
             // 
-            this.sumResultField.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.sumResultField.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sumResultField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.sumResultField.Location = new System.Drawing.Point(432, 609);
+            this.sumResultField.Location = new System.Drawing.Point(407, 609);
             this.sumResultField.Name = "sumResultField";
             this.sumResultField.Size = new System.Drawing.Size(153, 24);
             this.sumResultField.TabIndex = 95;
@@ -332,8 +331,38 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.panel2.Location = new System.Drawing.Point(6, 351);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(574, 2);
+            this.panel2.Size = new System.Drawing.Size(565, 2);
             this.panel2.TabIndex = 105;
+            // 
+            // exportItemControl3
+            // 
+            this.exportItemControl3.BackColor = System.Drawing.Color.White;
+            this.exportItemControl3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exportItemControl3.Location = new System.Drawing.Point(-2, 204);
+            this.exportItemControl3.Margin = new System.Windows.Forms.Padding(5);
+            this.exportItemControl3.Name = "exportItemControl3";
+            this.exportItemControl3.Size = new System.Drawing.Size(556, 63);
+            this.exportItemControl3.TabIndex = 2;
+            // 
+            // exportItemControl2
+            // 
+            this.exportItemControl2.BackColor = System.Drawing.Color.White;
+            this.exportItemControl2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exportItemControl2.Location = new System.Drawing.Point(0, 87);
+            this.exportItemControl2.Margin = new System.Windows.Forms.Padding(5);
+            this.exportItemControl2.Name = "exportItemControl2";
+            this.exportItemControl2.Size = new System.Drawing.Size(556, 63);
+            this.exportItemControl2.TabIndex = 1;
+            // 
+            // exportItemControl1
+            // 
+            this.exportItemControl1.BackColor = System.Drawing.Color.White;
+            this.exportItemControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exportItemControl1.Location = new System.Drawing.Point(0, 2);
+            this.exportItemControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.exportItemControl1.Name = "exportItemControl1";
+            this.exportItemControl1.Size = new System.Drawing.Size(556, 63);
+            this.exportItemControl1.TabIndex = 0;
             // 
             // Export
             // 
@@ -368,7 +397,7 @@
             this.Controls.Add(this.pageTitle);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Export";
             this.Text = "Export";
             this.Load += new System.EventHandler(this.Export_Load);
@@ -402,9 +431,11 @@
         private System.Windows.Forms.Label tableTicketLabel;
         private System.Windows.Forms.Label tableAmountLabel;
         private System.Windows.Forms.Label tableSceneLabel;
-        private UserControls.ExportItemControl exportItemControl2;
         private System.Windows.Forms.Label sumResultLabel;
         private System.Windows.Forms.Label sumResultField;
         private System.Windows.Forms.Panel panel2;
+        private UserControls.ExportItemControl exportItemControl3;
+        private UserControls.ExportItemControl exportItemControl2;
+        private UserControls.ExportItemControl exportItemControl1;
     }
 }

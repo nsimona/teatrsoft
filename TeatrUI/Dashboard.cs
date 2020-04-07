@@ -79,6 +79,10 @@ namespace TeatrUI
                     Info info = new Info();
                     loadContent(info);
                     break;
+                case "account":
+                    Account account = new Account();
+                    loadContent(account);
+                    break;
             }
 
 

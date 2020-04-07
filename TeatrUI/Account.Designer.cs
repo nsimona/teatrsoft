@@ -51,24 +51,28 @@
             this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
             this.pageTitle.Location = new System.Drawing.Point(0, 10);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(103, 24);
+            this.pageTitle.Size = new System.Drawing.Size(117, 29);
             this.pageTitle.TabIndex = 16;
             this.pageTitle.Text = "ПРОФИЛ";
             // 
             // editPhotoBtn
             // 
+            this.editPhotoBtn.BackColor = System.Drawing.Color.Transparent;
             this.editPhotoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editPhotoBtn.FlatAppearance.BorderSize = 0;
             this.editPhotoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editPhotoBtn.ForeColor = System.Drawing.Color.Transparent;
             this.editPhotoBtn.Image = global::TeatrUI.Properties.Resources.edituser;
-            this.editPhotoBtn.Location = new System.Drawing.Point(88, 177);
+            this.editPhotoBtn.Location = new System.Drawing.Point(88, 180);
             this.editPhotoBtn.Name = "editPhotoBtn";
             this.editPhotoBtn.Size = new System.Drawing.Size(42, 40);
             this.editPhotoBtn.TabIndex = 86;
-            this.editPhotoBtn.UseVisualStyleBackColor = true;
+            this.editPhotoBtn.UseVisualStyleBackColor = false;
+            this.editPhotoBtn.Click += new System.EventHandler(this.editPhotoBtn_Click);
             // 
             // photoField
             // 
+            this.photoField.BackColor = System.Drawing.Color.Silver;
             this.photoField.Location = new System.Drawing.Point(0, 90);
             this.photoField.Name = "photoField";
             this.photoField.Size = new System.Drawing.Size(130, 130);
@@ -89,7 +93,7 @@
             this.mailLabel.Location = new System.Drawing.Point(172, 151);
             this.mailLabel.Margin = new System.Windows.Forms.Padding(3);
             this.mailLabel.Name = "mailLabel";
-            this.mailLabel.Size = new System.Drawing.Size(56, 18);
+            this.mailLabel.Size = new System.Drawing.Size(67, 22);
             this.mailLabel.TabIndex = 88;
             this.mailLabel.Text = "Имейл";
             // 
@@ -100,7 +104,7 @@
             this.nameLabel.Location = new System.Drawing.Point(173, 90);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(3);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(40, 18);
+            this.nameLabel.Size = new System.Drawing.Size(46, 22);
             this.nameLabel.TabIndex = 87;
             this.nameLabel.Text = "Име";
             // 
@@ -126,7 +130,7 @@
             this.repeatNewPassLabel.Location = new System.Drawing.Point(173, 271);
             this.repeatNewPassLabel.Margin = new System.Windows.Forms.Padding(3);
             this.repeatNewPassLabel.Name = "repeatNewPassLabel";
-            this.repeatNewPassLabel.Size = new System.Drawing.Size(165, 18);
+            this.repeatNewPassLabel.Size = new System.Drawing.Size(191, 22);
             this.repeatNewPassLabel.TabIndex = 95;
             this.repeatNewPassLabel.Text = "Повтори нова парола";
             // 
@@ -159,13 +163,13 @@
             this.newPassLabel.Location = new System.Drawing.Point(172, 210);
             this.newPassLabel.Margin = new System.Windows.Forms.Padding(3);
             this.newPassLabel.Name = "newPassLabel";
-            this.newPassLabel.Size = new System.Drawing.Size(102, 18);
+            this.newPassLabel.Size = new System.Drawing.Size(116, 22);
             this.newPassLabel.TabIndex = 92;
             this.newPassLabel.Text = "Нова парола";
             // 
             // Account
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);

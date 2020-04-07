@@ -82,7 +82,7 @@ namespace TeatrUI
                     );
                 File.Copy(sourcePath, directionPath, true);
 
-                PersonModel person = new PersonModel(nameTextBox.Text, categoryComboBox.Text, phoneTextBox.Text, mailTextBox.Text, photoField.AccessibleName);
+                PersonModel person = new PersonModel(nameTextBox.Text, categoryComboBox.Text, phone: phoneTextBox.Text, mail: mailTextBox.Text, photo: photoField.AccessibleName);
                 GlobalConfig.Connection.AddPerson(person, photoField.AccessibleName);
             }
             else

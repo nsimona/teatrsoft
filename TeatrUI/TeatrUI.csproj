@@ -204,6 +204,18 @@
     <Compile Include="UserControls\ProductionDateTicketControl.Designer.cs">
       <DependentUpon>ProductionDateTicketControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ProductionFormAddedActor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductionFormAddedActor.Designer.cs">
+      <DependentUpon>ProductionFormAddedActor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductionFormAddedDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductionFormAddedDate.Designer.cs">
+      <DependentUpon>ProductionFormAddedDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ProductionItemControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -340,6 +352,12 @@
     <EmbeddedResource Include="UserControls\ProductionDateTicketControl.resx">
       <DependentUpon>ProductionDateTicketControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProductionFormAddedActor.resx">
+      <DependentUpon>ProductionFormAddedActor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProductionFormAddedDate.resx">
+      <DependentUpon>ProductionFormAddedDate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ProductionItemControl.resx">
       <DependentUpon>ProductionItemControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +445,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edituser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delbtbn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

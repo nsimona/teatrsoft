@@ -52,9 +52,8 @@
             this.currentTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.currentTimeLabel.Location = new System.Drawing.Point(470, 9);
             this.currentTimeLabel.Name = "currentTimeLabel";
-            this.currentTimeLabel.Size = new System.Drawing.Size(120, 20);
+            this.currentTimeLabel.Size = new System.Drawing.Size(0, 20);
             this.currentTimeLabel.TabIndex = 1;
-            this.currentTimeLabel.Text = "21/21/20 19:14:55";
             this.currentTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.currentTimeLabel.Click += new System.EventHandler(this.currentTimeLabel_Click);
             // 

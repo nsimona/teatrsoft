@@ -28,71 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.productionDateTicketControl2 = new TeatrUI.UserControls.ProductionDateTicketControl();
-            this.productionDateTicketControl1 = new TeatrUI.UserControls.ProductionDateTicketControl();
-            this.productionItemControl2 = new TeatrUI.UserControls.ProductionItemControl();
-            this.productionPanel = new System.Windows.Forms.Panel();
-            this.productionSubPanel = new System.Windows.Forms.Panel();
-            this.ticketsPanel = new System.Windows.Forms.Panel();
             this.addNewBtn = new System.Windows.Forms.Button();
             this.sortBtn = new System.Windows.Forms.Button();
             this.pageTitle = new System.Windows.Forms.Label();
-            this.productionPanel.SuspendLayout();
+            this.ticketsPanel = new System.Windows.Forms.Panel();
+            this.productionDateTicketControl1 = new TeatrUI.UserControls.ProductionDateTicketControl();
+            this.productionDateTicketControl2 = new TeatrUI.UserControls.ProductionDateTicketControl();
+            this.productionItemControl2 = new TeatrUI.UserControls.ProductionItemControl();
+            this.productionsPanel = new System.Windows.Forms.Panel();
+            this.ticketsPanel.SuspendLayout();
+            this.productionsPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // productionDateTicketControl2
-            // 
-            this.productionDateTicketControl2.BackColor = System.Drawing.Color.White;
-            this.productionDateTicketControl2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.productionDateTicketControl2.Location = new System.Drawing.Point(354, 153);
-            this.productionDateTicketControl2.Margin = new System.Windows.Forms.Padding(5);
-            this.productionDateTicketControl2.Name = "productionDateTicketControl2";
-            this.productionDateTicketControl2.Size = new System.Drawing.Size(236, 37);
-            this.productionDateTicketControl2.TabIndex = 9;
-            // 
-            // productionDateTicketControl1
-            // 
-            this.productionDateTicketControl1.BackColor = System.Drawing.Color.White;
-            this.productionDateTicketControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.productionDateTicketControl1.Location = new System.Drawing.Point(354, 110);
-            this.productionDateTicketControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.productionDateTicketControl1.Name = "productionDateTicketControl1";
-            this.productionDateTicketControl1.Size = new System.Drawing.Size(236, 37);
-            this.productionDateTicketControl1.TabIndex = 8;
-            // 
-            // productionItemControl2
-            // 
-            this.productionItemControl2.BackColor = System.Drawing.Color.White;
-            this.productionItemControl2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.productionItemControl2.Location = new System.Drawing.Point(0, 110);
-            this.productionItemControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.productionItemControl2.Name = "productionItemControl2";
-            this.productionItemControl2.Size = new System.Drawing.Size(352, 150);
-            this.productionItemControl2.TabIndex = 3;
-            // 
-            // productionPanel
-            // 
-            this.productionPanel.BackColor = System.Drawing.Color.White;
-            this.productionPanel.Controls.Add(this.productionSubPanel);
-            this.productionPanel.Controls.Add(this.ticketsPanel);
-            this.productionPanel.Location = new System.Drawing.Point(0, 90);
-            this.productionPanel.Name = "productionPanel";
-            this.productionPanel.Size = new System.Drawing.Size(593, 170);
-            this.productionPanel.TabIndex = 11;
-            // 
-            // productionSubPanel
-            // 
-            this.productionSubPanel.Location = new System.Drawing.Point(0, 1);
-            this.productionSubPanel.Name = "productionSubPanel";
-            this.productionSubPanel.Size = new System.Drawing.Size(352, 169);
-            this.productionSubPanel.TabIndex = 1;
-            // 
-            // ticketsPanel
-            // 
-            this.ticketsPanel.Location = new System.Drawing.Point(353, 0);
-            this.ticketsPanel.Name = "ticketsPanel";
-            this.ticketsPanel.Size = new System.Drawing.Size(237, 169);
-            this.ticketsPanel.TabIndex = 0;
             // 
             // addNewBtn
             // 
@@ -137,43 +83,89 @@
             this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
             this.pageTitle.Location = new System.Drawing.Point(0, 10);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(137, 24);
+            this.pageTitle.Size = new System.Drawing.Size(151, 29);
             this.pageTitle.TabIndex = 13;
             this.pageTitle.Text = "СПЕКТАКЛИ";
             // 
+            // ticketsPanel
+            // 
+            this.ticketsPanel.Controls.Add(this.productionDateTicketControl2);
+            this.ticketsPanel.Controls.Add(this.productionDateTicketControl1);
+            this.ticketsPanel.Location = new System.Drawing.Point(353, 0);
+            this.ticketsPanel.Name = "ticketsPanel";
+            this.ticketsPanel.Size = new System.Drawing.Size(237, 196);
+            this.ticketsPanel.TabIndex = 0;
+            // 
+            // productionDateTicketControl1
+            // 
+            this.productionDateTicketControl1.BackColor = System.Drawing.Color.White;
+            this.productionDateTicketControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.productionDateTicketControl1.Location = new System.Drawing.Point(0, 0);
+            this.productionDateTicketControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.productionDateTicketControl1.Name = "productionDateTicketControl1";
+            this.productionDateTicketControl1.Size = new System.Drawing.Size(236, 37);
+            this.productionDateTicketControl1.TabIndex = 0;
+            // 
+            // productionDateTicketControl2
+            // 
+            this.productionDateTicketControl2.BackColor = System.Drawing.Color.White;
+            this.productionDateTicketControl2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.productionDateTicketControl2.Location = new System.Drawing.Point(0, 35);
+            this.productionDateTicketControl2.Margin = new System.Windows.Forms.Padding(5);
+            this.productionDateTicketControl2.Name = "productionDateTicketControl2";
+            this.productionDateTicketControl2.Size = new System.Drawing.Size(236, 37);
+            this.productionDateTicketControl2.TabIndex = 1;
+            // 
+            // productionItemControl2
+            // 
+            this.productionItemControl2.BackColor = System.Drawing.Color.White;
+            this.productionItemControl2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.productionItemControl2.Location = new System.Drawing.Point(2, 0);
+            this.productionItemControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.productionItemControl2.Name = "productionItemControl2";
+            this.productionItemControl2.Size = new System.Drawing.Size(352, 150);
+            this.productionItemControl2.TabIndex = 3;
+            // 
+            // productionsPanel
+            // 
+            this.productionsPanel.BackColor = System.Drawing.Color.White;
+            this.productionsPanel.Controls.Add(this.productionItemControl2);
+            this.productionsPanel.Controls.Add(this.ticketsPanel);
+            this.productionsPanel.Location = new System.Drawing.Point(0, 90);
+            this.productionsPanel.Name = "productionsPanel";
+            this.productionsPanel.Size = new System.Drawing.Size(593, 196);
+            this.productionsPanel.TabIndex = 11;
+            // 
             // Productions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
             this.Controls.Add(this.pageTitle);
             this.Controls.Add(this.addNewBtn);
-            this.Controls.Add(this.productionDateTicketControl2);
-            this.Controls.Add(this.productionDateTicketControl1);
             this.Controls.Add(this.sortBtn);
-            this.Controls.Add(this.productionItemControl2);
-            this.Controls.Add(this.productionPanel);
+            this.Controls.Add(this.productionsPanel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Productions";
             this.Text = "Productions";
-            this.productionPanel.ResumeLayout(false);
+            this.ticketsPanel.ResumeLayout(false);
+            this.productionsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private UserControls.ProductionItemControl productionItemControl2;
         private System.Windows.Forms.Button sortBtn;
-        private UserControls.ProductionDateTicketControl productionDateTicketControl1;
-        private UserControls.ProductionDateTicketControl productionDateTicketControl2;
-        private System.Windows.Forms.Panel productionPanel;
-        private System.Windows.Forms.Panel productionSubPanel;
-        private System.Windows.Forms.Panel ticketsPanel;
         private System.Windows.Forms.Button addNewBtn;
         private System.Windows.Forms.Label pageTitle;
+        private System.Windows.Forms.Panel ticketsPanel;
+        private UserControls.ProductionDateTicketControl productionDateTicketControl2;
+        private UserControls.ProductionDateTicketControl productionDateTicketControl1;
+        private UserControls.ProductionItemControl productionItemControl2;
+        private System.Windows.Forms.Panel productionsPanel;
     }
 }
