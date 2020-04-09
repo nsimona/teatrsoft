@@ -17,9 +17,15 @@ namespace TeatrUI.UserControls
             InitializeComponent();
         }
 
-        private void titleLabel_Click(object sender, EventArgs e)
+        private void posterField_Click(object sender, EventArgs e)
         {
+            TeatrUIEventHandler.SetMainContent(new ProductionDescription());
+            TeatrUIEventHandler.SetSideContent(new ProductionSideForm());
+        }
 
+        private void eidtBtn_Click(object sender, EventArgs e)
+        {
+            TeatrUIEventHandler.SetMainContent(new CreateUpdateProduction());
         }
     }
 }

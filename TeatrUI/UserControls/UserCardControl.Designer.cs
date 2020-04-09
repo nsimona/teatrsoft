@@ -50,7 +50,7 @@
             this.roleField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.roleField.Location = new System.Drawing.Point(111, 42);
             this.roleField.Name = "roleField";
-            this.roleField.Size = new System.Drawing.Size(55, 17);
+            this.roleField.Size = new System.Drawing.Size(65, 21);
             this.roleField.TabIndex = 9;
             this.roleField.Text = "касиер";
             // 
@@ -61,7 +61,7 @@
             this.nameField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameField.Location = new System.Drawing.Point(112, 24);
             this.nameField.Name = "nameField";
-            this.nameField.Size = new System.Drawing.Size(118, 16);
+            this.nameField.Size = new System.Drawing.Size(137, 18);
             this.nameField.TabIndex = 8;
             this.nameField.Text = "ИВАНА ИВАНОВА";
             // 
@@ -79,10 +79,11 @@
             this.changePassBtn.Text = "промени парола";
             this.changePassBtn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.changePassBtn.UseVisualStyleBackColor = true;
+            this.changePassBtn.Click += new System.EventHandler(this.changePassBtn_Click);
             // 
             // UserCardControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.changePassBtn);

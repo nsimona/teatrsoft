@@ -12,8 +12,8 @@ namespace TeatrUI
 {
     public partial class Navigation : Form
     {
-        public event NavigationClickHandler NavigationClicked;
-        public delegate void NavigationClickHandler(string buttonClicked);
+        /*public event NavigationClickHandler NavigationClicked;
+        public delegate void NavigationClickHandler(string buttonClicked);*/
         public Navigation()
         {
             InitializeComponent();
@@ -27,59 +27,55 @@ namespace TeatrUI
         private void homeNavBtn_Click(object sender, EventArgs e)
         {
             selector_move(homeNavBtn.Location.Y);
-            NavigationClicked("home");
+            TeatrUIEventHandler.SetMainContent(new Home());
+            //NavigationClicked("home");
         }
 
         private void personNavBtn_Click(object sender, EventArgs e)
         {
             selector_move(personNavBtn.Location.Y);
-            NavigationClicked("staffMembers");
+            TeatrUIEventHandler.SetMainContent(new StaffList());
         }
 
         private void programNavBtn_Click(object sender, EventArgs e)
         {
             selector_move(programNavBtn.Location.Y);
-            NavigationClicked("program");
+            TeatrUIEventHandler.SetMainContent(new MonthProgram());
         }
 
         private void productionsNavBtn_Click(object sender, EventArgs e)
         {
             selector_move(productionsNavBtn.Location.Y);
-            NavigationClicked("productions");
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            TeatrUIEventHandler.SetMainContent(new Productions());
         }
 
         private void exportsNavBtn_Click(object sender, EventArgs e)
         {
             selector_move(exportsNavBtn.Location.Y);
-            NavigationClicked("exports");
+            TeatrUIEventHandler.SetMainContent(new Export());
         }
 
         private void usersNavBtn_Click(object sender, EventArgs e)
         {
             selector_move(usersNavBtn.Location.Y);
-            NavigationClicked("users");
+            TeatrUIEventHandler.SetMainContent(new Users());
         }
 
         private void scenesNavBtn_Click(object sender, EventArgs e)
         {
             selector_move(scenesNavBtn.Location.Y);
-            NavigationClicked("scenes");
+            TeatrUIEventHandler.SetMainContent(new ScenesPresentation());
         }
 
         private void infoBtnNav_Click(object sender, EventArgs e)
         {
             selector_move(infoBtnNav.Location.Y);
-            NavigationClicked("info");
+            TeatrUIEventHandler.SetMainContent(new Info());
         }
 
         private void userPhotoField_Click(object sender, EventArgs e)
         {
-            NavigationClicked("account");
+            TeatrUIEventHandler.SetMainContent(new Account());
         }
     }
 }

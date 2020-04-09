@@ -12,111 +12,49 @@ using System.Drawing.Text;
 using System.Runtime.InteropServices;
 
 namespace TeatrUI
-{
-    public partial class Dashboard : Form
+{/**/
+    public  partial class Dashboard : Form
     {
         public Dashboard()
         {
             InitializeComponent();
 
-            // Handle Fonts
-                
-            // Handle navigation
-            Navigation navigation = new Navigation();
-            navigation.TopLevel = false;
-            sidePanel.Controls.Add(navigation);
-            navigation.Show();
-            navigation.NavigationClicked += navigationButtonClicked;
-            // Handle init content
-            Home home = new Home();
-            loadContent(home);
-        }
-
-        private void loadContent(Form form)
-        {
-            contentPanel.Controls.Clear();
-            form.TopLevel = false;
-            contentPanel.Controls.Add(form);
-            form.Show();
-        }
-        private void navigationButtonClicked(string clickedButton)
-        {
-            switch (clickedButton)
+            TeatrUIEventHandler.SetMainContent = (Form f) =>
             {
-                case "home":
-                    Home home = new Home();
-                    loadContent(home);
-                    break;
-                case "program":
-                    MonthProgram monthProgram= new MonthProgram();
-                    loadContent(monthProgram);
-                    break;
-                case "productions":
-                    Productions productions = new Productions();
-                    AddProduction addProduction = new AddProduction();
-                    loadContent(productions);
-                    productions.OnAddButtonClicked += (object sender, EventArgs e) => loadContent(addProduction);
-                    break;
-                case "exports":
-                    Export export = new Export();
-                    loadContent(export);
-                    break;
-                case "staffMembers":
-                    StaffList staffList = new StaffList();
-                    AddPerson addPerson = new AddPerson();
-                    loadContent(staffList);
-                    staffList.OnAddButtonClicked += (object sender, EventArgs e) => loadContent(addPerson);
-                    break;
-                case "users":
-                    Users users = new Users();
-                    loadContent(users);
-                    break;
-                case "scenes":
-                    ScenesPresentation scenes = new ScenesPresentation();
-                    loadContent(scenes);
-                    break;
-                case "info":
-                    Info info = new Info();
-                    loadContent(info);
-                    break;
-                case "account":
-                    Account account = new Account();
-                    loadContent(account);
-                    break;
-            }
+                contentPanel.Controls.Clear();
+                f.TopLevel = false;
+                contentPanel.Controls.Add(f);
+                f.Show();
+                TeatrUIEventHandler.ContentHistory.Add(f);
+            };
 
+            TeatrUIEventHandler.SetSideContent = (Form f) =>
+            {
+                sidePanel.Controls.Clear();
+                f.TopLevel = false;
+                sidePanel.Controls.Add(f);
+                f.Show();
+                TeatrUIEventHandler.SideHistory.Add(f);
+            };
 
+            TeatrUIEventHandler.GoBack = () =>
+            {
+                List<Form> ContentHistory = TeatrUIEventHandler.ContentHistory;
+                List<Form> SideHistory = TeatrUIEventHandler.SideHistory;
+                Form lastVisitedMainForm = ContentHistory[ContentHistory.Count - 1];
+                Form lastVisitedSideForm = SideHistory[SideHistory.Count - 1];
+                SideHistory.RemoveAt(SideHistory.Count - 1);
+                ContentHistory.RemoveAt(ContentHistory.Count - 1);
+
+                TeatrUIEventHandler.SetMainContent(lastVisitedMainForm);
+                TeatrUIEventHandler.SetSideContent(lastVisitedSideForm);
+            };
+
+            Navigation navigation = new Navigation();
+            TeatrUIEventHandler.SetSideContent(navigation);
+
+            Home home = new Home();
+            TeatrUIEventHandler.SetMainContent(home);
         }
-        private void sidePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        //private void GetFont()
-        //{
-        //    //Create your private font collection object.
-        //    PrivateFontCollection pfc = new PrivateFontCollection();
-
-        //    //Select your font from the resources.
-        //    //My font here is "Digireu.ttf"
-        //    int fontLength = Properties.Resources.Montserrat_Regular.Length;
-
-        //    // create a buffer to read in to
-        //    byte[] fontdata = Properties.Resources.Montserrat_Regular;
-
-        //    // create an unsafe memory block for the font data
-        //    System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
-
-        //    // copy the bytes to the unsafe memory block
-        //    Marshal.Copy(fontdata, 0, data, fontLength);
-
-        //    // pass the font to the font collection
-        //    pfc.AddMemoryFont(data, fontLength);
-        //}
     }
 }

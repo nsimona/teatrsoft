@@ -14,17 +14,37 @@ using TeatrLibrary.Models;
 
 namespace TeatrUI
 {
-    public partial class AddPerson : Form
+    public partial class CreateUpdateStaffPerson : Form
     {
-        public AddPerson()
+
+        private void setPositionsList()
         {
-            InitializeComponent();
             // Get all positions
-            List<Position> categoryPositions = GlobalConfig.Connection.GetPositions();
-            categoryComboBox.DataSource = new BindingSource(categoryPositions, null);
+            //List<Position> categoryPositions = GlobalConfig.Connection.GetPositions();
+            List<Position> categoryPositions = new List<Position>{
+                new Position(0, "Actor"),
+                new Position(1, "Producer"),
+                new Position(3, "Staff"),
+            };
+            categoryComboBox.DataSource = categoryPositions;
             categoryComboBox.DisplayMember = "Name";
             categoryComboBox.ValueMember = "Id";
+        }
+        public CreateUpdateStaffPerson()
+        {
+            InitializeComponent();
+            setPositionsList();
+        }
 
+        public CreateUpdateStaffPerson(string name, string phone, string mail, int category, string file)
+        {
+            InitializeComponent();
+            setPositionsList();
+            nameTextBox.Text = name;
+            phoneTextBox.Text = phone;
+            mailTextBox.Text = mail;
+            categoryComboBox.SelectedValue = category;
+            fileNameField.Text = file;
         }
 
         private bool ValidateForm()
@@ -94,7 +114,7 @@ namespace TeatrUI
         private void personPic_Click(object sender, EventArgs e)
         {
             OpenFileDialog opnfd = new OpenFileDialog();
-            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg; *.png)|*.jpg;*.jpeg;*.png";
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
                 photoField.Text = opnfd.FileName;

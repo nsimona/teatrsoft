@@ -52,7 +52,6 @@
             this.dateField.Size = new System.Drawing.Size(90, 22);
             this.dateField.TabIndex = 1;
             this.dateField.Text = "03.03.2020";
-            this.dateField.Click += new System.EventHandler(this.dateLabel_Click);
             // 
             // dayLabel
             // 
@@ -64,7 +63,6 @@
             this.dayLabel.Size = new System.Drawing.Size(78, 22);
             this.dayLabel.TabIndex = 2;
             this.dayLabel.Text = "Вторник";
-            this.dayLabel.Click += new System.EventHandler(this.dayLabel_Click);
             // 
             // ProgramDateControl
             // 

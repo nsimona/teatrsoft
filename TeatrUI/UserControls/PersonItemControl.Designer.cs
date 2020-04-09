@@ -68,10 +68,11 @@
             this.editBtn.Size = new System.Drawing.Size(34, 30);
             this.editBtn.TabIndex = 66;
             this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // photoField
             // 
-            this.photoField.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.photoField.Cursor = System.Windows.Forms.Cursors.Default;
             this.photoField.Location = new System.Drawing.Point(10, 11);
             this.photoField.Name = "photoField";
             this.photoField.Size = new System.Drawing.Size(125, 160);
@@ -80,7 +81,7 @@
             // 
             // PersonItemControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.editBtn);

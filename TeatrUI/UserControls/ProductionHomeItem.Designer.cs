@@ -1,6 +1,6 @@
 ﻿namespace TeatrUI.UserControls
 {
-    partial class MainProductionItem
+    partial class ProductionHomeItem
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,58 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PosterField = new System.Windows.Forms.PictureBox();
+            this.posterField = new System.Windows.Forms.PictureBox();
             this.titleField = new System.Windows.Forms.Label();
             this.sceneField = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.PosterField)).BeginInit();
+            this.timeField = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.posterField)).BeginInit();
             this.SuspendLayout();
             // 
-            // PosterField
+            // posterField
             // 
-            this.PosterField.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PosterField.Location = new System.Drawing.Point(7, 25);
-            this.PosterField.Name = "PosterField";
-            this.PosterField.Size = new System.Drawing.Size(110, 140);
-            this.PosterField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PosterField.TabIndex = 0;
-            this.PosterField.TabStop = false;
-            this.PosterField.Click += new System.EventHandler(this.PosterImg_Click);
+            this.posterField.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.posterField.Location = new System.Drawing.Point(7, 25);
+            this.posterField.Name = "posterField";
+            this.posterField.Size = new System.Drawing.Size(110, 140);
+            this.posterField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.posterField.TabIndex = 0;
+            this.posterField.TabStop = false;
+            this.posterField.Click += new System.EventHandler(this.posterField_Click);
             // 
             // titleField
             // 
-            this.titleField.AutoSize = true;
+            this.titleField.AutoEllipsis = true;
             this.titleField.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
-            this.titleField.Location = new System.Drawing.Point(3, 177);
+            this.titleField.Location = new System.Drawing.Point(3, 168);
             this.titleField.Name = "titleField";
-            this.titleField.Size = new System.Drawing.Size(34, 16);
+            this.titleField.Size = new System.Drawing.Size(114, 43);
             this.titleField.TabIndex = 1;
-            this.titleField.Text = "Title\r\n";
-            this.titleField.Click += new System.EventHandler(this.titleLabel_Click);
+            this.titleField.Text = "Title\r\n1";
             // 
             // sceneField
             // 
             this.sceneField.AutoSize = true;
             this.sceneField.Location = new System.Drawing.Point(3, 0);
             this.sceneField.Name = "sceneField";
-            this.sceneField.Size = new System.Drawing.Size(55, 22);
+            this.sceneField.Size = new System.Drawing.Size(60, 22);
             this.sceneField.TabIndex = 2;
             this.sceneField.Text = "Scene";
-            this.sceneField.Click += new System.EventHandler(this.sceneLabel_Click);
             // 
-            // MainProductionItem
+            // timeField
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.timeField.AutoSize = true;
+            this.timeField.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
+            this.timeField.Location = new System.Drawing.Point(3, 211);
+            this.timeField.Name = "timeField";
+            this.timeField.Size = new System.Drawing.Size(44, 20);
+            this.timeField.TabIndex = 3;
+            this.timeField.Text = "19:00\r\n";
+            // 
+            // ProductionHomeItem
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.timeField);
             this.Controls.Add(this.sceneField);
             this.Controls.Add(this.titleField);
-            this.Controls.Add(this.PosterField);
+            this.Controls.Add(this.posterField);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "MainProductionItem";
+            this.Name = "ProductionHomeItem";
             this.Size = new System.Drawing.Size(125, 236);
-            this.Load += new System.EventHandler(this.productionItem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PosterField)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posterField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,8 +96,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox PosterField;
+        private System.Windows.Forms.PictureBox posterField;
         private System.Windows.Forms.Label titleField;
         private System.Windows.Forms.Label sceneField;
+        private System.Windows.Forms.Label timeField;
     }
 }

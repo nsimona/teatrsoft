@@ -1,6 +1,6 @@
 ﻿namespace TeatrUI
 {
-    partial class SeatPresentaion
+    partial class Seats
     {
         /// <summary>
         /// Required designer variable.
@@ -54,7 +54,7 @@
             this.dateField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
             this.dateField.Location = new System.Drawing.Point(31, 34);
             this.dateField.Name = "dateField";
-            this.dateField.Size = new System.Drawing.Size(212, 56);
+            this.dateField.Size = new System.Drawing.Size(218, 66);
             this.dateField.TabIndex = 0;
             this.dateField.Text = "01.01.20";
             // 
@@ -65,7 +65,7 @@
             this.sceneField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.sceneField.Location = new System.Drawing.Point(255, 34);
             this.sceneField.Name = "sceneField";
-            this.sceneField.Size = new System.Drawing.Size(224, 29);
+            this.sceneField.Size = new System.Drawing.Size(244, 33);
             this.sceneField.TabIndex = 1;
             this.sceneField.Text = "КАМЕРНА СЦЕНА";
             // 
@@ -76,7 +76,7 @@
             this.freeSeatsField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.freeSeatsField.Location = new System.Drawing.Point(256, 70);
             this.freeSeatsField.Name = "freeSeatsField";
-            this.freeSeatsField.Size = new System.Drawing.Size(250, 22);
+            this.freeSeatsField.Size = new System.Drawing.Size(265, 26);
             this.freeSeatsField.TabIndex = 2;
             this.freeSeatsField.Text = "13/60 СВОБОДНИ МЕСТА";
             // 
@@ -86,6 +86,7 @@
             this.seatControl2.Location = new System.Drawing.Point(50, 18);
             this.seatControl2.Margin = new System.Windows.Forms.Padding(5);
             this.seatControl2.Name = "seatControl2";
+            this.seatControl2.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.seatControl2.Size = new System.Drawing.Size(18, 19);
             this.seatControl2.TabIndex = 4;
             // 
@@ -95,6 +96,7 @@
             this.seatControl1.Location = new System.Drawing.Point(22, 18);
             this.seatControl1.Margin = new System.Windows.Forms.Padding(5);
             this.seatControl1.Name = "seatControl1";
+            this.seatControl1.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.seatControl1.Size = new System.Drawing.Size(18, 19);
             this.seatControl1.TabIndex = 3;
             // 
@@ -108,54 +110,60 @@
             // selectedSeatControl
             // 
             this.selectedSeatControl.BackColor = System.Drawing.Color.White;
-            this.selectedSeatControl.Location = new System.Drawing.Point(337, 517);
+            this.selectedSeatControl.Enabled = false;
+            this.selectedSeatControl.Location = new System.Drawing.Point(356, 547);
             this.selectedSeatControl.Margin = new System.Windows.Forms.Padding(5);
             this.selectedSeatControl.Name = "selectedSeatControl";
+            this.selectedSeatControl.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.selectedSeatControl.Size = new System.Drawing.Size(18, 19);
             this.selectedSeatControl.TabIndex = 0;
             // 
             // freeSeatControl
             // 
             this.freeSeatControl.BackColor = System.Drawing.Color.White;
-            this.freeSeatControl.Location = new System.Drawing.Point(65, 517);
+            this.freeSeatControl.Enabled = false;
+            this.freeSeatControl.Location = new System.Drawing.Point(84, 547);
             this.freeSeatControl.Margin = new System.Windows.Forms.Padding(5);
             this.freeSeatControl.Name = "freeSeatControl";
+            this.freeSeatControl.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.freeSeatControl.Size = new System.Drawing.Size(18, 19);
             this.freeSeatControl.TabIndex = 1;
             // 
             // busySeatControl
             // 
-            this.busySeatControl.BackColor = System.Drawing.Color.White;
-            this.busySeatControl.Location = new System.Drawing.Point(221, 517);
+            this.busySeatControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.busySeatControl.Enabled = false;
+            this.busySeatControl.Location = new System.Drawing.Point(240, 547);
             this.busySeatControl.Margin = new System.Windows.Forms.Padding(5);
             this.busySeatControl.Name = "busySeatControl";
+            this.busySeatControl.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.busySeatControl.Size = new System.Drawing.Size(18, 19);
             this.busySeatControl.TabIndex = 2;
             // 
             // freeLabel
             // 
             this.freeLabel.AutoSize = true;
-            this.freeLabel.Location = new System.Drawing.Point(91, 514);
+            this.freeLabel.Location = new System.Drawing.Point(110, 544);
             this.freeLabel.Name = "freeLabel";
-            this.freeLabel.Size = new System.Drawing.Size(81, 18);
+            this.freeLabel.Size = new System.Drawing.Size(94, 22);
             this.freeLabel.TabIndex = 6;
             this.freeLabel.Text = "Свободни";
             // 
             // busyLabel
             // 
             this.busyLabel.AutoSize = true;
-            this.busyLabel.Location = new System.Drawing.Point(247, 514);
+            this.busyLabel.Location = new System.Drawing.Point(266, 544);
             this.busyLabel.Name = "busyLabel";
-            this.busyLabel.Size = new System.Drawing.Size(50, 18);
+            this.busyLabel.Size = new System.Drawing.Size(58, 22);
             this.busyLabel.TabIndex = 7;
             this.busyLabel.Text = "Заети";
             // 
             // selectedLabel
             // 
             this.selectedLabel.AutoSize = true;
-            this.selectedLabel.Location = new System.Drawing.Point(363, 514);
+            this.selectedLabel.Location = new System.Drawing.Point(382, 544);
             this.selectedLabel.Name = "selectedLabel";
-            this.selectedLabel.Size = new System.Drawing.Size(101, 18);
+            this.selectedLabel.Size = new System.Drawing.Size(121, 22);
             this.selectedLabel.TabIndex = 8;
             this.selectedLabel.Text = "Селектирани";
             // 
@@ -165,15 +173,15 @@
             this.modelPanel.Controls.Add(this.seatControl1);
             this.modelPanel.Location = new System.Drawing.Point(33, 201);
             this.modelPanel.Name = "modelPanel";
-            this.modelPanel.Size = new System.Drawing.Size(515, 308);
+            this.modelPanel.Size = new System.Drawing.Size(515, 340);
             this.modelPanel.TabIndex = 9;
             // 
             // sumField
             // 
             this.sumField.AutoSize = true;
-            this.sumField.Location = new System.Drawing.Point(440, 591);
+            this.sumField.Location = new System.Drawing.Point(474, 606);
             this.sumField.Name = "sumField";
-            this.sumField.Size = new System.Drawing.Size(43, 18);
+            this.sumField.Size = new System.Drawing.Size(50, 22);
             this.sumField.TabIndex = 10;
             this.sumField.Text = "24лв";
             // 
@@ -181,9 +189,9 @@
             // 
             this.sumLabel.AutoSize = true;
             this.sumLabel.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sumLabel.Location = new System.Drawing.Point(422, 569);
+            this.sumLabel.Location = new System.Drawing.Point(456, 584);
             this.sumLabel.Name = "sumLabel";
-            this.sumLabel.Size = new System.Drawing.Size(61, 19);
+            this.sumLabel.Size = new System.Drawing.Size(68, 22);
             this.sumLabel.TabIndex = 11;
             this.sumLabel.Text = "ОБЩО";
             // 
@@ -194,15 +202,16 @@
             this.continueBtn.FlatAppearance.BorderSize = 0;
             this.continueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.continueBtn.Image = global::TeatrUI.Properties.Resources._continue;
-            this.continueBtn.Location = new System.Drawing.Point(496, 570);
+            this.continueBtn.Location = new System.Drawing.Point(530, 585);
             this.continueBtn.Name = "continueBtn";
             this.continueBtn.Size = new System.Drawing.Size(48, 43);
             this.continueBtn.TabIndex = 12;
             this.continueBtn.UseVisualStyleBackColor = false;
+            this.continueBtn.Click += new System.EventHandler(this.continueBtn_Click);
             // 
-            // SeatPresentaion
+            // Seats
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
@@ -223,7 +232,7 @@
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "SeatPresentaion";
+            this.Name = "Seats";
             this.Text = "SeatPresentaion";
             this.modelPanel.ResumeLayout(false);
             this.ResumeLayout(false);

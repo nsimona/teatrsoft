@@ -12,23 +12,22 @@ namespace TeatrUI
 {
     public partial class StaffList : Form
     {
-        public event EventHandler OnAddButtonClicked;
         public StaffList()
         {
             InitializeComponent();
         }
 
-        private void personItemControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void addNew_Click(object sender, EventArgs e)
         {
-            OnAddButtonClicked(sender, e);
+            TeatrUIEventHandler.SetMainContent(new CreateUpdateStaffPerson());
         }
 
         private void StaffList_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void personItemControl1_Load_1(object sender, EventArgs e)
         {
 
         }

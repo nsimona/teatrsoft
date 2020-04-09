@@ -77,7 +77,7 @@
             this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
             this.pageTitle.Location = new System.Drawing.Point(0, 8);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(233, 24);
+            this.pageTitle.Size = new System.Drawing.Size(251, 29);
             this.pageTitle.TabIndex = 17;
             this.pageTitle.Text = "ТВОРЧЕСКИ СЪСТАВ";
             // 
@@ -90,6 +90,7 @@
             this.personItemControl1.Name = "personItemControl1";
             this.personItemControl1.Size = new System.Drawing.Size(147, 254);
             this.personItemControl1.TabIndex = 15;
+            this.personItemControl1.Load += new System.EventHandler(this.personItemControl1_Load_1);
             // 
             // staffPanel
             // 
@@ -100,7 +101,7 @@
             // 
             // StaffList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);

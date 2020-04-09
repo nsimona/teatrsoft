@@ -32,8 +32,8 @@
             this.sortBtn = new System.Windows.Forms.Button();
             this.pageTitle = new System.Windows.Forms.Label();
             this.ticketsPanel = new System.Windows.Forms.Panel();
-            this.productionDateTicketControl1 = new TeatrUI.UserControls.ProductionDateTicketControl();
             this.productionDateTicketControl2 = new TeatrUI.UserControls.ProductionDateTicketControl();
+            this.productionDateTicketControl1 = new TeatrUI.UserControls.ProductionDateTicketControl();
             this.productionItemControl2 = new TeatrUI.UserControls.ProductionItemControl();
             this.productionsPanel = new System.Windows.Forms.Panel();
             this.ticketsPanel.SuspendLayout();
@@ -96,16 +96,6 @@
             this.ticketsPanel.Size = new System.Drawing.Size(237, 196);
             this.ticketsPanel.TabIndex = 0;
             // 
-            // productionDateTicketControl1
-            // 
-            this.productionDateTicketControl1.BackColor = System.Drawing.Color.White;
-            this.productionDateTicketControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.productionDateTicketControl1.Location = new System.Drawing.Point(0, 0);
-            this.productionDateTicketControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.productionDateTicketControl1.Name = "productionDateTicketControl1";
-            this.productionDateTicketControl1.Size = new System.Drawing.Size(236, 37);
-            this.productionDateTicketControl1.TabIndex = 0;
-            // 
             // productionDateTicketControl2
             // 
             this.productionDateTicketControl2.BackColor = System.Drawing.Color.White;
@@ -116,6 +106,16 @@
             this.productionDateTicketControl2.Size = new System.Drawing.Size(236, 37);
             this.productionDateTicketControl2.TabIndex = 1;
             // 
+            // productionDateTicketControl1
+            // 
+            this.productionDateTicketControl1.BackColor = System.Drawing.Color.White;
+            this.productionDateTicketControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.productionDateTicketControl1.Location = new System.Drawing.Point(0, 0);
+            this.productionDateTicketControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.productionDateTicketControl1.Name = "productionDateTicketControl1";
+            this.productionDateTicketControl1.Size = new System.Drawing.Size(236, 37);
+            this.productionDateTicketControl1.TabIndex = 0;
+            // 
             // productionItemControl2
             // 
             this.productionItemControl2.BackColor = System.Drawing.Color.White;
@@ -125,6 +125,7 @@
             this.productionItemControl2.Name = "productionItemControl2";
             this.productionItemControl2.Size = new System.Drawing.Size(352, 150);
             this.productionItemControl2.TabIndex = 3;
+            this.productionItemControl2.Load += new System.EventHandler(this.productionItemControl2_Load);
             // 
             // productionsPanel
             // 

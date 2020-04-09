@@ -21,5 +21,10 @@ namespace TeatrUI.UserControls
         {
 
         }
+
+        private void changePassBtn_Click(object sender, EventArgs e)
+        {
+            TeatrUIEventHandler.SetMainContent(new ChangePass());
+        }
     }
 }

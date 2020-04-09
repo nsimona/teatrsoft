@@ -44,16 +44,16 @@
             this.seatBox.Size = new System.Drawing.Size(18, 18);
             this.seatBox.TabIndex = 0;
             this.seatBox.UseVisualStyleBackColor = false;
+            this.seatBox.Click += new System.EventHandler(this.seatBox_Click);
             // 
             // SeatControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.Controls.Add(this.seatBox);
             this.Name = "SeatControl";
             this.Size = new System.Drawing.Size(18, 18);
-            this.Load += new System.EventHandler(this.SeatControl_Load);
             this.ResumeLayout(false);
 
         }

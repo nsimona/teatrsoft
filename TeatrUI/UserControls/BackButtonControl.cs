@@ -17,9 +17,9 @@ namespace TeatrUI.UserControls
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void backButton_Click(object sender, EventArgs e)
         {
-
+            TeatrUIEventHandler.GoBack();
         }
     }
 }

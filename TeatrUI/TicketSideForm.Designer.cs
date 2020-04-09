@@ -1,6 +1,6 @@
 ﻿namespace TeatrUI
 {
-    partial class TickerSideForm
+    partial class TicketSideForm
     {
         /// <summary>
         /// Required designer variable.
@@ -46,7 +46,7 @@
             this.payBtn = new System.Windows.Forms.Button();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalField = new System.Windows.Forms.Label();
-            this.backButtonControl1 = new TeatrUI.UserControls.BackButtonControl();
+            this.backButtonControl = new TeatrUI.UserControls.BackButtonControl();
             this.seatsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             this.authorField.ForeColor = System.Drawing.Color.Gray;
             this.authorField.Location = new System.Drawing.Point(13, 135);
             this.authorField.Name = "authorField";
-            this.authorField.Size = new System.Drawing.Size(138, 16);
+            this.authorField.Size = new System.Drawing.Size(155, 18);
             this.authorField.TabIndex = 32;
             this.authorField.Text = "Костадин Костадинов";
             // 
@@ -67,7 +67,7 @@
             this.authorLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authorLabel.Location = new System.Drawing.Point(12, 117);
             this.authorLabel.Name = "authorLabel";
-            this.authorLabel.Size = new System.Drawing.Size(47, 16);
+            this.authorLabel.Size = new System.Drawing.Size(52, 18);
             this.authorLabel.TabIndex = 31;
             this.authorLabel.Text = "Автор:";
             // 
@@ -78,7 +78,7 @@
             this.directorField.ForeColor = System.Drawing.Color.Gray;
             this.directorField.Location = new System.Drawing.Point(13, 175);
             this.directorField.Name = "directorField";
-            this.directorField.Size = new System.Drawing.Size(138, 16);
+            this.directorField.Size = new System.Drawing.Size(155, 18);
             this.directorField.TabIndex = 30;
             this.directorField.Text = "Костадин Костадинов";
             // 
@@ -88,7 +88,7 @@
             this.directorLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.directorLabel.Location = new System.Drawing.Point(12, 157);
             this.directorLabel.Name = "directorLabel";
-            this.directorLabel.Size = new System.Drawing.Size(67, 16);
+            this.directorLabel.Size = new System.Drawing.Size(76, 18);
             this.directorLabel.TabIndex = 29;
             this.directorLabel.Text = "Режисьор";
             // 
@@ -110,7 +110,7 @@
             this.actorsLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.actorsLabel.Location = new System.Drawing.Point(12, 193);
             this.actorsLabel.Name = "actorsLabel";
-            this.actorsLabel.Size = new System.Drawing.Size(56, 16);
+            this.actorsLabel.Size = new System.Drawing.Size(65, 18);
             this.actorsLabel.TabIndex = 27;
             this.actorsLabel.Text = "Актьори";
             // 
@@ -121,7 +121,7 @@
             this.durationField.ForeColor = System.Drawing.Color.Gray;
             this.durationField.Location = new System.Drawing.Point(14, 269);
             this.durationField.Name = "durationField";
-            this.durationField.Size = new System.Drawing.Size(45, 16);
+            this.durationField.Size = new System.Drawing.Size(52, 18);
             this.durationField.TabIndex = 26;
             this.durationField.Text = "96мин";
             // 
@@ -131,7 +131,7 @@
             this.durationLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.durationLabel.Location = new System.Drawing.Point(13, 251);
             this.durationLabel.Name = "durationLabel";
-            this.durationLabel.Size = new System.Drawing.Size(115, 16);
+            this.durationLabel.Size = new System.Drawing.Size(132, 18);
             this.durationLabel.TabIndex = 25;
             this.durationLabel.Text = "Продължителност";
             // 
@@ -154,7 +154,7 @@
             this.dateField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.dateField.Location = new System.Drawing.Point(14, 301);
             this.dateField.Name = "dateField";
-            this.dateField.Size = new System.Drawing.Size(234, 37);
+            this.dateField.Size = new System.Drawing.Size(238, 44);
             this.dateField.TabIndex = 33;
             this.dateField.Text = "01.01.20 19:00";
             // 
@@ -165,7 +165,7 @@
             this.sceneField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.sceneField.Location = new System.Drawing.Point(14, 345);
             this.sceneField.Name = "sceneField";
-            this.sceneField.Size = new System.Drawing.Size(178, 24);
+            this.sceneField.Size = new System.Drawing.Size(195, 29);
             this.sceneField.TabIndex = 34;
             this.sceneField.Text = "ГОЛЯМА СЦЕНА";
             // 
@@ -202,7 +202,6 @@
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
             this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelBtn.Enabled = false;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -213,6 +212,7 @@
             this.cancelBtn.TabIndex = 36;
             this.cancelBtn.Text = "ОТКАЗ";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // payBtn
             // 
@@ -228,6 +228,7 @@
             this.payBtn.TabIndex = 35;
             this.payBtn.Text = "ПЛАТИ";
             this.payBtn.UseVisualStyleBackColor = false;
+            this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
             // 
             // totalLabel
             // 
@@ -236,7 +237,7 @@
             this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.totalLabel.Location = new System.Drawing.Point(10, 618);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(82, 24);
+            this.totalLabel.Size = new System.Drawing.Size(91, 29);
             this.totalLabel.TabIndex = 37;
             this.totalLabel.Text = "ОБЩО:";
             // 
@@ -247,26 +248,26 @@
             this.totalField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.totalField.Location = new System.Drawing.Point(93, 618);
             this.totalField.Name = "totalField";
-            this.totalField.Size = new System.Drawing.Size(60, 24);
+            this.totalField.Size = new System.Drawing.Size(64, 29);
             this.totalField.TabIndex = 38;
             this.totalField.Text = "52лв";
             // 
-            // backButtonControl1
+            // backButtonControl
             // 
-            this.backButtonControl1.BackColor = System.Drawing.Color.White;
-            this.backButtonControl1.Location = new System.Drawing.Point(12, 13);
-            this.backButtonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.backButtonControl1.Name = "backButtonControl1";
-            this.backButtonControl1.Size = new System.Drawing.Size(135, 36);
-            this.backButtonControl1.TabIndex = 39;
+            this.backButtonControl.BackColor = System.Drawing.Color.Transparent;
+            this.backButtonControl.Location = new System.Drawing.Point(10, 10);
+            this.backButtonControl.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
+            this.backButtonControl.Name = "backButtonControl";
+            this.backButtonControl.Size = new System.Drawing.Size(135, 36);
+            this.backButtonControl.TabIndex = 40;
             // 
-            // TickerSideForm
+            // TicketSideForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(330, 710);
-            this.Controls.Add(this.backButtonControl1);
+            this.Controls.Add(this.backButtonControl);
             this.Controls.Add(this.totalField);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.cancelBtn);
@@ -286,7 +287,7 @@
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "TickerSideForm";
+            this.Name = "TicketSideForm";
             this.Text = "TickerSideForm";
             this.seatsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -314,6 +315,6 @@
         private System.Windows.Forms.Label totalField;
         private UserControls.ReservedTicketControl reservedTicketControl1;
         private UserControls.ReservedTicketControl reservedTicketControl2;
-        private UserControls.BackButtonControl backButtonControl1;
+        private UserControls.BackButtonControl backButtonControl;
     }
 }

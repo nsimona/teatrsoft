@@ -1,6 +1,6 @@
 ﻿namespace TeatrUI
 {
-    partial class AddProduction
+    partial class CreateUpdateProduction
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.saveBtn = new System.Windows.Forms.Button();
             this.addProductionPanel = new System.Windows.Forms.Panel();
             this.archiveBtn = new System.Windows.Forms.Button();
+            this.backButtonControl = new TeatrUI.UserControls.BackButtonControl();
             this.SuspendLayout();
             // 
             // pageTitle
@@ -39,7 +40,7 @@
             this.pageTitle.AutoSize = true;
             this.pageTitle.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.pageTitle.Location = new System.Drawing.Point(0, 10);
+            this.pageTitle.Location = new System.Drawing.Point(0, 40);
             this.pageTitle.Name = "pageTitle";
             this.pageTitle.Size = new System.Drawing.Size(510, 29);
             this.pageTitle.TabIndex = 29;
@@ -85,12 +86,22 @@
             this.archiveBtn.Text = "АХИВИРАНЕ";
             this.archiveBtn.UseVisualStyleBackColor = false;
             // 
+            // backButtonControl
+            // 
+            this.backButtonControl.BackColor = System.Drawing.Color.Transparent;
+            this.backButtonControl.Location = new System.Drawing.Point(0, 0);
+            this.backButtonControl.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.backButtonControl.Name = "backButtonControl";
+            this.backButtonControl.Size = new System.Drawing.Size(135, 36);
+            this.backButtonControl.TabIndex = 36;
+            // 
             // AddProduction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
+            this.Controls.Add(this.backButtonControl);
             this.Controls.Add(this.archiveBtn);
             this.Controls.Add(this.pageTitle);
             this.Controls.Add(this.saveBtn);
@@ -111,5 +122,6 @@
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Panel addProductionPanel;
         private System.Windows.Forms.Button archiveBtn;
+        private UserControls.BackButtonControl backButtonControl;
     }
 }

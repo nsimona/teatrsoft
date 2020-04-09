@@ -12,7 +12,7 @@ using TeatrUI.UserControls;
 
 namespace TeatrUI
 {
-    public partial class AddProductionForm : Form
+    public partial class CreateUpdateProductionForm : Form
     {
         //Added Actors List
         private List<PersonModel> selectedActors = new List<PersonModel>();
@@ -34,22 +34,53 @@ namespace TeatrUI
             new SceneModel("Голяма сцена"),
             new SceneModel("Зала 51"),
         };
-
-        public AddProductionForm()
+        public void InitialLoad()
         {
             InitializeComponent();
-            premiereDateControl.Format = DateTimePickerFormat.Custom;
-            premiereDateControl.CustomFormat = "dd/MM/yyyy";
-            addDateControl.Format = DateTimePickerFormat.Custom;
-            addDateControl.CustomFormat = "dd/MM/yyyy";
 
+            SetDateFormats();
             //WireUp Lists
             WireUpActors();
             WireUpDirectors();
             WireUpDates();
             WireUpScenes();
         }
+        public CreateUpdateProductionForm()
+        {
+            InitialLoad();
+        }
 
+        public CreateUpdateProductionForm(
+                List<PersonModel> selectedActors, 
+                List<PorductionEventModel> addedEvents, 
+                string name,
+                string author,
+                string description, 
+                DateTime premiereDate,
+                string duration, 
+                int directorId,
+                string fileNameField
+            )
+        {
+            InitialLoad();
+            this.selectedActors = selectedActors;
+            this.addedEvents = addedEvents;
+            this.nameTextBox.Text = name;
+            this.authorTextBox.Text = author;
+            this.descriptionTextBox.Text = description;
+            this.premiereDateControl.Value = premiereDate;
+            this.durationTextBox.Text = duration;
+            this.directorComboBox.SelectedValue = directorId;
+            this.fileNameField.Text = fileNameField;
+        }
+
+        private void SetDateFormats()
+        {
+            premiereDateControl.Format = DateTimePickerFormat.Custom;
+            premiereDateControl.CustomFormat = "dd/MM/yyyy";
+            addDateControl.Format = DateTimePickerFormat.Custom;
+            addDateControl.CustomFormat = "dd/MM/yyyy";
+        }
         private void WireUpActors()
         {
             actorsComboBox.DataSource = null;
@@ -84,20 +115,16 @@ namespace TeatrUI
             addSceneComboBox.DisplayMember = "Name";
         }
 
-        private void DeleteFromList()
-        {
-
-        }
-
         private void posterField_Click(object sender, EventArgs e)
         {
             OpenFileDialog opnfd = new OpenFileDialog();
-            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;*.png;)|*.jpg;*.jpeg;.*.gif; *.png";
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;*.png;)|*.jpg;*.jpeg;*.png";
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
                 posterField.Text = opnfd.FileName;
                 posterField.Image = new Bitmap(opnfd.FileName);
                 posterField.AccessibleName = opnfd.SafeFileName;
+                fileNameField.Text = opnfd.SafeFileName;
             }
         }
 
@@ -116,9 +143,12 @@ namespace TeatrUI
 
         private void delActorBtn_Click(object sender, EventArgs e)
         {
-            PersonModel person = (PersonModel)actorsList.SelectedItem;
-            selectedActors.Remove(person);
-            availableActors.Add(person);
+            foreach(object listItem in actorsList.SelectedItems)
+            {
+                PersonModel person = (PersonModel)listItem;
+                selectedActors.Remove(person);
+                availableActors.Add(person);
+            }
             WireUpActors();
         }
 
@@ -155,8 +185,11 @@ namespace TeatrUI
 
         private void delDateBtn_Click(object sender, EventArgs e)
         {
-            PorductionEventModel porductionEvent = (PorductionEventModel)datesList.SelectedItem;
-            addedEvents.Remove(porductionEvent);
+            foreach (object listItem in datesList.SelectedItems)
+            {
+                PorductionEventModel porductionEvent = (PorductionEventModel)listItem;
+                addedEvents.Remove(porductionEvent);
+            }
             WireUpDates();
         }
 

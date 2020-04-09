@@ -52,23 +52,23 @@
     <Compile Include="Account.Designer.cs">
       <DependentUpon>Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPerson.cs">
+    <Compile Include="CreateUpdateStaffPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPerson.Designer.cs">
-      <DependentUpon>AddPerson.cs</DependentUpon>
+    <Compile Include="CreateUpdateStaffPerson.Designer.cs">
+      <DependentUpon>CreateUpdateStaffPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddProduction.cs">
+    <Compile Include="CreateUpdateProduction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddProduction.Designer.cs">
-      <DependentUpon>AddProduction.cs</DependentUpon>
+    <Compile Include="CreateUpdateProduction.Designer.cs">
+      <DependentUpon>CreateUpdateProduction.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddProductionForm.cs">
+    <Compile Include="CreateUpdateProductionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddProductionForm.Designer.cs">
-      <DependentUpon>AddProductionForm.cs</DependentUpon>
+    <Compile Include="CreateUpdateProductionForm.Designer.cs">
+      <DependentUpon>CreateUpdateProductionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -144,11 +144,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeatPresentaion.cs">
+    <Compile Include="Seats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SeatPresentaion.Designer.cs">
-      <DependentUpon>SeatPresentaion.cs</DependentUpon>
+    <Compile Include="Seats.Designer.cs">
+      <DependentUpon>Seats.cs</DependentUpon>
     </Compile>
     <Compile Include="TicketSideForm.cs">
       <SubType>Form</SubType>
@@ -168,6 +168,7 @@
     <Compile Include="ChangePass.Designer.cs">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeatrUIEventHandler.cs" />
     <Compile Include="UserControls\ExportItemControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,11 +193,11 @@
     <Compile Include="UserControls\FooterControl.Designer.cs">
       <DependentUpon>FooterControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\MainProductionItem.cs">
+    <Compile Include="UserControls\ProductionHomeItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\MainProductionItem.Designer.cs">
-      <DependentUpon>MainProductionItem.cs</DependentUpon>
+    <Compile Include="UserControls\ProductionHomeItem.Designer.cs">
+      <DependentUpon>ProductionHomeItem.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ProductionDateTicketControl.cs">
       <SubType>UserControl</SubType>
@@ -267,14 +268,14 @@
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPerson.resx">
-      <DependentUpon>AddPerson.cs</DependentUpon>
+    <EmbeddedResource Include="CreateUpdateStaffPerson.resx">
+      <DependentUpon>CreateUpdateStaffPerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddProduction.resx">
-      <DependentUpon>AddProduction.cs</DependentUpon>
+    <EmbeddedResource Include="CreateUpdateProduction.resx">
+      <DependentUpon>CreateUpdateProduction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddProductionForm.resx">
-      <DependentUpon>AddProductionForm.cs</DependentUpon>
+    <EmbeddedResource Include="CreateUpdateProductionForm.resx">
+      <DependentUpon>CreateUpdateProductionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -322,8 +323,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SeatPresentaion.resx">
-      <DependentUpon>SeatPresentaion.cs</DependentUpon>
+    <EmbeddedResource Include="Seats.resx">
+      <DependentUpon>Seats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketSideForm.resx">
       <DependentUpon>TicketSideForm.cs</DependentUpon>
@@ -346,8 +347,8 @@
     <EmbeddedResource Include="UserControls\FooterControl.resx">
       <DependentUpon>FooterControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\MainProductionItem.resx">
-      <DependentUpon>MainProductionItem.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\ProductionHomeItem.resx">
+      <DependentUpon>ProductionHomeItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ProductionDateTicketControl.resx">
       <DependentUpon>ProductionDateTicketControl.cs</DependentUpon>

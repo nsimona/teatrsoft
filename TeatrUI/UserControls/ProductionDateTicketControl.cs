@@ -16,5 +16,11 @@ namespace TeatrUI.UserControls
         {
             InitializeComponent();
         }
+
+        private void ticketsBtn_Click(object sender, EventArgs e)
+        {
+            TeatrUIEventHandler.SetSideContent(new ProductionSideForm());
+            TeatrUIEventHandler.SetMainContent(new Seats());
+        }
     }
 }

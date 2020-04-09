@@ -1,6 +1,6 @@
 ﻿namespace TeatrUI
 {
-    partial class AddPerson
+    partial class CreateUpdateStaffPerson
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,9 @@
             this.photoField = new System.Windows.Forms.PictureBox();
             this.archiveBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.backButtonControl = new TeatrUI.UserControls.BackButtonControl();
+            this.fileNameField = new System.Windows.Forms.Label();
+            this.photoDescLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.photoField)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +54,7 @@
             this.nameLabel.Location = new System.Drawing.Point(0, 90);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(3);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(40, 18);
+            this.nameLabel.Size = new System.Drawing.Size(46, 22);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Име";
             // 
@@ -62,7 +65,7 @@
             this.categoryLabel.Location = new System.Drawing.Point(0, 151);
             this.categoryLabel.Margin = new System.Windows.Forms.Padding(3);
             this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(83, 18);
+            this.categoryLabel.Size = new System.Drawing.Size(98, 22);
             this.categoryLabel.TabIndex = 2;
             this.categoryLabel.Text = "Категория";
             // 
@@ -73,7 +76,7 @@
             this.phoneLabel.Location = new System.Drawing.Point(0, 215);
             this.phoneLabel.Margin = new System.Windows.Forms.Padding(3);
             this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(71, 18);
+            this.phoneLabel.Size = new System.Drawing.Size(82, 22);
             this.phoneLabel.TabIndex = 3;
             this.phoneLabel.Text = "Телефон";
             // 
@@ -84,7 +87,7 @@
             this.mailLabel.Location = new System.Drawing.Point(0, 276);
             this.mailLabel.Margin = new System.Windows.Forms.Padding(3);
             this.mailLabel.Name = "mailLabel";
-            this.mailLabel.Size = new System.Drawing.Size(56, 18);
+            this.mailLabel.Size = new System.Drawing.Size(67, 22);
             this.mailLabel.TabIndex = 5;
             this.mailLabel.Text = "Имейл";
             // 
@@ -94,7 +97,7 @@
             this.photoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.photoLabel.Location = new System.Drawing.Point(335, 90);
             this.photoLabel.Name = "photoLabel";
-            this.photoLabel.Size = new System.Drawing.Size(63, 18);
+            this.photoLabel.Size = new System.Drawing.Size(74, 22);
             this.photoLabel.TabIndex = 10;
             this.photoLabel.Text = "Снимка";
             // 
@@ -103,9 +106,9 @@
             this.pageTitle.AutoSize = true;
             this.pageTitle.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.pageTitle.Location = new System.Drawing.Point(0, 10);
+            this.pageTitle.Location = new System.Drawing.Point(0, 40);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(451, 24);
+            this.pageTitle.Size = new System.Drawing.Size(502, 29);
             this.pageTitle.TabIndex = 14;
             this.pageTitle.Text = "ДОБАВЯНЕ/ РЕДАКТИРАНЕ НА СЛУЖИТЕЛ\r\n";
             // 
@@ -137,7 +140,7 @@
             this.categoryComboBox.FormattingEnabled = true;
             this.categoryComboBox.Location = new System.Drawing.Point(0, 179);
             this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(300, 26);
+            this.categoryComboBox.Size = new System.Drawing.Size(300, 30);
             this.categoryComboBox.TabIndex = 18;
             // 
             // photoField
@@ -147,6 +150,7 @@
             this.photoField.Location = new System.Drawing.Point(339, 118);
             this.photoField.Name = "photoField";
             this.photoField.Size = new System.Drawing.Size(233, 275);
+            this.photoField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.photoField.TabIndex = 9;
             this.photoField.TabStop = false;
             this.photoField.Click += new System.EventHandler(this.personPic_Click);
@@ -160,7 +164,7 @@
             this.archiveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.archiveBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.archiveBtn.ForeColor = System.Drawing.Color.White;
-            this.archiveBtn.Location = new System.Drawing.Point(448, 423);
+            this.archiveBtn.Location = new System.Drawing.Point(442, 598);
             this.archiveBtn.Name = "archiveBtn";
             this.archiveBtn.Size = new System.Drawing.Size(130, 30);
             this.archiveBtn.TabIndex = 34;
@@ -176,7 +180,7 @@
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(337, 423);
+            this.saveBtn.Location = new System.Drawing.Point(331, 598);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(100, 30);
             this.saveBtn.TabIndex = 32;
@@ -184,12 +188,44 @@
             this.saveBtn.UseVisualStyleBackColor = false;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click_1);
             // 
-            // AddPerson
+            // backButtonControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.backButtonControl.BackColor = System.Drawing.Color.Transparent;
+            this.backButtonControl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButtonControl.Location = new System.Drawing.Point(0, 0);
+            this.backButtonControl.Margin = new System.Windows.Forms.Padding(5);
+            this.backButtonControl.Name = "backButtonControl";
+            this.backButtonControl.Size = new System.Drawing.Size(135, 36);
+            this.backButtonControl.TabIndex = 35;
+            // 
+            // fileNameField
+            // 
+            this.fileNameField.AutoEllipsis = true;
+            this.fileNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.fileNameField.Location = new System.Drawing.Point(335, 406);
+            this.fileNameField.Name = "fileNameField";
+            this.fileNameField.Size = new System.Drawing.Size(237, 49);
+            this.fileNameField.TabIndex = 83;
+            this.fileNameField.Text = "filename.jpg";
+            // 
+            // photoDescLabel
+            // 
+            this.photoDescLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.photoDescLabel.Location = new System.Drawing.Point(335, 463);
+            this.photoDescLabel.Name = "photoDescLabel";
+            this.photoDescLabel.Size = new System.Drawing.Size(237, 99);
+            this.photoDescLabel.TabIndex = 82;
+            this.photoDescLabel.Text = "Снимката може да бъде .png, .jpg, .jpeg и трябва да е с размери до 340/200px";
+            // 
+            // CreateUpdateStaffPerson
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
+            this.Controls.Add(this.fileNameField);
+            this.Controls.Add(this.photoDescLabel);
+            this.Controls.Add(this.backButtonControl);
             this.Controls.Add(this.archiveBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.categoryComboBox);
@@ -206,7 +242,7 @@
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "AddPerson";
+            this.Name = "CreateUpdateStaffPerson";
             this.Text = " ";
             this.Load += new System.EventHandler(this.AddPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.photoField)).EndInit();
@@ -230,5 +266,8 @@
         private System.Windows.Forms.ComboBox categoryComboBox;
         private System.Windows.Forms.Button archiveBtn;
         private System.Windows.Forms.Button saveBtn;
+        private UserControls.BackButtonControl backButtonControl;
+        private System.Windows.Forms.Label fileNameField;
+        private System.Windows.Forms.Label photoDescLabel;
     }
 }

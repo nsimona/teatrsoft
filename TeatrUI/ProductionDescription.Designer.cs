@@ -29,21 +29,48 @@
         private void InitializeComponent()
         {
             this.descriptionBox = new System.Windows.Forms.RichTextBox();
-            this.productionDateTicketControl1 = new TeatrUI.UserControls.ProductionDateTicketControl();
             this.descrLabel = new System.Windows.Forms.Label();
             this.datesLabel = new System.Windows.Forms.Label();
             this.datesPanel = new System.Windows.Forms.Panel();
+            this.productionDateTicketControl1 = new TeatrUI.UserControls.ProductionDateTicketControl();
             this.SuspendLayout();
             // 
             // descriptionBox
             // 
+            this.descriptionBox.BackColor = System.Drawing.Color.White;
             this.descriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptionBox.Font = new System.Drawing.Font("Montserrat", 9.65F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionBox.Font = new System.Drawing.Font("Montserrat", 9.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.descriptionBox.Location = new System.Drawing.Point(0, 45);
             this.descriptionBox.Name = "descriptionBox";
+            this.descriptionBox.ReadOnly = true;
             this.descriptionBox.Size = new System.Drawing.Size(328, 583);
             this.descriptionBox.TabIndex = 0;
             this.descriptionBox.Text = "Descr";
+            // 
+            // descrLabel
+            // 
+            this.descrLabel.AutoSize = true;
+            this.descrLabel.Location = new System.Drawing.Point(-4, 20);
+            this.descrLabel.Name = "descrLabel";
+            this.descrLabel.Size = new System.Drawing.Size(96, 22);
+            this.descrLabel.TabIndex = 2;
+            this.descrLabel.Text = "Описание";
+            // 
+            // datesLabel
+            // 
+            this.datesLabel.AutoSize = true;
+            this.datesLabel.Location = new System.Drawing.Point(357, 20);
+            this.datesLabel.Name = "datesLabel";
+            this.datesLabel.Size = new System.Drawing.Size(51, 22);
+            this.datesLabel.TabIndex = 3;
+            this.datesLabel.Text = "Дати";
+            // 
+            // datesPanel
+            // 
+            this.datesPanel.Location = new System.Drawing.Point(354, 41);
+            this.datesPanel.Name = "datesPanel";
+            this.datesPanel.Size = new System.Drawing.Size(237, 587);
+            this.datesPanel.TabIndex = 4;
             // 
             // productionDateTicketControl1
             // 
@@ -55,34 +82,9 @@
             this.productionDateTicketControl1.Size = new System.Drawing.Size(236, 37);
             this.productionDateTicketControl1.TabIndex = 1;
             // 
-            // descrLabel
-            // 
-            this.descrLabel.AutoSize = true;
-            this.descrLabel.Location = new System.Drawing.Point(0, 20);
-            this.descrLabel.Name = "descrLabel";
-            this.descrLabel.Size = new System.Drawing.Size(78, 18);
-            this.descrLabel.TabIndex = 2;
-            this.descrLabel.Text = "Описание";
-            // 
-            // datesLabel
-            // 
-            this.datesLabel.AutoSize = true;
-            this.datesLabel.Location = new System.Drawing.Point(351, 20);
-            this.datesLabel.Name = "datesLabel";
-            this.datesLabel.Size = new System.Drawing.Size(43, 18);
-            this.datesLabel.TabIndex = 3;
-            this.datesLabel.Text = "Дати";
-            // 
-            // datesPanel
-            // 
-            this.datesPanel.Location = new System.Drawing.Point(354, 41);
-            this.datesPanel.Name = "datesPanel";
-            this.datesPanel.Size = new System.Drawing.Size(237, 587);
-            this.datesPanel.TabIndex = 4;
-            // 
             // ProductionDescription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);

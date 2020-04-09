@@ -17,14 +17,15 @@ namespace TeatrUI.UserControls
             InitializeComponent();
         }
 
-        private void dayLabel_Click(object sender, EventArgs e)
+        public string Date
         {
-
+            get { return dateField.Text; }
+            set { dateField.Text = value; }
         }
-
-        private void dateLabel_Click(object sender, EventArgs e)
+        public string Day
         {
-
+            get { return dayLabel.Text; }
+            set { dayLabel.Text = value; }
         }
     }
 }

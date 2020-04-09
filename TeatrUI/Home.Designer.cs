@@ -33,10 +33,10 @@
             this.tomorrowField = new System.Windows.Forms.Label();
             this.tomorrowLabel = new System.Windows.Forms.Label();
             this.todayPanel = new System.Windows.Forms.Panel();
+            this.mainProductionItem1 = new TeatrUI.UserControls.ProductionHomeItem();
             this.tomorrowPanel = new System.Windows.Forms.Panel();
+            this.mainProductionItem2 = new TeatrUI.UserControls.ProductionHomeItem();
             this.pageTitle = new System.Windows.Forms.Label();
-            this.mainProductionItem2 = new TeatrUI.UserControls.MainProductionItem();
-            this.mainProductionItem1 = new TeatrUI.UserControls.MainProductionItem();
             this.todayPanel.SuspendLayout();
             this.tomorrowPanel.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +93,16 @@
             this.todayPanel.Size = new System.Drawing.Size(451, 264);
             this.todayPanel.TabIndex = 9;
             // 
+            // mainProductionItem1
+            // 
+            this.mainProductionItem1.BackColor = System.Drawing.Color.White;
+            this.mainProductionItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mainProductionItem1.Location = new System.Drawing.Point(1, 2);
+            this.mainProductionItem1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mainProductionItem1.Name = "mainProductionItem1";
+            this.mainProductionItem1.Size = new System.Drawing.Size(139, 260);
+            this.mainProductionItem1.TabIndex = 0;
+            // 
             // tomorrowPanel
             // 
             this.tomorrowPanel.Controls.Add(this.mainProductionItem2);
@@ -101,6 +111,17 @@
             this.tomorrowPanel.Name = "tomorrowPanel";
             this.tomorrowPanel.Size = new System.Drawing.Size(450, 260);
             this.tomorrowPanel.TabIndex = 10;
+            // 
+            // mainProductionItem2
+            // 
+            this.mainProductionItem2.BackColor = System.Drawing.Color.White;
+            this.mainProductionItem2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mainProductionItem2.Location = new System.Drawing.Point(0, 0);
+            this.mainProductionItem2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mainProductionItem2.Name = "mainProductionItem2";
+            this.mainProductionItem2.Size = new System.Drawing.Size(139, 260);
+            this.mainProductionItem2.TabIndex = 1;
+            this.mainProductionItem2.Load += new System.EventHandler(this.mainProductionItem2_Load);
             // 
             // pageTitle
             // 
@@ -112,27 +133,6 @@
             this.pageTitle.Size = new System.Drawing.Size(484, 29);
             this.pageTitle.TabIndex = 14;
             this.pageTitle.Text = "МАЛЪК ГРАДСКИ ТЕАТЪР \"ЗАД КАНАЛА\"";
-            // 
-            // mainProductionItem2
-            // 
-            this.mainProductionItem2.BackColor = System.Drawing.Color.White;
-            this.mainProductionItem2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mainProductionItem2.Location = new System.Drawing.Point(1, 20);
-            this.mainProductionItem2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.mainProductionItem2.Name = "mainProductionItem2";
-            this.mainProductionItem2.Size = new System.Drawing.Size(139, 260);
-            this.mainProductionItem2.TabIndex = 1;
-            this.mainProductionItem2.Load += new System.EventHandler(this.mainProductionItem2_Load);
-            // 
-            // mainProductionItem1
-            // 
-            this.mainProductionItem1.BackColor = System.Drawing.Color.White;
-            this.mainProductionItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mainProductionItem1.Location = new System.Drawing.Point(1, 2);
-            this.mainProductionItem1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.mainProductionItem1.Name = "mainProductionItem1";
-            this.mainProductionItem1.Size = new System.Drawing.Size(139, 260);
-            this.mainProductionItem1.TabIndex = 0;
             // 
             // Home
             // 
@@ -167,8 +167,8 @@
         private System.Windows.Forms.Label tomorrowLabel;
         private System.Windows.Forms.Panel todayPanel;
         private System.Windows.Forms.Panel tomorrowPanel;
-        private UserControls.MainProductionItem mainProductionItem1;
-        private UserControls.MainProductionItem mainProductionItem2;
+        private UserControls.ProductionHomeItem mainProductionItem1;
+        private UserControls.ProductionHomeItem mainProductionItem2;
         private System.Windows.Forms.Label pageTitle;
     }
 }

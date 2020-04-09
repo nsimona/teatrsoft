@@ -1,6 +1,6 @@
 ﻿namespace TeatrUI
 {
-    partial class AddProductionForm
+    partial class CreateUpdateProductionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -69,7 +69,7 @@
             // 
             this.actorsLabel.AutoSize = true;
             this.actorsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.actorsLabel.Location = new System.Drawing.Point(7, 296);
+            this.actorsLabel.Location = new System.Drawing.Point(6, 296);
             this.actorsLabel.Margin = new System.Windows.Forms.Padding(3);
             this.actorsLabel.Name = "actorsLabel";
             this.actorsLabel.Size = new System.Drawing.Size(80, 22);
@@ -91,7 +91,7 @@
             // 
             this.premiereLabel.AutoSize = true;
             this.premiereLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.premiereLabel.Location = new System.Drawing.Point(2, 69);
+            this.premiereLabel.Location = new System.Drawing.Point(6, 69);
             this.premiereLabel.Margin = new System.Windows.Forms.Padding(3);
             this.premiereLabel.Name = "premiereLabel";
             this.premiereLabel.Size = new System.Drawing.Size(98, 22);
@@ -102,7 +102,7 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.nameLabel.Location = new System.Drawing.Point(2, 7);
+            this.nameLabel.Location = new System.Drawing.Point(6, 7);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(3);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(46, 22);
@@ -126,9 +126,9 @@
             this.posterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.posterLabel.Location = new System.Drawing.Point(352, 7);
             this.posterLabel.Name = "posterLabel";
-            this.posterLabel.Size = new System.Drawing.Size(71, 22);
+            this.posterLabel.Size = new System.Drawing.Size(68, 22);
             this.posterLabel.TabIndex = 49;
-            this.posterLabel.Text = "Постер";
+            this.posterLabel.Text = "Плакат";
             // 
             // authorLabel
             // 
@@ -145,7 +145,7 @@
             // 
             this.dateLabel.AutoSize = true;
             this.dateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.dateLabel.Location = new System.Drawing.Point(3, 491);
+            this.dateLabel.Location = new System.Drawing.Point(6, 491);
             this.dateLabel.Margin = new System.Windows.Forms.Padding(3);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(49, 22);
@@ -158,7 +158,7 @@
             this.addDateControl.CustomFormat = "dd/MM/yy";
             this.addDateControl.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addDateControl.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.addDateControl.Location = new System.Drawing.Point(7, 518);
+            this.addDateControl.Location = new System.Drawing.Point(6, 518);
             this.addDateControl.Name = "addDateControl";
             this.addDateControl.Size = new System.Drawing.Size(133, 29);
             this.addDateControl.TabIndex = 54;
@@ -200,7 +200,7 @@
             // 
             this.addedDatesLabel.AutoSize = true;
             this.addedDatesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.addedDatesLabel.Location = new System.Drawing.Point(3, 553);
+            this.addedDatesLabel.Location = new System.Drawing.Point(6, 553);
             this.addedDatesLabel.Margin = new System.Windows.Forms.Padding(3);
             this.addedDatesLabel.Name = "addedDatesLabel";
             this.addedDatesLabel.Size = new System.Drawing.Size(137, 22);
@@ -211,7 +211,7 @@
             // 
             this.descriptionLabel.AutoSize = true;
             this.descriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.descriptionLabel.Location = new System.Drawing.Point(7, 703);
+            this.descriptionLabel.Location = new System.Drawing.Point(6, 703);
             this.descriptionLabel.Margin = new System.Windows.Forms.Padding(3);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.Size = new System.Drawing.Size(96, 22);
@@ -318,7 +318,7 @@
             this.posterDescLabel.Name = "posterDescLabel";
             this.posterDescLabel.Size = new System.Drawing.Size(200, 99);
             this.posterDescLabel.TabIndex = 52;
-            this.posterDescLabel.Text = "Постерът може да бъде .png, .jpg, .jpeg и трябва да е с размери до 340/200px";
+            this.posterDescLabel.Text = "Плакатът може да бъде .png, .jpg, .jpeg и трябва да е с размери до 340/200px";
             // 
             // actorsList
             // 
@@ -379,6 +379,7 @@
             this.posterField.Location = new System.Drawing.Point(356, 34);
             this.posterField.Name = "posterField";
             this.posterField.Size = new System.Drawing.Size(200, 274);
+            this.posterField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.posterField.TabIndex = 0;
             this.posterField.TabStop = false;
             this.posterField.Click += new System.EventHandler(this.posterField_Click);
@@ -387,10 +388,10 @@
             // 
             this.datesList.FormattingEnabled = true;
             this.datesList.ItemHeight = 22;
-            this.datesList.Location = new System.Drawing.Point(7, 583);
+            this.datesList.Location = new System.Drawing.Point(6, 583);
             this.datesList.Name = "datesList";
             this.datesList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.datesList.Size = new System.Drawing.Size(510, 114);
+            this.datesList.Size = new System.Drawing.Size(513, 114);
             this.datesList.TabIndex = 79;
             // 
             // delDateBtn

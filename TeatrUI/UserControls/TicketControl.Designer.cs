@@ -80,7 +80,7 @@
             this.priceField.ForeColor = System.Drawing.Color.Black;
             this.priceField.Location = new System.Drawing.Point(474, 181);
             this.priceField.Name = "priceField";
-            this.priceField.Size = new System.Drawing.Size(96, 24);
+            this.priceField.Size = new System.Drawing.Size(101, 29);
             this.priceField.TabIndex = 10;
             this.priceField.Text = "15,00 лв";
             // 
@@ -103,7 +103,7 @@
             this.seatField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
             this.seatField.Location = new System.Drawing.Point(357, 143);
             this.seatField.Name = "seatField";
-            this.seatField.Size = new System.Drawing.Size(30, 21);
+            this.seatField.Size = new System.Drawing.Size(30, 25);
             this.seatField.TabIndex = 8;
             this.seatField.Text = "12";
             // 
@@ -114,7 +114,7 @@
             this.rowField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
             this.rowField.Location = new System.Drawing.Point(232, 143);
             this.rowField.Name = "rowField";
-            this.rowField.Size = new System.Drawing.Size(20, 21);
+            this.rowField.Size = new System.Drawing.Size(24, 25);
             this.rowField.TabIndex = 7;
             this.rowField.Text = "4";
             // 
@@ -125,7 +125,7 @@
             this.sceneAddressField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.sceneAddressField.Location = new System.Drawing.Point(18, 143);
             this.sceneAddressField.Name = "sceneAddressField";
-            this.sceneAddressField.Size = new System.Drawing.Size(59, 16);
+            this.sceneAddressField.Size = new System.Drawing.Size(67, 18);
             this.sceneAddressField.TabIndex = 6;
             this.sceneAddressField.Text = "партер 2";
             // 
@@ -136,7 +136,7 @@
             this.seatLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.seatLabel.Location = new System.Drawing.Point(359, 126);
             this.seatLabel.Name = "seatLabel";
-            this.seatLabel.Size = new System.Drawing.Size(53, 16);
+            this.seatLabel.Size = new System.Drawing.Size(59, 18);
             this.seatLabel.TabIndex = 5;
             this.seatLabel.Text = "МЯСТО";
             this.seatLabel.Click += new System.EventHandler(this.label6_Click);
@@ -148,7 +148,7 @@
             this.rowLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.rowLabel.Location = new System.Drawing.Point(234, 126);
             this.rowLabel.Name = "rowLabel";
-            this.rowLabel.Size = new System.Drawing.Size(35, 16);
+            this.rowLabel.Size = new System.Drawing.Size(36, 18);
             this.rowLabel.TabIndex = 4;
             this.rowLabel.Text = "РЕД";
             // 
@@ -159,7 +159,7 @@
             this.sceneField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.sceneField.Location = new System.Drawing.Point(17, 126);
             this.sceneField.Name = "sceneField";
-            this.sceneField.Size = new System.Drawing.Size(112, 16);
+            this.sceneField.Size = new System.Drawing.Size(121, 18);
             this.sceneField.TabIndex = 3;
             this.sceneField.Text = "ГОЛЯМА СЦЕНА";
             this.sceneField.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,7 +169,7 @@
             this.theaterAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.theaterAddress.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.theaterAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.theaterAddress.Location = new System.Drawing.Point(235, 5);
+            this.theaterAddress.Location = new System.Drawing.Point(293, 5);
             this.theaterAddress.Name = "theaterAddress";
             this.theaterAddress.Size = new System.Drawing.Size(243, 32);
             this.theaterAddress.TabIndex = 2;
@@ -181,13 +181,13 @@
             this.theaterName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.theaterName.Location = new System.Drawing.Point(18, 5);
             this.theaterName.Name = "theaterName";
-            this.theaterName.Size = new System.Drawing.Size(209, 32);
+            this.theaterName.Size = new System.Drawing.Size(269, 32);
             this.theaterName.TabIndex = 1;
             this.theaterName.Text = "МАЛЪК ГРАДСКИ ТЕАТЪР \"ЗАД КАНАЛА\"";
             // 
             // TicketControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.ticketPanel);

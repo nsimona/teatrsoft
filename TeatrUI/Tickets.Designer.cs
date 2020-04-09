@@ -43,7 +43,7 @@
             this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
             this.pageTitle.Location = new System.Drawing.Point(0, 10);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(176, 45);
+            this.pageTitle.Size = new System.Drawing.Size(193, 52);
             this.pageTitle.TabIndex = 1;
             this.pageTitle.Text = "БИЛЕТИ";
             // 
@@ -100,7 +100,7 @@
             // 
             // Tickets
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);

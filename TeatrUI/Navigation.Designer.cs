@@ -106,7 +106,6 @@
             this.selector.Name = "selector";
             this.selector.Size = new System.Drawing.Size(10, 45);
             this.selector.TabIndex = 4;
-            this.selector.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // programNavBtn
             // 

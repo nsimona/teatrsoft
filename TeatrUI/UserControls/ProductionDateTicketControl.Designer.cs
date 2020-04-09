@@ -40,7 +40,7 @@
             this.dateLabel.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateLabel.Location = new System.Drawing.Point(3, 7);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(64, 17);
+            this.dateLabel.Size = new System.Drawing.Size(65, 21);
             this.dateLabel.TabIndex = 0;
             this.dateLabel.Text = "01.01.20";
             // 
@@ -50,7 +50,7 @@
             this.timeField.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.timeField.Location = new System.Drawing.Point(79, 7);
             this.timeField.Name = "timeField";
-            this.timeField.Size = new System.Drawing.Size(44, 17);
+            this.timeField.Size = new System.Drawing.Size(47, 21);
             this.timeField.TabIndex = 1;
             this.timeField.Text = "19:00";
             // 
@@ -68,19 +68,20 @@
             this.ticketsBtn.TabIndex = 2;
             this.ticketsBtn.Text = "БИЛЕТИ";
             this.ticketsBtn.UseVisualStyleBackColor = false;
+            this.ticketsBtn.Click += new System.EventHandler(this.ticketsBtn_Click);
             // 
             // dateField
             // 
             this.dateField.AutoSize = true;
             this.dateField.Location = new System.Drawing.Point(63, 7);
             this.dateField.Name = "dateField";
-            this.dateField.Size = new System.Drawing.Size(15, 22);
+            this.dateField.Size = new System.Drawing.Size(16, 22);
             this.dateField.TabIndex = 3;
             this.dateField.Text = "-";
             // 
             // ProductionDateTicketControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dateField);

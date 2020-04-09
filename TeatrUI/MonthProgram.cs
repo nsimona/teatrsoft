@@ -26,5 +26,10 @@ namespace TeatrUI
         {
 
         }
+
+        private void programDateControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

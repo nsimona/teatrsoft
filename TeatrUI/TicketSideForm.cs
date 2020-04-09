@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace TeatrUI
 {
-    public partial class TickerSideForm : Form
+    public partial class TicketSideForm : Form
     {
-        public TickerSideForm()
+        public TicketSideForm()
         {
             InitializeComponent();
+        }
+
+        private void payBtn_Click(object sender, EventArgs e)
+        {
+            TeatrUIEventHandler.SetMainContent(new Tickets());
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            TeatrUIEventHandler.SetMainContent(new Home());
+            TeatrUIEventHandler.SetSideContent(new Navigation());
         }
     }
 }

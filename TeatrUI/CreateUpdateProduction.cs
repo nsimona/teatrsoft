@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace TeatrUI
 {
-    public partial class AddProduction : Form
+    public partial class CreateUpdateProduction : Form
     {
-        AddProductionForm production = new AddProductionForm();
-        public AddProduction()
+        CreateUpdateProductionForm production = new CreateUpdateProductionForm();
+        public CreateUpdateProduction()
         {
             InitializeComponent();
             production.TopLevel = false;

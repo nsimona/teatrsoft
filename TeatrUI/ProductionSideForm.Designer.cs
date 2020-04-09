@@ -38,6 +38,7 @@
             this.directorLabel = new System.Windows.Forms.Label();
             this.authorField = new System.Windows.Forms.Label();
             this.authorLabel = new System.Windows.Forms.Label();
+            this.backButtonControl = new TeatrUI.UserControls.BackButtonControl();
             ((System.ComponentModel.ISupportInitialize)(this.posterField)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             this.durationLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.durationLabel.Location = new System.Drawing.Point(16, 662);
             this.durationLabel.Name = "durationLabel";
-            this.durationLabel.Size = new System.Drawing.Size(115, 16);
+            this.durationLabel.Size = new System.Drawing.Size(132, 18);
             this.durationLabel.TabIndex = 16;
             this.durationLabel.Text = "Продължителност";
             // 
@@ -78,7 +79,7 @@
             this.durationField.ForeColor = System.Drawing.Color.Gray;
             this.durationField.Location = new System.Drawing.Point(17, 680);
             this.durationField.Name = "durationField";
-            this.durationField.Size = new System.Drawing.Size(45, 16);
+            this.durationField.Size = new System.Drawing.Size(52, 18);
             this.durationField.TabIndex = 17;
             this.durationField.Text = "96мин";
             // 
@@ -100,7 +101,7 @@
             this.actrosLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.actrosLabel.Location = new System.Drawing.Point(15, 604);
             this.actrosLabel.Name = "actrosLabel";
-            this.actrosLabel.Size = new System.Drawing.Size(56, 16);
+            this.actrosLabel.Size = new System.Drawing.Size(65, 18);
             this.actrosLabel.TabIndex = 18;
             this.actrosLabel.Text = "Актьори";
             // 
@@ -111,7 +112,7 @@
             this.directorField.ForeColor = System.Drawing.Color.Gray;
             this.directorField.Location = new System.Drawing.Point(16, 586);
             this.directorField.Name = "directorField";
-            this.directorField.Size = new System.Drawing.Size(138, 16);
+            this.directorField.Size = new System.Drawing.Size(155, 18);
             this.directorField.TabIndex = 21;
             this.directorField.Text = "Костадин Костадинов";
             // 
@@ -121,7 +122,7 @@
             this.directorLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.directorLabel.Location = new System.Drawing.Point(15, 568);
             this.directorLabel.Name = "directorLabel";
-            this.directorLabel.Size = new System.Drawing.Size(67, 16);
+            this.directorLabel.Size = new System.Drawing.Size(76, 18);
             this.directorLabel.TabIndex = 20;
             this.directorLabel.Text = "Режисьор";
             // 
@@ -132,7 +133,7 @@
             this.authorField.ForeColor = System.Drawing.Color.Gray;
             this.authorField.Location = new System.Drawing.Point(16, 546);
             this.authorField.Name = "authorField";
-            this.authorField.Size = new System.Drawing.Size(138, 16);
+            this.authorField.Size = new System.Drawing.Size(155, 18);
             this.authorField.TabIndex = 23;
             this.authorField.Text = "Костадин Костадинов";
             // 
@@ -142,16 +143,26 @@
             this.authorLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authorLabel.Location = new System.Drawing.Point(15, 528);
             this.authorLabel.Name = "authorLabel";
-            this.authorLabel.Size = new System.Drawing.Size(47, 16);
+            this.authorLabel.Size = new System.Drawing.Size(52, 18);
             this.authorLabel.TabIndex = 22;
             this.authorLabel.Text = "Автор:";
             // 
+            // backButtonControl
+            // 
+            this.backButtonControl.BackColor = System.Drawing.Color.Transparent;
+            this.backButtonControl.Location = new System.Drawing.Point(10, 10);
+            this.backButtonControl.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
+            this.backButtonControl.Name = "backButtonControl";
+            this.backButtonControl.Size = new System.Drawing.Size(135, 36);
+            this.backButtonControl.TabIndex = 37;
+            // 
             // ProductionSideForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(330, 710);
+            this.Controls.Add(this.backButtonControl);
             this.Controls.Add(this.authorField);
             this.Controls.Add(this.authorLabel);
             this.Controls.Add(this.directorField);
@@ -185,5 +196,6 @@
         private System.Windows.Forms.Label directorLabel;
         private System.Windows.Forms.Label authorField;
         private System.Windows.Forms.Label authorLabel;
+        private UserControls.BackButtonControl backButtonControl;
     }
 }

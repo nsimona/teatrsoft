@@ -12,14 +12,29 @@ namespace TeatrUI.UserControls
 {
     public partial class SeatControl : UserControl
     {
+        bool selected = false;
         public SeatControl()
         {
             InitializeComponent();
         }
 
-        private void SeatControl_Load(object sender, EventArgs e)
+        public Color SeatColor
         {
+            get { return seatBox.BackColor; }
+            set { seatBox.BackColor = value; }
+        }
 
+        private void seatBox_Click(object sender, EventArgs e)
+        {
+            if(selected)
+            {
+                seatBox.BackColor = Color.FromArgb(200, 200, 200);
+                selected = false;
+            } else
+            {
+                seatBox.BackColor = Color.FromArgb(107, 216, 180);
+                selected = true;
+            }
         }
     }
 }

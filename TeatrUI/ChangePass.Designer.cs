@@ -44,9 +44,9 @@
             this.pageTitle.BackColor = System.Drawing.Color.White;
             this.pageTitle.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.pageTitle.Location = new System.Drawing.Point(0, 75);
+            this.pageTitle.Location = new System.Drawing.Point(0, 40);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(246, 24);
+            this.pageTitle.Size = new System.Drawing.Size(279, 29);
             this.pageTitle.TabIndex = 15;
             this.pageTitle.Text = "ПРОМЯНА НА ПАРОЛА";
             // 
@@ -54,7 +54,7 @@
             // 
             this.userCardControl1.BackColor = System.Drawing.Color.White;
             this.userCardControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userCardControl1.Location = new System.Drawing.Point(5, 121);
+            this.userCardControl1.Location = new System.Drawing.Point(0, 74);
             this.userCardControl1.Margin = new System.Windows.Forms.Padding(5);
             this.userCardControl1.Name = "userCardControl1";
             this.userCardControl1.Size = new System.Drawing.Size(288, 125);
@@ -68,7 +68,7 @@
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(0, 407);
+            this.saveBtn.Location = new System.Drawing.Point(0, 371);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(100, 30);
             this.saveBtn.TabIndex = 49;
@@ -77,7 +77,7 @@
             // 
             // newPassTextBox
             // 
-            this.newPassTextBox.Location = new System.Drawing.Point(0, 295);
+            this.newPassTextBox.Location = new System.Drawing.Point(0, 259);
             this.newPassTextBox.Name = "newPassTextBox";
             this.newPassTextBox.Size = new System.Drawing.Size(300, 27);
             this.newPassTextBox.TabIndex = 48;
@@ -86,16 +86,16 @@
             // 
             this.newPassLabel.AutoSize = true;
             this.newPassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.newPassLabel.Location = new System.Drawing.Point(1, 267);
+            this.newPassLabel.Location = new System.Drawing.Point(1, 231);
             this.newPassLabel.Margin = new System.Windows.Forms.Padding(3);
             this.newPassLabel.Name = "newPassLabel";
-            this.newPassLabel.Size = new System.Drawing.Size(102, 18);
+            this.newPassLabel.Size = new System.Drawing.Size(116, 22);
             this.newPassLabel.TabIndex = 47;
             this.newPassLabel.Text = "Нова парола";
             // 
             // newPassRepeatTextBox
             // 
-            this.newPassRepeatTextBox.Location = new System.Drawing.Point(0, 358);
+            this.newPassRepeatTextBox.Location = new System.Drawing.Point(0, 322);
             this.newPassRepeatTextBox.Name = "newPassRepeatTextBox";
             this.newPassRepeatTextBox.Size = new System.Drawing.Size(300, 27);
             this.newPassRepeatTextBox.TabIndex = 51;
@@ -104,25 +104,25 @@
             // 
             this.repeatPassLabel.AutoSize = true;
             this.repeatPassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.repeatPassLabel.Location = new System.Drawing.Point(1, 330);
+            this.repeatPassLabel.Location = new System.Drawing.Point(1, 294);
             this.repeatPassLabel.Margin = new System.Windows.Forms.Padding(3);
             this.repeatPassLabel.Name = "repeatPassLabel";
-            this.repeatPassLabel.Size = new System.Drawing.Size(165, 18);
+            this.repeatPassLabel.Size = new System.Drawing.Size(191, 22);
             this.repeatPassLabel.TabIndex = 50;
             this.repeatPassLabel.Text = "Повтори нова парола";
             // 
             // backButtonControl1
             // 
             this.backButtonControl1.BackColor = System.Drawing.Color.White;
-            this.backButtonControl1.Location = new System.Drawing.Point(0, 10);
-            this.backButtonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backButtonControl1.Location = new System.Drawing.Point(0, 0);
+            this.backButtonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.backButtonControl1.Name = "backButtonControl1";
             this.backButtonControl1.Size = new System.Drawing.Size(135, 36);
             this.backButtonControl1.TabIndex = 52;
             // 
             // ChangePass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
