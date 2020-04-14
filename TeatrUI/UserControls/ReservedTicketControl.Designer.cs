@@ -39,9 +39,9 @@
             this.placeLabel.BackColor = System.Drawing.Color.Transparent;
             this.placeLabel.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.placeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.placeLabel.Location = new System.Drawing.Point(7, 4);
+            this.placeLabel.Location = new System.Drawing.Point(1, 0);
             this.placeLabel.Name = "placeLabel";
-            this.placeLabel.Size = new System.Drawing.Size(65, 22);
+            this.placeLabel.Size = new System.Drawing.Size(66, 22);
             this.placeLabel.TabIndex = 0;
             this.placeLabel.Text = "Място:";
             // 
@@ -51,9 +51,9 @@
             this.seatField.BackColor = System.Drawing.Color.Transparent;
             this.seatField.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.seatField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
-            this.seatField.Location = new System.Drawing.Point(7, 28);
+            this.seatField.Location = new System.Drawing.Point(1, 24);
             this.seatField.Name = "seatField";
-            this.seatField.Size = new System.Drawing.Size(31, 22);
+            this.seatField.Size = new System.Drawing.Size(32, 22);
             this.seatField.TabIndex = 1;
             this.seatField.Text = "С8";
             // 
@@ -63,15 +63,15 @@
             this.priceField.BackColor = System.Drawing.Color.Transparent;
             this.priceField.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.priceField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.priceField.Location = new System.Drawing.Point(206, 28);
+            this.priceField.Location = new System.Drawing.Point(186, 24);
             this.priceField.Name = "priceField";
-            this.priceField.Size = new System.Drawing.Size(70, 22);
+            this.priceField.Size = new System.Drawing.Size(71, 22);
             this.priceField.TabIndex = 2;
             this.priceField.Text = "12,00лв";
             // 
             // ReservedTicketControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.priceField);
             this.Controls.Add(this.seatField);

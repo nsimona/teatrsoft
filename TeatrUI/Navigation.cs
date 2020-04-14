@@ -17,6 +17,15 @@ namespace TeatrUI
         public Navigation()
         {
             InitializeComponent();
+            homeNavBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            personNavBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            programNavBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            productionsNavBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            exportsNavBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            usersNavBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            personNavBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            scenesNavBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            infoBtnNav.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
         }
 
         private void selector_move(int y)

@@ -27,7 +27,7 @@ namespace TeatrUI
         private void continueBtn_Click(object sender, EventArgs e)
         {
             TeatrUIEventHandler.SetSideContent(new TicketSideForm());
-            TeatrUIEventHandler.SetMainContent(new Form());
+            TeatrUIEventHandler.SetMainContent(new Tickets());
         }
     }
 }

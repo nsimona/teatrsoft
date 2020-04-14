@@ -15,6 +15,7 @@ namespace TeatrUI.UserControls
         public BackButtonControl()
         {
             InitializeComponent();
+            backButton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
         }
 
         private void backButton_Click(object sender, EventArgs e)

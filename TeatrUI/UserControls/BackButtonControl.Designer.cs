@@ -46,6 +46,7 @@
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(135, 36);
             this.backButton.TabIndex = 0;
+            this.backButton.TabStop = false;
             this.backButton.Text = "  ОБРАТНО";
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);

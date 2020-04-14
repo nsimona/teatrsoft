@@ -39,17 +39,16 @@ namespace TeatrUI
 
             TeatrUIEventHandler.GoBack = () =>
             {
-                List<Form> ContentHistory = TeatrUIEventHandler.ContentHistory;
-                List<Form> SideHistory = TeatrUIEventHandler.SideHistory;
-
                 Form lastVisitedMainForm = TeatrUIEventHandler.ContentHistory[TeatrUIEventHandler.ContentHistory.Count - 2];
-                //Form lastVisitedSideForm = TeatrUIEventHandler.SideHistory[TeatrUIEventHandler.SideHistory.Count - 2];
-
+                TeatrUIEventHandler.ContentHistory.RemoveAt(TeatrUIEventHandler.ContentHistory.Count - 1);
                 TeatrUIEventHandler.SetMainContent(lastVisitedMainForm);
-                //TeatrUIEventHandler.SetSideContent(lastVisitedSideForm);
-                //TeatrUIEventHandler.SideHistory.RemoveAt(TeatrUIEventHandler.SideHistory.Count - 2);
-                TeatrUIEventHandler.ContentHistory.RemoveAt(TeatrUIEventHandler.ContentHistory.Count - 2);
-                
+                TeatrUIEventHandler.ContentHistory.RemoveAt(TeatrUIEventHandler.ContentHistory.Count - 1);
+                if (TeatrUIEventHandler.SideHistory.Count > 1) {
+                    Form lastVisitedSideForm = TeatrUIEventHandler.SideHistory[TeatrUIEventHandler.SideHistory.Count - 2];
+                    TeatrUIEventHandler.SideHistory.RemoveAt(TeatrUIEventHandler.SideHistory.Count - 1);
+                    TeatrUIEventHandler.SetSideContent(lastVisitedSideForm);
+                    TeatrUIEventHandler.SideHistory.RemoveAt(TeatrUIEventHandler.SideHistory.Count - 1);
+                }
             };
 
             Navigation navigation = new Navigation();

@@ -93,6 +93,7 @@
             this.homeNavBtn.Name = "homeNavBtn";
             this.homeNavBtn.Size = new System.Drawing.Size(262, 45);
             this.homeNavBtn.TabIndex = 3;
+            this.homeNavBtn.TabStop = false;
             this.homeNavBtn.Text = "         НАЧАЛО";
             this.homeNavBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeNavBtn.UseVisualStyleBackColor = false;
@@ -124,6 +125,7 @@
             this.programNavBtn.Name = "programNavBtn";
             this.programNavBtn.Size = new System.Drawing.Size(262, 45);
             this.programNavBtn.TabIndex = 13;
+            this.programNavBtn.TabStop = false;
             this.programNavBtn.Text = "         ПРОГРАМА";
             this.programNavBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.programNavBtn.UseVisualStyleBackColor = false;
@@ -146,6 +148,7 @@
             this.productionsNavBtn.Name = "productionsNavBtn";
             this.productionsNavBtn.Size = new System.Drawing.Size(262, 45);
             this.productionsNavBtn.TabIndex = 14;
+            this.productionsNavBtn.TabStop = false;
             this.productionsNavBtn.Text = "         СПЕКТАКЛИ";
             this.productionsNavBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.productionsNavBtn.UseVisualStyleBackColor = false;
@@ -168,6 +171,7 @@
             this.exportsNavBtn.Name = "exportsNavBtn";
             this.exportsNavBtn.Size = new System.Drawing.Size(262, 45);
             this.exportsNavBtn.TabIndex = 15;
+            this.exportsNavBtn.TabStop = false;
             this.exportsNavBtn.Text = "         ОТЧЕТИ";
             this.exportsNavBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exportsNavBtn.UseVisualStyleBackColor = false;
@@ -190,6 +194,7 @@
             this.personNavBtn.Name = "personNavBtn";
             this.personNavBtn.Size = new System.Drawing.Size(262, 45);
             this.personNavBtn.TabIndex = 16;
+            this.personNavBtn.TabStop = false;
             this.personNavBtn.Text = "         ТВОРЧЕСКИ СЪСТАВ";
             this.personNavBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.personNavBtn.UseVisualStyleBackColor = false;
@@ -212,6 +217,7 @@
             this.usersNavBtn.Name = "usersNavBtn";
             this.usersNavBtn.Size = new System.Drawing.Size(262, 45);
             this.usersNavBtn.TabIndex = 17;
+            this.usersNavBtn.TabStop = false;
             this.usersNavBtn.Text = "         ПОТРЕБИТЕЛИ";
             this.usersNavBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.usersNavBtn.UseVisualStyleBackColor = false;
@@ -234,6 +240,7 @@
             this.infoBtnNav.Name = "infoBtnNav";
             this.infoBtnNav.Size = new System.Drawing.Size(262, 45);
             this.infoBtnNav.TabIndex = 19;
+            this.infoBtnNav.TabStop = false;
             this.infoBtnNav.Text = "         ИНФО";
             this.infoBtnNav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.infoBtnNav.UseVisualStyleBackColor = false;
@@ -256,6 +263,7 @@
             this.scenesNavBtn.Name = "scenesNavBtn";
             this.scenesNavBtn.Size = new System.Drawing.Size(262, 45);
             this.scenesNavBtn.TabIndex = 18;
+            this.scenesNavBtn.TabStop = false;
             this.scenesNavBtn.Text = "         СЦЕНИ";
             this.scenesNavBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.scenesNavBtn.UseVisualStyleBackColor = false;

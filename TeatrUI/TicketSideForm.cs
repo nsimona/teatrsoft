@@ -19,7 +19,7 @@ namespace TeatrUI
 
         private void payBtn_Click(object sender, EventArgs e)
         {
-            TeatrUIEventHandler.SetMainContent(new Tickets());
+            //TeatrUIEventHandler.SetMainContent(new Tickets());
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
