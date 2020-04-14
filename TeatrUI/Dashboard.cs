@@ -12,7 +12,7 @@ using System.Drawing.Text;
 using System.Runtime.InteropServices;
 
 namespace TeatrUI
-{/**/
+{
     public  partial class Dashboard : Form
     {
         public Dashboard()
@@ -21,33 +21,35 @@ namespace TeatrUI
 
             TeatrUIEventHandler.SetMainContent = (Form f) =>
             {
+                TeatrUIEventHandler.ContentHistory.Add(f);
                 contentPanel.Controls.Clear();
                 f.TopLevel = false;
                 contentPanel.Controls.Add(f);
                 f.Show();
-                TeatrUIEventHandler.ContentHistory.Add(f);
             };
 
             TeatrUIEventHandler.SetSideContent = (Form f) =>
             {
+                TeatrUIEventHandler.SideHistory.Add(f);
                 sidePanel.Controls.Clear();
                 f.TopLevel = false;
                 sidePanel.Controls.Add(f);
                 f.Show();
-                TeatrUIEventHandler.SideHistory.Add(f);
             };
 
             TeatrUIEventHandler.GoBack = () =>
             {
                 List<Form> ContentHistory = TeatrUIEventHandler.ContentHistory;
                 List<Form> SideHistory = TeatrUIEventHandler.SideHistory;
-                Form lastVisitedMainForm = ContentHistory[ContentHistory.Count - 1];
-                Form lastVisitedSideForm = SideHistory[SideHistory.Count - 1];
-                SideHistory.RemoveAt(SideHistory.Count - 1);
-                ContentHistory.RemoveAt(ContentHistory.Count - 1);
+
+                Form lastVisitedMainForm = TeatrUIEventHandler.ContentHistory[TeatrUIEventHandler.ContentHistory.Count - 2];
+                //Form lastVisitedSideForm = TeatrUIEventHandler.SideHistory[TeatrUIEventHandler.SideHistory.Count - 2];
 
                 TeatrUIEventHandler.SetMainContent(lastVisitedMainForm);
-                TeatrUIEventHandler.SetSideContent(lastVisitedSideForm);
+                //TeatrUIEventHandler.SetSideContent(lastVisitedSideForm);
+                //TeatrUIEventHandler.SideHistory.RemoveAt(TeatrUIEventHandler.SideHistory.Count - 2);
+                TeatrUIEventHandler.ContentHistory.RemoveAt(TeatrUIEventHandler.ContentHistory.Count - 2);
+                
             };
 
             Navigation navigation = new Navigation();

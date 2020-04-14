@@ -95,7 +95,7 @@
             // 
             this.photoLabel.AutoSize = true;
             this.photoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.photoLabel.Location = new System.Drawing.Point(335, 90);
+            this.photoLabel.Location = new System.Drawing.Point(339, 90);
             this.photoLabel.Name = "photoLabel";
             this.photoLabel.Size = new System.Drawing.Size(74, 22);
             this.photoLabel.TabIndex = 10;
@@ -147,9 +147,9 @@
             // 
             this.photoField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.photoField.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.photoField.Location = new System.Drawing.Point(339, 118);
+            this.photoField.Location = new System.Drawing.Point(339, 115);
             this.photoField.Name = "photoField";
-            this.photoField.Size = new System.Drawing.Size(233, 275);
+            this.photoField.Size = new System.Drawing.Size(230, 290);
             this.photoField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.photoField.TabIndex = 9;
             this.photoField.TabStop = false;
@@ -202,20 +202,20 @@
             // 
             this.fileNameField.AutoEllipsis = true;
             this.fileNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.fileNameField.Location = new System.Drawing.Point(335, 406);
+            this.fileNameField.Location = new System.Drawing.Point(339, 408);
             this.fileNameField.Name = "fileNameField";
-            this.fileNameField.Size = new System.Drawing.Size(237, 49);
+            this.fileNameField.Size = new System.Drawing.Size(230, 29);
             this.fileNameField.TabIndex = 83;
             this.fileNameField.Text = "filename.jpg";
             // 
             // photoDescLabel
             // 
             this.photoDescLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.photoDescLabel.Location = new System.Drawing.Point(335, 463);
+            this.photoDescLabel.Location = new System.Drawing.Point(339, 437);
             this.photoDescLabel.Name = "photoDescLabel";
             this.photoDescLabel.Size = new System.Drawing.Size(237, 99);
             this.photoDescLabel.TabIndex = 82;
-            this.photoDescLabel.Text = "Снимката може да бъде .png, .jpg, .jpeg и трябва да е с размери до 340/200px";
+            this.photoDescLabel.Text = "Снимката може да бъде .png, .jpg, .jpeg и трябва да е с размери до 230/290px";
             // 
             // CreateUpdateStaffPerson
             // 

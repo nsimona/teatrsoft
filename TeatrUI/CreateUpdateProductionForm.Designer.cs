@@ -314,11 +314,11 @@
             // posterDescLabel
             // 
             this.posterDescLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.posterDescLabel.Location = new System.Drawing.Point(356, 381);
+            this.posterDescLabel.Location = new System.Drawing.Point(356, 354);
             this.posterDescLabel.Name = "posterDescLabel";
             this.posterDescLabel.Size = new System.Drawing.Size(200, 99);
             this.posterDescLabel.TabIndex = 52;
-            this.posterDescLabel.Text = "Плакатът може да бъде .png, .jpg, .jpeg и трябва да е с размери до 340/200px";
+            this.posterDescLabel.Text = "Плакатът може да бъде .png, .jpg, .jpeg и трябва да е с размери 300/385px";
             // 
             // actorsList
             // 
@@ -378,7 +378,7 @@
             this.posterField.Cursor = System.Windows.Forms.Cursors.Hand;
             this.posterField.Location = new System.Drawing.Point(356, 34);
             this.posterField.Name = "posterField";
-            this.posterField.Size = new System.Drawing.Size(200, 274);
+            this.posterField.Size = new System.Drawing.Size(200, 255);
             this.posterField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.posterField.TabIndex = 0;
             this.posterField.TabStop = false;
@@ -412,13 +412,13 @@
             // 
             this.fileNameField.AutoEllipsis = true;
             this.fileNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.fileNameField.Location = new System.Drawing.Point(356, 324);
+            this.fileNameField.Location = new System.Drawing.Point(356, 305);
             this.fileNameField.Name = "fileNameField";
             this.fileNameField.Size = new System.Drawing.Size(200, 49);
             this.fileNameField.TabIndex = 81;
             this.fileNameField.Text = "filename.jpg";
             // 
-            // AddProductionForm
+            // CreateUpdateProductionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -459,7 +459,7 @@
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "AddProductionForm";
+            this.Name = "CreateUpdateProductionForm";
             this.Text = "AddProductionForm";
             this.Load += new System.EventHandler(this.AddProductionForm_Load);
             this.descriptionHolder.ResumeLayout(false);

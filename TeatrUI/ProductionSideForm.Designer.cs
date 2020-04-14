@@ -49,16 +49,16 @@
             this.titleField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
             this.titleField.Location = new System.Drawing.Point(12, 49);
             this.titleField.Name = "titleField";
-            this.titleField.Size = new System.Drawing.Size(306, 92);
+            this.titleField.Size = new System.Drawing.Size(298, 92);
             this.titleField.TabIndex = 14;
             this.titleField.Text = "Ромео и Жулиета";
             this.titleField.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // posterField
             // 
-            this.posterField.Location = new System.Drawing.Point(17, 144);
+            this.posterField.Location = new System.Drawing.Point(16, 141);
             this.posterField.Name = "posterField";
-            this.posterField.Size = new System.Drawing.Size(301, 381);
+            this.posterField.Size = new System.Drawing.Size(300, 384);
             this.posterField.TabIndex = 15;
             this.posterField.TabStop = false;
             // 

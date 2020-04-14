@@ -36,20 +36,21 @@
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(216)))), ((int)(((byte)(180)))));
+            this.panel.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(10, 44);
+            this.panel.Size = new System.Drawing.Size(10, 45);
             this.panel.TabIndex = 0;
             // 
             // dateField
             // 
             this.dateField.AutoSize = true;
             this.dateField.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
+            this.dateField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(216)))), ((int)(((byte)(180)))));
             this.dateField.Location = new System.Drawing.Point(21, 0);
             this.dateField.Name = "dateField";
-            this.dateField.Size = new System.Drawing.Size(90, 22);
+            this.dateField.Size = new System.Drawing.Size(98, 22);
             this.dateField.TabIndex = 1;
             this.dateField.Text = "03.03.2020";
             // 
@@ -57,16 +58,16 @@
             // 
             this.dayLabel.AutoSize = true;
             this.dayLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
+            this.dayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(216)))), ((int)(((byte)(180)))));
             this.dayLabel.Location = new System.Drawing.Point(21, 22);
             this.dayLabel.Name = "dayLabel";
-            this.dayLabel.Size = new System.Drawing.Size(78, 22);
+            this.dayLabel.Size = new System.Drawing.Size(84, 22);
             this.dayLabel.TabIndex = 2;
             this.dayLabel.Text = "Вторник";
             // 
             // ProgramDateControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dayLabel);
