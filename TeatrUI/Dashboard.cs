@@ -21,6 +21,9 @@ namespace TeatrUI
 
             TeatrUIEventHandler.SetMainContent = (Form f) =>
             {
+
+                if(TeatrUIEventHandler.ContentHistory.Count == 10)
+                    TeatrUIEventHandler.ContentHistory.RemoveAt(0);
                 TeatrUIEventHandler.ContentHistory.Add(f);
                 contentPanel.Controls.Clear();
                 f.TopLevel = false;
@@ -30,6 +33,8 @@ namespace TeatrUI
 
             TeatrUIEventHandler.SetSideContent = (Form f) =>
             {
+                if (TeatrUIEventHandler.SideHistory.Count == 10)
+                    TeatrUIEventHandler.SideHistory.RemoveAt(0);
                 TeatrUIEventHandler.SideHistory.Add(f);
                 sidePanel.Controls.Clear();
                 f.TopLevel = false;

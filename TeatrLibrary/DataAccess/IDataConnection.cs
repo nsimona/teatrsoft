@@ -7,7 +7,12 @@ namespace TeatrLibrary.DataAccess
 {
    public interface IDataConnection
     {
-        PersonModel AddPerson(PersonModel person, string photoPath);
+        PersonModel AddMember(PersonModel person);
+        void UpdateMember(PersonModel person);
         List<Position> GetPositions();
+        List<PersonModel> GetAllMembers(string sort = null);
+        PersonModel GetMember(int id);
+        List<PersonModel> GetMembersByCategory(string category);
+        List<SceneModel> GetScenes();
     }
 }

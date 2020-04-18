@@ -143,6 +143,26 @@ namespace TeatrUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap default_member {
+            get {
+                object obj = ResourceManager.GetObject("default_member", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap default_poster {
+            get {
+                object obj = ResourceManager.GetObject("default_poster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap del {
             get {
                 object obj = ResourceManager.GetObject("del", resourceCulture);

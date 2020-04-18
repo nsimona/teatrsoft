@@ -12,6 +12,6 @@ namespace TeatrLibrary.Models
         public string Role { get; set; }
         public string Username { get; set; }
         public string Mail { get; set; }
-        public byte[] Picture { get; set; }
+        public string Avatar { get; set; }
     }
 }

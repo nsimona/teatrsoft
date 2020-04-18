@@ -6,34 +6,20 @@ using TeatrLibrary.Models;
 using Dapper;
 using System.Linq;
 
-//@id integer,
-//@name nvarchar(50),
-//	@phone nvarchar(25),
-//	@mail varchar(100),
-//	@position integer,
-//    @picture varbinary(MAX),
-//	@active bit,
-//    @statementType varchar(20),
-//	@createdId int = 0 output
-
 namespace TeatrLibrary.DataAccess
 {
     class SQLConnector : IDataConnection
     {
-        public PersonModel AddPerson(PersonModel person, string photoPath = null)
+        public PersonModel AddMember(PersonModel person)
         {
            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("teatrsoft")))
            {
-                if(photoPath.Length > 0)
-                {
-                    // TODO - Copy the picture to PhotoLibrary/StaffMember
-                }
                 DynamicParameters parameter = new DynamicParameters();
                 parameter.Add("@statementType", "insert");
                 parameter.Add("@name", person.Name);
                 parameter.Add("@phone", person.Phone);
                 parameter.Add("@mail", person.Mail);
-                parameter.Add("@position", 1);
+                parameter.Add("@position", person.Position);
                 parameter.Add("@photo", person.Photo);
                 parameter.Add("@createdId", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
@@ -44,10 +30,61 @@ namespace TeatrLibrary.DataAccess
                 return person;
            }
         }
-        public List<PersonModel> GetAllMembers() 
+
+        public List<PersonModel> GetMembersByCategory(string category)
         {
-            return new List<PersonModel>();
+            List<PersonModel> actors = new List<PersonModel>();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("teatrsoft")))
+            {
+                var queryActors = connection.Query("select * from StaffMember where active = 1 and position_id = (select id from Position where name = '" + category + "')" ).ToList();
+                foreach(var actor in queryActors)
+                {
+                    actors.Add(new PersonModel(actor.name, position: actor.position_id, id: actor.id, phone: actor.phone, mail: actor.mail, photo: actor.photo));
+                }
+            }
+            return actors;
         }
+
+        public List<PersonModel> GetAllMembers(string sort = null) 
+        {
+            List<PersonModel> staffMembers = new List<PersonModel>();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("teatrsoft")))
+            {
+                var queryMembers = new List<dynamic>();
+                if (sort == null)
+                    queryMembers = connection.Query("select * from StaffMember").ToList();
+                else
+                    queryMembers = connection.Query("select * from StaffMember order by name " + sort).ToList();
+
+                foreach (var member in queryMembers)
+                {
+                    staffMembers.Add(new PersonModel(member.name, position: member.position_id, id: member.id, phone: member.phone, mail: member.mail, photo: member.photo, active: member.active));
+                }
+
+            }
+            return staffMembers;
+        }
+
+        public PersonModel GetMember(int id)
+        {
+            PersonModel person = new PersonModel();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("teatrsoft")))
+            {
+                var queryMember = connection.Query("select * from StaffMember where active = 1 and id =" + id).ToList();
+                foreach (var member in queryMember)
+                {
+                    person.Name = member.name;
+                    person.Phone = member.phone;
+                    person.Mail = member.mail;
+                    person.Position = member.position_id;
+                    person.Photo = member.photo;
+                    person.Id = member.id;
+                }
+                
+            }
+            return person;
+        }
+
         public List<Position> GetPositions()
         {
             List<Position> positions = new List<Position>();
@@ -58,10 +95,32 @@ namespace TeatrLibrary.DataAccess
                 {
                     positions.Add(new Position(position.id, position.name));
                 }
-                
+
             }
             return positions;
+        }
 
+        public List<SceneModel> GetScenes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateMember(PersonModel person)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("teatrsoft")))
+            {
+                DynamicParameters parameter = new DynamicParameters();
+                parameter.Add("@statementType", "update");
+                parameter.Add("@id", person.Id);
+                parameter.Add("@name", person.Name);
+                parameter.Add("@phone", person.Phone);
+                parameter.Add("@mail", person.Mail);
+                parameter.Add("@position", person.Position);
+                parameter.Add("@photo", person.Photo);
+                parameter.Add("@active", person.Active);
+
+                connection.Execute("dbo.spUpsertStaffMember", parameter, commandType: CommandType.StoredProcedure);
+            }
         }
     }
 }

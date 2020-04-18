@@ -54,13 +54,13 @@
             this.directorComboBox = new System.Windows.Forms.ComboBox();
             this.posterDescLabel = new System.Windows.Forms.Label();
             this.actorsList = new System.Windows.Forms.ListBox();
+            this.datesList = new System.Windows.Forms.ListBox();
+            this.fileNameField = new System.Windows.Forms.Label();
+            this.delDateBtn = new System.Windows.Forms.Button();
             this.delActorBtn = new System.Windows.Forms.Button();
             this.addDateBtn = new System.Windows.Forms.Button();
             this.addActorBtn = new System.Windows.Forms.Button();
             this.posterField = new System.Windows.Forms.PictureBox();
-            this.datesList = new System.Windows.Forms.ListBox();
-            this.delDateBtn = new System.Windows.Forms.Button();
-            this.fileNameField = new System.Windows.Forms.Label();
             this.descriptionHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posterField)).BeginInit();
             this.SuspendLayout();
@@ -330,6 +330,40 @@
             this.actorsList.Size = new System.Drawing.Size(279, 92);
             this.actorsList.TabIndex = 77;
             // 
+            // datesList
+            // 
+            this.datesList.FormattingEnabled = true;
+            this.datesList.ItemHeight = 22;
+            this.datesList.Location = new System.Drawing.Point(6, 583);
+            this.datesList.Name = "datesList";
+            this.datesList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.datesList.Size = new System.Drawing.Size(513, 114);
+            this.datesList.TabIndex = 79;
+            // 
+            // fileNameField
+            // 
+            this.fileNameField.AutoEllipsis = true;
+            this.fileNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.fileNameField.Location = new System.Drawing.Point(356, 305);
+            this.fileNameField.Name = "fileNameField";
+            this.fileNameField.Size = new System.Drawing.Size(200, 49);
+            this.fileNameField.TabIndex = 81;
+            this.fileNameField.Text = "default.jpg";
+            // 
+            // delDateBtn
+            // 
+            this.delDateBtn.BackColor = System.Drawing.Color.White;
+            this.delDateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delDateBtn.FlatAppearance.BorderSize = 0;
+            this.delDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delDateBtn.Image = global::TeatrUI.Properties.Resources.delbtbn;
+            this.delDateBtn.Location = new System.Drawing.Point(525, 583);
+            this.delDateBtn.Name = "delDateBtn";
+            this.delDateBtn.Size = new System.Drawing.Size(34, 30);
+            this.delDateBtn.TabIndex = 80;
+            this.delDateBtn.UseVisualStyleBackColor = false;
+            this.delDateBtn.Click += new System.EventHandler(this.delDateBtn_Click);
+            // 
             // delActorBtn
             // 
             this.delActorBtn.BackColor = System.Drawing.Color.White;
@@ -376,6 +410,7 @@
             // 
             this.posterField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.posterField.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.posterField.Image = global::TeatrUI.Properties.Resources.default_poster;
             this.posterField.Location = new System.Drawing.Point(356, 34);
             this.posterField.Name = "posterField";
             this.posterField.Size = new System.Drawing.Size(200, 255);
@@ -383,40 +418,6 @@
             this.posterField.TabIndex = 0;
             this.posterField.TabStop = false;
             this.posterField.Click += new System.EventHandler(this.posterField_Click);
-            // 
-            // datesList
-            // 
-            this.datesList.FormattingEnabled = true;
-            this.datesList.ItemHeight = 22;
-            this.datesList.Location = new System.Drawing.Point(6, 583);
-            this.datesList.Name = "datesList";
-            this.datesList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.datesList.Size = new System.Drawing.Size(513, 114);
-            this.datesList.TabIndex = 79;
-            // 
-            // delDateBtn
-            // 
-            this.delDateBtn.BackColor = System.Drawing.Color.White;
-            this.delDateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delDateBtn.FlatAppearance.BorderSize = 0;
-            this.delDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delDateBtn.Image = global::TeatrUI.Properties.Resources.delbtbn;
-            this.delDateBtn.Location = new System.Drawing.Point(525, 583);
-            this.delDateBtn.Name = "delDateBtn";
-            this.delDateBtn.Size = new System.Drawing.Size(34, 30);
-            this.delDateBtn.TabIndex = 80;
-            this.delDateBtn.UseVisualStyleBackColor = false;
-            this.delDateBtn.Click += new System.EventHandler(this.delDateBtn_Click);
-            // 
-            // fileNameField
-            // 
-            this.fileNameField.AutoEllipsis = true;
-            this.fileNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.fileNameField.Location = new System.Drawing.Point(356, 305);
-            this.fileNameField.Name = "fileNameField";
-            this.fileNameField.Size = new System.Drawing.Size(200, 49);
-            this.fileNameField.TabIndex = 81;
-            this.fileNameField.Text = "filename.jpg";
             // 
             // CreateUpdateProductionForm
             // 

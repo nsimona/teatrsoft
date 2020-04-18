@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.titleField = new System.Windows.Forms.Label();
-            this.posterField = new System.Windows.Forms.PictureBox();
             this.durationLabel = new System.Windows.Forms.Label();
             this.durationField = new System.Windows.Forms.Label();
             this.actorsField = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.authorField = new System.Windows.Forms.Label();
             this.authorLabel = new System.Windows.Forms.Label();
             this.backButtonControl = new TeatrUI.UserControls.BackButtonControl();
+            this.posterField = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.posterField)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,26 +47,18 @@
             this.titleField.AutoEllipsis = true;
             this.titleField.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.titleField.Location = new System.Drawing.Point(12, 49);
+            this.titleField.Location = new System.Drawing.Point(15, 46);
             this.titleField.Name = "titleField";
-            this.titleField.Size = new System.Drawing.Size(298, 92);
+            this.titleField.Size = new System.Drawing.Size(298, 75);
             this.titleField.TabIndex = 14;
             this.titleField.Text = "Ромео и Жулиета";
             this.titleField.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // posterField
-            // 
-            this.posterField.Location = new System.Drawing.Point(16, 141);
-            this.posterField.Name = "posterField";
-            this.posterField.Size = new System.Drawing.Size(300, 384);
-            this.posterField.TabIndex = 15;
-            this.posterField.TabStop = false;
             // 
             // durationLabel
             // 
             this.durationLabel.AutoSize = true;
             this.durationLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.durationLabel.Location = new System.Drawing.Point(16, 662);
+            this.durationLabel.Location = new System.Drawing.Point(13, 658);
             this.durationLabel.Name = "durationLabel";
             this.durationLabel.Size = new System.Drawing.Size(132, 18);
             this.durationLabel.TabIndex = 16;
@@ -77,7 +69,7 @@
             this.durationField.AutoSize = true;
             this.durationField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.durationField.ForeColor = System.Drawing.Color.Gray;
-            this.durationField.Location = new System.Drawing.Point(17, 680);
+            this.durationField.Location = new System.Drawing.Point(14, 676);
             this.durationField.Name = "durationField";
             this.durationField.Size = new System.Drawing.Size(52, 18);
             this.durationField.TabIndex = 17;
@@ -88,7 +80,7 @@
             this.actorsField.AutoEllipsis = true;
             this.actorsField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.actorsField.ForeColor = System.Drawing.Color.Gray;
-            this.actorsField.Location = new System.Drawing.Point(16, 622);
+            this.actorsField.Location = new System.Drawing.Point(13, 618);
             this.actorsField.Name = "actorsField";
             this.actorsField.Size = new System.Drawing.Size(304, 40);
             this.actorsField.TabIndex = 19;
@@ -99,7 +91,7 @@
             // 
             this.actrosLabel.AutoSize = true;
             this.actrosLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.actrosLabel.Location = new System.Drawing.Point(15, 604);
+            this.actrosLabel.Location = new System.Drawing.Point(12, 600);
             this.actrosLabel.Name = "actrosLabel";
             this.actrosLabel.Size = new System.Drawing.Size(65, 18);
             this.actrosLabel.TabIndex = 18;
@@ -110,7 +102,7 @@
             this.directorField.AutoSize = true;
             this.directorField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.directorField.ForeColor = System.Drawing.Color.Gray;
-            this.directorField.Location = new System.Drawing.Point(16, 586);
+            this.directorField.Location = new System.Drawing.Point(13, 582);
             this.directorField.Name = "directorField";
             this.directorField.Size = new System.Drawing.Size(155, 18);
             this.directorField.TabIndex = 21;
@@ -120,7 +112,7 @@
             // 
             this.directorLabel.AutoSize = true;
             this.directorLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.directorLabel.Location = new System.Drawing.Point(15, 568);
+            this.directorLabel.Location = new System.Drawing.Point(12, 564);
             this.directorLabel.Name = "directorLabel";
             this.directorLabel.Size = new System.Drawing.Size(76, 18);
             this.directorLabel.TabIndex = 20;
@@ -131,7 +123,7 @@
             this.authorField.AutoSize = true;
             this.authorField.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authorField.ForeColor = System.Drawing.Color.Gray;
-            this.authorField.Location = new System.Drawing.Point(16, 546);
+            this.authorField.Location = new System.Drawing.Point(13, 542);
             this.authorField.Name = "authorField";
             this.authorField.Size = new System.Drawing.Size(155, 18);
             this.authorField.TabIndex = 23;
@@ -141,7 +133,7 @@
             // 
             this.authorLabel.AutoSize = true;
             this.authorLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.authorLabel.Location = new System.Drawing.Point(15, 528);
+            this.authorLabel.Location = new System.Drawing.Point(12, 524);
             this.authorLabel.Name = "authorLabel";
             this.authorLabel.Size = new System.Drawing.Size(52, 18);
             this.authorLabel.TabIndex = 22;
@@ -155,6 +147,18 @@
             this.backButtonControl.Name = "backButtonControl";
             this.backButtonControl.Size = new System.Drawing.Size(135, 36);
             this.backButtonControl.TabIndex = 37;
+            // 
+            // posterField
+            // 
+            this.posterField.ImageLocation = "";
+            this.posterField.InitialImage = global::TeatrUI.Properties.Resources.default_poster;
+            this.posterField.Location = new System.Drawing.Point(15, 124);
+            this.posterField.Name = "posterField";
+            this.posterField.Size = new System.Drawing.Size(300, 384);
+            this.posterField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.posterField.TabIndex = 15;
+            this.posterField.TabStop = false;
+            this.posterField.WaitOnLoad = true;
             // 
             // ProductionSideForm
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TeatrLibrary;
 using TeatrLibrary.Models;
 using TeatrUI.UserControls;
 
@@ -16,18 +17,22 @@ namespace TeatrUI
     {
         //Added Actors List
         private List<PersonModel> selectedActors = new List<PersonModel>();
-        private List<PersonModel> availableActors = new List<PersonModel>()
+        private List<PersonModel> availableActors = GlobalConfig.Connection.GetMembersByCategory("Актьор");
+
+        /* private List<PersonModel> availableActors = new List<PersonModel>()
+             {
+                 new PersonModel("Simona Nasteva", id: 1),
+                 new PersonModel("Simeon Kashkanov", id: 2),
+                 new PersonModel("Ivana  Ivanova", id: 3),
+             };*/
+
+        /*private List<PersonModel> availableDirectors = new List<PersonModel>()
             {
                 new PersonModel("Simona Nasteva", id: 1),
                 new PersonModel("Simeon Kashkanov", id: 2),
                 new PersonModel("Ivana  Ivanova", id: 3),
-            };
-        private List<PersonModel> availableDirectors = new List<PersonModel>()
-            {
-                new PersonModel("Simona Nasteva", id: 1),
-                new PersonModel("Simeon Kashkanov", id: 2),
-                new PersonModel("Ivana  Ivanova", id: 3),
-            };
+            };*/
+        private List<PersonModel> availableDirectors = GlobalConfig.Connection.GetMembersByCategory("Режисьор");
         private List<PorductionEventModel> addedEvents = new List<PorductionEventModel>();
         private List<SceneModel> availableScenes = new List<SceneModel>
         {

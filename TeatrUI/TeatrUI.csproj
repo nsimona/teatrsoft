@@ -52,11 +52,11 @@
     <Compile Include="Account.Designer.cs">
       <DependentUpon>Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateUpdateStaffPerson.cs">
+    <Compile Include="CreateUpdateStaffMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateUpdateStaffPerson.Designer.cs">
-      <DependentUpon>CreateUpdateStaffPerson.cs</DependentUpon>
+    <Compile Include="CreateUpdateStaffMember.Designer.cs">
+      <DependentUpon>CreateUpdateStaffMember.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateUpdateProduction.cs">
       <SubType>Form</SubType>
@@ -124,6 +124,11 @@
     <Compile Include="ProductionSideForm.Designer.cs">
       <DependentUpon>ProductionSideForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ScenesPresentation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,11 +180,11 @@
     <Compile Include="UserControls\ExportItemControl.Designer.cs">
       <DependentUpon>ExportItemControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\PersonItemControl.cs">
+    <Compile Include="UserControls\MemberItemControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\PersonItemControl.Designer.cs">
-      <DependentUpon>PersonItemControl.cs</DependentUpon>
+    <Compile Include="UserControls\MemberItemControl.Designer.cs">
+      <DependentUpon>MemberItemControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\BackButtonControl.cs">
       <SubType>UserControl</SubType>
@@ -265,11 +270,12 @@
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateUpdateStaffPerson.resx">
-      <DependentUpon>CreateUpdateStaffPerson.cs</DependentUpon>
+    <EmbeddedResource Include="CreateUpdateStaffMember.resx">
+      <DependentUpon>CreateUpdateStaffMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateUpdateProduction.resx">
       <DependentUpon>CreateUpdateProduction.cs</DependentUpon>
@@ -315,14 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Seats.resx">
       <DependentUpon>Seats.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,8 +339,8 @@
     <EmbeddedResource Include="UserControls\ExportItemControl.resx">
       <DependentUpon>ExportItemControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\PersonItemControl.resx">
-      <DependentUpon>PersonItemControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\MemberItemControl.resx">
+      <DependentUpon>MemberItemControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BackButtonControl.resx">
       <DependentUpon>BackButtonControl.cs</DependentUpon>
@@ -397,46 +398,46 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bg.jpg" />
+    <EmbeddedResource Include="Resources\bg.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arrow.png" />
+    <EmbeddedResource Include="Resources\arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\navBg.jpg" />
+    <EmbeddedResource Include="Resources\navBg.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png" />
+    <EmbeddedResource Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sort.png" />
+    <EmbeddedResource Include="Resources\sort.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sort1.png" />
+    <EmbeddedResource Include="Resources\sort1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sort2.png" />
+    <EmbeddedResource Include="Resources\sort2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\continue.png" />
+    <EmbeddedResource Include="Resources\continue.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\add.png" />
+    <EmbeddedResource Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\add1.png" />
+    <EmbeddedResource Include="Resources\add1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\print.png" />
+    <EmbeddedResource Include="Resources\print.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\save.png" />
+    <EmbeddedResource Include="Resources\save.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\addGreen.png" />
+    <EmbeddedResource Include="Resources\addGreen.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\editPerson.png" />
+    <EmbeddedResource Include="Resources\editPerson.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeatrLibrary\TeatrLibrary.csproj">
@@ -445,13 +446,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\edituser.png" />
+    <EmbeddedResource Include="Resources\edituser.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\del.png" />
+    <EmbeddedResource Include="Resources\del.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\delbtbn.png" />
+    <EmbeddedResource Include="Resources\delbtbn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\default_member.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\default_poster.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

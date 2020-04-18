@@ -31,8 +31,7 @@
             this.addNew = new System.Windows.Forms.Button();
             this.sortBtn = new System.Windows.Forms.Button();
             this.pageTitle = new System.Windows.Forms.Label();
-            this.personItemControl1 = new TeatrUI.UserControls.PersonItemControl();
-            this.staffPanel = new System.Windows.Forms.Panel();
+            this.staffPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // addNew
@@ -69,6 +68,7 @@
             this.sortBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.sortBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.sortBtn.UseVisualStyleBackColor = true;
+            this.sortBtn.Click += new System.EventHandler(this.sortBtn_Click);
             // 
             // pageTitle
             // 
@@ -81,23 +81,13 @@
             this.pageTitle.TabIndex = 17;
             this.pageTitle.Text = "ТВОРЧЕСКИ СЪСТАВ";
             // 
-            // personItemControl1
-            // 
-            this.personItemControl1.BackColor = System.Drawing.Color.White;
-            this.personItemControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.personItemControl1.Location = new System.Drawing.Point(0, 90);
-            this.personItemControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.personItemControl1.Name = "personItemControl1";
-            this.personItemControl1.Size = new System.Drawing.Size(147, 254);
-            this.personItemControl1.TabIndex = 15;
-            this.personItemControl1.Load += new System.EventHandler(this.personItemControl1_Load_1);
-            // 
             // staffPanel
             // 
-            this.staffPanel.Location = new System.Drawing.Point(0, 90);
+            this.staffPanel.AutoScroll = true;
+            this.staffPanel.Location = new System.Drawing.Point(1, 76);
             this.staffPanel.Name = "staffPanel";
-            this.staffPanel.Size = new System.Drawing.Size(588, 548);
-            this.staffPanel.TabIndex = 18;
+            this.staffPanel.Size = new System.Drawing.Size(590, 552);
+            this.staffPanel.TabIndex = 19;
             // 
             // StaffList
             // 
@@ -105,11 +95,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
+            this.Controls.Add(this.staffPanel);
             this.Controls.Add(this.pageTitle);
-            this.Controls.Add(this.personItemControl1);
             this.Controls.Add(this.addNew);
             this.Controls.Add(this.sortBtn);
-            this.Controls.Add(this.staffPanel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -125,8 +114,7 @@
 
         private System.Windows.Forms.Button addNew;
         private System.Windows.Forms.Button sortBtn;
-        private UserControls.PersonItemControl personItemControl1;
         private System.Windows.Forms.Label pageTitle;
-        private System.Windows.Forms.Panel staffPanel;
+        private System.Windows.Forms.FlowLayoutPanel staffPanel;
     }
 }

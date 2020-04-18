@@ -8,7 +8,7 @@ namespace TeatrLibrary.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Position { get; set; }
+        public int Position { get; set; }
         public string Phone { get; set; }
         public string Mail { get; set; }
         //public byte[] Photo { get; set; }
@@ -20,18 +20,18 @@ namespace TeatrLibrary.Models
             return true;
         }
         public PersonModel() { }
-        public PersonModel(string name, string position = "", int id = 0, string phone="", string mail="", string photo = null, bool active=true)
+        public PersonModel(string name, int position = 0, int id = 0, string phone="", string mail="", string photo = "default_actor.jpg", bool active=true)
         {
-            if(name != "")
+            /*if(name != "")
             {
-                Name = name;
                 return;
             } 
             if(position != "")
             {
-                Position = position;
                 return;
-            }
+            }*/
+            Name = name;
+            Position = position;
             Id = id;
             Phone = phone;
             Mail = mail;
