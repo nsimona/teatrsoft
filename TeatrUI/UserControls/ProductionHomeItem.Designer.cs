@@ -44,7 +44,6 @@
             this.posterField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.posterField.TabIndex = 0;
             this.posterField.TabStop = false;
-            this.posterField.Click += new System.EventHandler(this.posterField_Click);
             // 
             // titleField
             // 

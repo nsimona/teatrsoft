@@ -16,69 +16,62 @@ namespace TeatrUI
     public partial class CreateUpdateProductionForm : Form
     {
         //Added Actors List
-        private List<PersonModel> selectedActors = new List<PersonModel>();
         private List<PersonModel> availableActors = GlobalConfig.Connection.GetMembersByCategory("Актьор");
-
-        /* private List<PersonModel> availableActors = new List<PersonModel>()
-             {
-                 new PersonModel("Simona Nasteva", id: 1),
-                 new PersonModel("Simeon Kashkanov", id: 2),
-                 new PersonModel("Ivana  Ivanova", id: 3),
-             };*/
-
-        /*private List<PersonModel> availableDirectors = new List<PersonModel>()
-            {
-                new PersonModel("Simona Nasteva", id: 1),
-                new PersonModel("Simeon Kashkanov", id: 2),
-                new PersonModel("Ivana  Ivanova", id: 3),
-            };*/
         private List<PersonModel> availableDirectors = GlobalConfig.Connection.GetMembersByCategory("Режисьор");
-        private List<PorductionEventModel> addedEvents = new List<PorductionEventModel>();
-        private List<SceneModel> availableScenes = new List<SceneModel>
-        {
-            new SceneModel("Голяма сцена"),
-            new SceneModel("Зала 51"),
-        };
+        private List<SceneModel> availableScenes = GlobalConfig.Connection.GetScenes();
+        public List<PersonModel> selectedActors = new List<PersonModel>();
+        public List<ProductionEventModel> addedEvents = new List<ProductionEventModel>();
         public void InitialLoad()
         {
             InitializeComponent();
 
             SetDateFormats();
-            //WireUp Lists
+            DateTime now = DateTime.Now;
+            addTimeControl.Value = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second, now.Kind); ;
+        }
+        public CreateUpdateProductionForm()
+        {
+            InitialLoad();
             WireUpActors();
             WireUpDirectors();
             WireUpDates();
             WireUpScenes();
         }
-        public CreateUpdateProductionForm()
+
+        public CreateUpdateProductionForm(ProductionModel production)
         {
             InitialLoad();
+            this.nameTextBox.Text = production.Name;
+            this.authorTextBox.Text = production.Author;
+            this.descriptionTextBox.Text = production.Description;
+            this.premiereDateControl.Value = production.Premiere;
+            this.durationTextBox.Text = $"{production.Duration}";
+            this.directorComboBox.SelectedValue = production.Director;
+            this.posterField.Image = Utils.LoadImage("production", production.PosterFileName);
+            this.fileNameField.Text = production.PosterFileName;
+            this.selectedActors = production.Actors;
+            this.addedEvents = production.Dates;
+            WireUpActors();
+            WireUpDirectors();
+            WireUpDates();
+            WireUpScenes();
         }
 
-        public CreateUpdateProductionForm(
-                List<PersonModel> selectedActors, 
-                List<PorductionEventModel> addedEvents, 
-                string name,
-                string author,
-                string description, 
-                DateTime premiereDate,
-                string duration, 
-                int directorId,
-                string fileNameField
-            )
+        public void ResetAllControls()
         {
-            InitialLoad();
-            this.selectedActors = selectedActors;
-            this.addedEvents = addedEvents;
-            this.nameTextBox.Text = name;
-            this.authorTextBox.Text = author;
-            this.descriptionTextBox.Text = description;
-            this.premiereDateControl.Value = premiereDate;
-            this.durationTextBox.Text = duration;
-            this.directorComboBox.SelectedValue = directorId;
-            this.fileNameField.Text = fileNameField;
+            nameTextBox.Text = "";
+            premiereDateControl.Value = DateTime.Now;
+            authorTextBox.Text = "";
+            directorComboBox.SelectedIndex = 0;
+            durationTextBox.Text = "0";
+            selectedActors = new List<PersonModel>();
+            addedEvents = new List<ProductionEventModel>();
+            descriptionTextBox.Text = "";
+            posterField.Image = Utils.LoadImage("production", null);
+            fileNameField.Text = "default.jpg";
+            WireUpActors();
+            WireUpDates();
         }
-
         private void SetDateFormats()
         {
             premiereDateControl.Format = DateTimePickerFormat.Custom;
@@ -118,6 +111,7 @@ namespace TeatrUI
             addSceneComboBox.DataSource = null;
             addSceneComboBox.DataSource = availableScenes;
             addSceneComboBox.DisplayMember = "Name";
+            addSceneComboBox.ValueMember = "Id";
         }
 
         private void posterField_Click(object sender, EventArgs e)
@@ -160,11 +154,12 @@ namespace TeatrUI
         private void addDateBtn_Click(object sender, EventArgs e)
         {
             DateTime date = addDateControl.Value.Date;
-            DateTime time = addDateControl.Value.ToLocalTime();
-            PorductionEventModel productionEvent = new PorductionEventModel();
+            TimeSpan time = addTimeControl.Value.TimeOfDay;
+            ProductionEventModel productionEvent = new ProductionEventModel();
             productionEvent.Date = date;
             productionEvent.Time = time;
-            productionEvent.Scene = ((SceneModel)addSceneComboBox.SelectedItem).Name;
+            productionEvent.Scene = ((SceneModel)addSceneComboBox.SelectedItem).Id;
+            productionEvent.SceneName = availableScenes.Find(scene => scene.Id == productionEvent.Scene).Name;
 
             if(durationTextBox.TextLength == 0)
             {
@@ -192,7 +187,7 @@ namespace TeatrUI
         {
             foreach (object listItem in datesList.SelectedItems)
             {
-                PorductionEventModel porductionEvent = (PorductionEventModel)listItem;
+                ProductionEventModel porductionEvent = (ProductionEventModel)listItem;
                 addedEvents.Remove(porductionEvent);
             }
             WireUpDates();
@@ -201,7 +196,7 @@ namespace TeatrUI
         private void durationTextBox_TextChanged(object sender, EventArgs e)
         {
             // TODO - Allow only numeric values
-            if (!int.TryParse(durationTextBox.Text, out int result))
+            if (!short.TryParse(durationTextBox.Text, out short result))
             {
                 MessageBox.Show("Въведете продължителността на спектакъла в минути. Позволено е изпозлването само на цели числа.");
                 return;

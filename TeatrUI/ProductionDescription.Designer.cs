@@ -31,8 +31,7 @@
             this.descriptionBox = new System.Windows.Forms.RichTextBox();
             this.descrLabel = new System.Windows.Forms.Label();
             this.datesLabel = new System.Windows.Forms.Label();
-            this.datesPanel = new System.Windows.Forms.Panel();
-            this.productionDateTicketControl1 = new TeatrUI.UserControls.ProductionDateTicketControl();
+            this.datesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // descriptionBox
@@ -67,20 +66,10 @@
             // 
             // datesPanel
             // 
-            this.datesPanel.Location = new System.Drawing.Point(354, 41);
+            this.datesPanel.Location = new System.Drawing.Point(353, 45);
             this.datesPanel.Name = "datesPanel";
-            this.datesPanel.Size = new System.Drawing.Size(237, 587);
-            this.datesPanel.TabIndex = 4;
-            // 
-            // productionDateTicketControl1
-            // 
-            this.productionDateTicketControl1.BackColor = System.Drawing.Color.White;
-            this.productionDateTicketControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.productionDateTicketControl1.Location = new System.Drawing.Point(355, 45);
-            this.productionDateTicketControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.productionDateTicketControl1.Name = "productionDateTicketControl1";
-            this.productionDateTicketControl1.Size = new System.Drawing.Size(236, 37);
-            this.productionDateTicketControl1.TabIndex = 1;
+            this.datesPanel.Size = new System.Drawing.Size(237, 596);
+            this.datesPanel.TabIndex = 0;
             // 
             // ProductionDescription
             // 
@@ -88,11 +77,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
+            this.Controls.Add(this.datesPanel);
             this.Controls.Add(this.datesLabel);
             this.Controls.Add(this.descrLabel);
-            this.Controls.Add(this.productionDateTicketControl1);
             this.Controls.Add(this.descriptionBox);
-            this.Controls.Add(this.datesPanel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -109,6 +97,6 @@
         private UserControls.ProductionDateTicketControl productionDateTicketControl1;
         private System.Windows.Forms.Label descrLabel;
         private System.Windows.Forms.Label datesLabel;
-        private System.Windows.Forms.Panel datesPanel;
+        private System.Windows.Forms.FlowLayoutPanel datesPanel;
     }
 }

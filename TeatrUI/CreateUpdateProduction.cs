@@ -7,32 +7,70 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TeatrLibrary;
+using TeatrLibrary.Models;
 
 namespace TeatrUI
 {
     public partial class CreateUpdateProduction : Form
     {
-        CreateUpdateProductionForm production = new CreateUpdateProductionForm();
+        CreateUpdateProductionForm productionForm = new CreateUpdateProductionForm();
+        ProductionModel production = new ProductionModel();
         public CreateUpdateProduction()
         {
             InitializeComponent();
-            production.TopLevel = false;
-            addProductionPanel.Controls.Add(production);
-            production.Show();
+            productionForm.TopLevel = false;
+            addProductionPanel.Controls.Add(productionForm);
+            productionForm.Show();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        public CreateUpdateProduction(ProductionModel production)
         {
-
+            InitializeComponent();
+            productionForm = new CreateUpdateProductionForm(production);
+            productionForm.TopLevel = false;
+            addProductionPanel.Controls.Add(productionForm);
+            productionForm.Show();
         }
-
+        private bool ValidateForm()
+        {
+            if (production.Name == "") return false;
+            if (production.Duration == 0) return false;
+            return true;
+        }
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            foreach (Control c in production.Controls)
-            {
+            string name = productionForm.Controls.Find("nameTextBox", true)[0].Text;
+            DateTime premiere = ((DateTimePicker)productionForm.Controls.Find("premiereDateControl", true)[0]).Value;
+            string author = productionForm.Controls.Find("authorTextBox", true)[0].Text;
+            short duration = 0;
+            short.TryParse((productionForm.Controls.Find("durationTextBox", true)[0].Text), out duration);
+            int director = (int)((ComboBox)productionForm.Controls.Find("directorComboBox", true)[0]).SelectedValue;
+            string description = productionForm.Controls.Find("descriptionTextBox", true)[0].Text;
+            string posterFileName = productionForm.Controls.Find("posterField", true)[0].AccessibleName;
+            string sourceFile = productionForm.Controls.Find("posterField", true)[0].Text;
+            List<PersonModel> actors = productionForm.selectedActors;
+            List<ProductionEventModel> dates = productionForm.addedEvents;
+
+            production.Name = name;
+            production.Premiere = premiere;
+            production.Author = author;
+            production.Duration = duration;
+            production.Director = director;
+            production.Description = description;
+            production.PosterFileName = posterFileName;
+            production.Actors = actors;
+            production.Dates = dates;
                 
+            if (posterFileName != null)
+                Utils.CopyImageToPhotoLibrary(sourceFile, posterFileName, "production");
+            if (ValidateForm())
+            {
+                GlobalConfig.Connection.AddProduction(production);
+                productionForm.ResetAllControls();
             }
-            
+                
+            else
+                MessageBox.Show("Полетата име и продължителност са задължителни");
         }
     }
 }

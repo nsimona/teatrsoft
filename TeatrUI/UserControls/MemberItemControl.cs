@@ -22,16 +22,9 @@ namespace TeatrUI.UserControls
         {
             nameField.Text = currentPerson.Name;
             positionField.Text = positions[currentPerson.Position - 1].Name.ToLower();
-            photoField.Image = Utils.LoadImage("staff", currentPerson.Photo, "default_member");
-            if (!currentPerson.Active)
-            {
-                editBtn.Visible = false;
-                activateBtn.Visible = true;
-            } else
-            {
-                editBtn.Visible = true;
-                activateBtn.Visible = false;
-            }
+            photoField.Image = Utils.LoadImage("staff", currentPerson.Photo);
+            editBtn.Visible = currentPerson.Active;
+            activateBtn.Visible = !editBtn.Visible;
         }
 
         public new string Name

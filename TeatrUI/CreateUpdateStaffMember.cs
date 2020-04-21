@@ -42,7 +42,7 @@ namespace TeatrUI
             mailTextBox.Text = currentMember.Mail;
             categoryComboBox.SelectedValue = currentMember.Position;
             fileNameField.Text = currentMember.Photo;
-            photoField.Image = Utils.LoadImage("staff", currentMember.Photo, "default_member");
+            photoField.Image = Utils.LoadImage("staff", currentMember.Photo);
         }
 
         private void setPositionsList()

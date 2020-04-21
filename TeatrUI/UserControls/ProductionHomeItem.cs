@@ -37,10 +37,10 @@ namespace TeatrUI.UserControls
             set { timeField.Text = value; }
         }
 
-        private void posterField_Click(object sender, EventArgs e)
-        {
-            TeatrUIEventHandler.SetMainContent(new ProductionDescription());
-            TeatrUIEventHandler.SetSideContent(new ProductionSideForm());
-        }
+        //private void posterField_Click(object sender, EventArgs e)
+        //{
+        //    TeatrUIEventHandler.SetMainContent(new ProductionDescription());
+        //    TeatrUIEventHandler.SetSideContent(new ProductionSideForm());
+        //}
     }
 }

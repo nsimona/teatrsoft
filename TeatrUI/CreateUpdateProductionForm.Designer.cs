@@ -187,14 +187,15 @@
             // 
             this.addTimeControl.CalendarFont = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addTimeControl.Checked = false;
-            this.addTimeControl.CustomFormat = "HH:mm";
+            this.addTimeControl.CustomFormat = "HH:mm:ss";
             this.addTimeControl.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addTimeControl.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.addTimeControl.Location = new System.Drawing.Point(162, 517);
             this.addTimeControl.Name = "addTimeControl";
+            this.addTimeControl.ShowUpDown = true;
             this.addTimeControl.Size = new System.Drawing.Size(123, 29);
             this.addTimeControl.TabIndex = 59;
-            this.addTimeControl.Value = new System.DateTime(2020, 4, 9, 0, 0, 0, 0);
+            this.addTimeControl.Value = new System.DateTime(2020, 4, 19, 0, 0, 0, 0);
             // 
             // addedDatesLabel
             // 

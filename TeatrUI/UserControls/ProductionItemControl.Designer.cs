@@ -35,17 +35,17 @@
             this.authorField = new System.Windows.Forms.Label();
             this.directorField = new System.Windows.Forms.Label();
             this.posterField = new System.Windows.Forms.PictureBox();
-            this.eidtBtn = new System.Windows.Forms.Button();
+            this.actionBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.posterField)).BeginInit();
             this.SuspendLayout();
             // 
             // titleField
             // 
-            this.titleField.AutoSize = true;
+            this.titleField.AutoEllipsis = true;
             this.titleField.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleField.Location = new System.Drawing.Point(121, 3);
             this.titleField.Name = "titleField";
-            this.titleField.Size = new System.Drawing.Size(62, 22);
+            this.titleField.Size = new System.Drawing.Size(214, 73);
             this.titleField.TabIndex = 2;
             this.titleField.Text = "Зорба";
             // 
@@ -82,6 +82,7 @@
             // 
             // authorField
             // 
+            this.authorField.AutoEllipsis = true;
             this.authorField.AutoSize = true;
             this.authorField.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authorField.Location = new System.Drawing.Point(169, 87);
@@ -111,26 +112,26 @@
             this.posterField.TabStop = false;
             this.posterField.Click += new System.EventHandler(this.posterField_Click);
             // 
-            // eidtBtn
+            // actionBtn
             // 
-            this.eidtBtn.BackColor = System.Drawing.Color.White;
-            this.eidtBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.eidtBtn.FlatAppearance.BorderSize = 0;
-            this.eidtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eidtBtn.Image = global::TeatrUI.Properties.Resources.editPerson;
-            this.eidtBtn.Location = new System.Drawing.Point(3, 3);
-            this.eidtBtn.Name = "eidtBtn";
-            this.eidtBtn.Size = new System.Drawing.Size(34, 30);
-            this.eidtBtn.TabIndex = 67;
-            this.eidtBtn.UseVisualStyleBackColor = false;
-            this.eidtBtn.Click += new System.EventHandler(this.eidtBtn_Click);
+            this.actionBtn.BackColor = System.Drawing.Color.White;
+            this.actionBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.actionBtn.FlatAppearance.BorderSize = 0;
+            this.actionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.actionBtn.Image = global::TeatrUI.Properties.Resources.editPerson;
+            this.actionBtn.Location = new System.Drawing.Point(76, 110);
+            this.actionBtn.Name = "actionBtn";
+            this.actionBtn.Size = new System.Drawing.Size(34, 30);
+            this.actionBtn.TabIndex = 67;
+            this.actionBtn.UseVisualStyleBackColor = false;
+            this.actionBtn.Click += new System.EventHandler(this.actionBtn_Click);
             // 
             // ProductionItemControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.eidtBtn);
+            this.Controls.Add(this.actionBtn);
             this.Controls.Add(this.directorField);
             this.Controls.Add(this.authorField);
             this.Controls.Add(this.directorLabel);
@@ -139,7 +140,7 @@
             this.Controls.Add(this.titleField);
             this.Controls.Add(this.posterField);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 10);
             this.Name = "ProductionItemControl";
             this.Size = new System.Drawing.Size(338, 150);
             ((System.ComponentModel.ISupportInitialize)(this.posterField)).EndInit();
@@ -157,6 +158,6 @@
         private System.Windows.Forms.Label directorLabel;
         private System.Windows.Forms.Label authorField;
         private System.Windows.Forms.Label directorField;
-        private System.Windows.Forms.Button eidtBtn;
+        private System.Windows.Forms.Button actionBtn;
     }
 }

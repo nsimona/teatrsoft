@@ -69,7 +69,6 @@
             this.addProductionPanel.Name = "addProductionPanel";
             this.addProductionPanel.Size = new System.Drawing.Size(590, 502);
             this.addProductionPanel.TabIndex = 30;
-            this.addProductionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // archiveBtn
             // 

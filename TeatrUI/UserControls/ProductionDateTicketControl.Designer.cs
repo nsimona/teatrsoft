@@ -31,28 +31,28 @@
             this.dateLabel = new System.Windows.Forms.Label();
             this.timeField = new System.Windows.Forms.Label();
             this.ticketsBtn = new System.Windows.Forms.Button();
-            this.dateField = new System.Windows.Forms.Label();
+            this.minusLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dateLabel
             // 
             this.dateLabel.AutoSize = true;
             this.dateLabel.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateLabel.Location = new System.Drawing.Point(3, 7);
+            this.dateLabel.Location = new System.Drawing.Point(3, 4);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(65, 21);
+            this.dateLabel.Size = new System.Drawing.Size(73, 21);
             this.dateLabel.TabIndex = 0;
-            this.dateLabel.Text = "01.01.20";
+            this.dateLabel.Text = "24.02.20";
             // 
             // timeField
             // 
             this.timeField.AutoSize = true;
             this.timeField.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timeField.Location = new System.Drawing.Point(79, 7);
+            this.timeField.Location = new System.Drawing.Point(81, 4);
             this.timeField.Name = "timeField";
-            this.timeField.Size = new System.Drawing.Size(47, 21);
+            this.timeField.Size = new System.Drawing.Size(50, 21);
             this.timeField.TabIndex = 1;
-            this.timeField.Text = "19:00";
+            this.timeField.Text = "24:30";
             // 
             // ticketsBtn
             // 
@@ -62,36 +62,39 @@
             this.ticketsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ticketsBtn.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ticketsBtn.ForeColor = System.Drawing.Color.White;
-            this.ticketsBtn.Location = new System.Drawing.Point(129, 4);
+            this.ticketsBtn.Location = new System.Drawing.Point(130, 0);
             this.ticketsBtn.Name = "ticketsBtn";
-            this.ticketsBtn.Size = new System.Drawing.Size(103, 29);
+            this.ticketsBtn.Size = new System.Drawing.Size(85, 29);
             this.ticketsBtn.TabIndex = 2;
             this.ticketsBtn.Text = "БИЛЕТИ";
             this.ticketsBtn.UseVisualStyleBackColor = false;
             this.ticketsBtn.Click += new System.EventHandler(this.ticketsBtn_Click);
             // 
-            // dateField
+            // minusLabel
             // 
-            this.dateField.AutoSize = true;
-            this.dateField.Location = new System.Drawing.Point(63, 7);
-            this.dateField.Name = "dateField";
-            this.dateField.Size = new System.Drawing.Size(16, 22);
-            this.dateField.TabIndex = 3;
-            this.dateField.Text = "-";
+            this.minusLabel.AutoSize = true;
+            this.minusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.minusLabel.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minusLabel.Location = new System.Drawing.Point(72, 4);
+            this.minusLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.minusLabel.Name = "minusLabel";
+            this.minusLabel.Size = new System.Drawing.Size(16, 21);
+            this.minusLabel.TabIndex = 0;
+            this.minusLabel.Text = "-";
             // 
             // ProductionDateTicketControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.dateField);
             this.Controls.Add(this.ticketsBtn);
             this.Controls.Add(this.timeField);
             this.Controls.Add(this.dateLabel);
+            this.Controls.Add(this.minusLabel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ProductionDateTicketControl";
-            this.Size = new System.Drawing.Size(236, 37);
+            this.Size = new System.Drawing.Size(218, 28);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +105,6 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label timeField;
         private System.Windows.Forms.Button ticketsBtn;
-        private System.Windows.Forms.Label dateField;
+        private System.Windows.Forms.Label minusLabel;
     }
 }

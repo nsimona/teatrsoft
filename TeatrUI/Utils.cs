@@ -21,19 +21,45 @@ namespace TeatrUI
             File.Copy(source, directionPath, true);
         }
 
-        public static Image LoadImage(string directory, string fileName, string defaultImage)
+        public static Image LoadImage(string directory, string fileName)
         {
             Image image = null;
-            try
+            string defaultImage = "default";
+            switch(directory)
             {
-                image =  Image.FromFile(Path.Combine(
-                               Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName).Parent.FullName,
-                               "PhotoLibrary\\" + directory + "\\" + fileName));
+                case "staff":
+                    defaultImage = "default_member";
+                    break;
+                case "production":
+                    defaultImage = "default_poster";
+                    break;
+                case "user":
+                    defaultImage = "default_user";
+                    break;
+                default:
+                    defaultImage = "default";
+                    break;
             }
-            catch (FileNotFoundException e)
+            if (fileName != null)
             {
+                try
+                {
+                    image = Image.FromFile(Path.Combine(
+                                   Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName).Parent.FullName,
+                                   "PhotoLibrary\\" + directory + "\\" + fileName));
+                }
+                catch (FileNotFoundException e)
+                {
+                    //TODO - log exception for the file
+                    // load not found image
+                    image = (Image)Properties.Resources.ResourceManager.GetObject(defaultImage);
+                }
+            } else
+            {
+                // load default image
                 image = (Image)Properties.Resources.ResourceManager.GetObject(defaultImage);
             }
+            
             return image;
         }
 
