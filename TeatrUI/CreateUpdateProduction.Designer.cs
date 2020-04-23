@@ -54,7 +54,7 @@
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(349, 610);
+            this.saveBtn.Location = new System.Drawing.Point(265, 610);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(100, 30);
             this.saveBtn.TabIndex = 27;
@@ -78,23 +78,24 @@
             this.archiveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.archiveBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.archiveBtn.ForeColor = System.Drawing.Color.White;
-            this.archiveBtn.Location = new System.Drawing.Point(460, 610);
+            this.archiveBtn.Location = new System.Drawing.Point(381, 610);
             this.archiveBtn.Name = "archiveBtn";
-            this.archiveBtn.Size = new System.Drawing.Size(130, 30);
+            this.archiveBtn.Size = new System.Drawing.Size(209, 30);
             this.archiveBtn.TabIndex = 31;
-            this.archiveBtn.Text = "АХИВИРАНЕ";
+            this.archiveBtn.Text = "ЗАПИС И АХИВИРАНЕ";
             this.archiveBtn.UseVisualStyleBackColor = false;
+            this.archiveBtn.Click += new System.EventHandler(this.archiveBtn_Click);
             // 
             // backButtonControl
             // 
             this.backButtonControl.BackColor = System.Drawing.Color.Transparent;
             this.backButtonControl.Location = new System.Drawing.Point(0, 0);
-            this.backButtonControl.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.backButtonControl.Margin = new System.Windows.Forms.Padding(8);
             this.backButtonControl.Name = "backButtonControl";
             this.backButtonControl.Size = new System.Drawing.Size(135, 36);
             this.backButtonControl.TabIndex = 36;
             // 
-            // AddProduction
+            // CreateUpdateProduction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,7 +109,7 @@
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "AddProduction";
+            this.Name = "CreateUpdateProduction";
             this.Text = "AddProduction";
             this.ResumeLayout(false);
             this.PerformLayout();

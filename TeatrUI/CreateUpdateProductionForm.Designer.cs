@@ -259,7 +259,7 @@
             this.descriptionHolder.Controls.Add(this.descriptionTextBox);
             this.descriptionHolder.Location = new System.Drawing.Point(6, 731);
             this.descriptionHolder.Name = "descriptionHolder";
-            this.descriptionHolder.Size = new System.Drawing.Size(546, 160);
+            this.descriptionHolder.Size = new System.Drawing.Size(513, 160);
             this.descriptionHolder.TabIndex = 72;
             // 
             // descriptionTextBox
@@ -269,7 +269,7 @@
             this.descriptionTextBox.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.descriptionTextBox.Location = new System.Drawing.Point(0, 0);
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(544, 158);
+            this.descriptionTextBox.Size = new System.Drawing.Size(511, 158);
             this.descriptionTextBox.TabIndex = 0;
             this.descriptionTextBox.Text = "";
             // 

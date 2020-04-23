@@ -20,7 +20,7 @@ namespace TeatrUI
             descriptionBox.Text = production.Description;
             foreach(ProductionEventModel productionEvent in production.Dates)
             {
-                datesPanel.Controls.Add(new ProductionDateTicketControl(productionEvent));
+                datesPanel.Controls.Add(new ProductionDateTicketControl(productionEvent, production));
             }
         }
     }

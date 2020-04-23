@@ -31,20 +31,19 @@
             this.dateField = new System.Windows.Forms.Label();
             this.sceneField = new System.Windows.Forms.Label();
             this.freeSeatsField = new System.Windows.Forms.Label();
-            this.seatControl2 = new TeatrUI.UserControls.SeatControl();
-            this.seatControl1 = new TeatrUI.UserControls.SeatControl();
-            this.scenePanel = new System.Windows.Forms.Panel();
-            this.selectedSeatControl = new TeatrUI.UserControls.SeatControl();
-            this.freeSeatControl = new TeatrUI.UserControls.SeatControl();
-            this.busySeatControl = new TeatrUI.UserControls.SeatControl();
             this.freeLabel = new System.Windows.Forms.Label();
             this.busyLabel = new System.Windows.Forms.Label();
             this.selectedLabel = new System.Windows.Forms.Label();
-            this.modelPanel = new System.Windows.Forms.Panel();
             this.sumField = new System.Windows.Forms.Label();
             this.sumLabel = new System.Windows.Forms.Label();
             this.continueBtn = new System.Windows.Forms.Button();
-            this.modelPanel.SuspendLayout();
+            this.sceneDemoLabel = new System.Windows.Forms.Label();
+            this.scenePanel = new System.Windows.Forms.Panel();
+            this.modelPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.selectedSeatControl = new TeatrUI.UserControls.SeatControl();
+            this.freeSeatControl = new TeatrUI.UserControls.SeatControl();
+            this.busySeatControl = new TeatrUI.UserControls.SeatControl();
+            this.scenePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateField
@@ -63,7 +62,7 @@
             this.sceneField.AutoSize = true;
             this.sceneField.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sceneField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.sceneField.Location = new System.Drawing.Point(255, 34);
+            this.sceneField.Location = new System.Drawing.Point(280, 34);
             this.sceneField.Name = "sceneField";
             this.sceneField.Size = new System.Drawing.Size(244, 33);
             this.sceneField.TabIndex = 1;
@@ -74,71 +73,11 @@
             this.freeSeatsField.AutoSize = true;
             this.freeSeatsField.Font = new System.Drawing.Font("Montserrat SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.freeSeatsField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.freeSeatsField.Location = new System.Drawing.Point(256, 70);
+            this.freeSeatsField.Location = new System.Drawing.Point(281, 70);
             this.freeSeatsField.Name = "freeSeatsField";
             this.freeSeatsField.Size = new System.Drawing.Size(265, 26);
             this.freeSeatsField.TabIndex = 2;
             this.freeSeatsField.Text = "13/60 СВОБОДНИ МЕСТА";
-            // 
-            // seatControl2
-            // 
-            this.seatControl2.BackColor = System.Drawing.Color.White;
-            this.seatControl2.Location = new System.Drawing.Point(50, 18);
-            this.seatControl2.Margin = new System.Windows.Forms.Padding(5);
-            this.seatControl2.Name = "seatControl2";
-            this.seatControl2.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.seatControl2.Size = new System.Drawing.Size(18, 19);
-            this.seatControl2.TabIndex = 4;
-            // 
-            // seatControl1
-            // 
-            this.seatControl1.BackColor = System.Drawing.Color.White;
-            this.seatControl1.Location = new System.Drawing.Point(22, 18);
-            this.seatControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.seatControl1.Name = "seatControl1";
-            this.seatControl1.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.seatControl1.Size = new System.Drawing.Size(18, 19);
-            this.seatControl1.TabIndex = 3;
-            // 
-            // scenePanel
-            // 
-            this.scenePanel.Location = new System.Drawing.Point(33, 127);
-            this.scenePanel.Name = "scenePanel";
-            this.scenePanel.Size = new System.Drawing.Size(515, 57);
-            this.scenePanel.TabIndex = 5;
-            // 
-            // selectedSeatControl
-            // 
-            this.selectedSeatControl.BackColor = System.Drawing.Color.White;
-            this.selectedSeatControl.Enabled = false;
-            this.selectedSeatControl.Location = new System.Drawing.Point(356, 547);
-            this.selectedSeatControl.Margin = new System.Windows.Forms.Padding(5);
-            this.selectedSeatControl.Name = "selectedSeatControl";
-            this.selectedSeatControl.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.selectedSeatControl.Size = new System.Drawing.Size(18, 19);
-            this.selectedSeatControl.TabIndex = 0;
-            // 
-            // freeSeatControl
-            // 
-            this.freeSeatControl.BackColor = System.Drawing.Color.White;
-            this.freeSeatControl.Enabled = false;
-            this.freeSeatControl.Location = new System.Drawing.Point(84, 547);
-            this.freeSeatControl.Margin = new System.Windows.Forms.Padding(5);
-            this.freeSeatControl.Name = "freeSeatControl";
-            this.freeSeatControl.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.freeSeatControl.Size = new System.Drawing.Size(18, 19);
-            this.freeSeatControl.TabIndex = 1;
-            // 
-            // busySeatControl
-            // 
-            this.busySeatControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.busySeatControl.Enabled = false;
-            this.busySeatControl.Location = new System.Drawing.Point(240, 547);
-            this.busySeatControl.Margin = new System.Windows.Forms.Padding(5);
-            this.busySeatControl.Name = "busySeatControl";
-            this.busySeatControl.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.busySeatControl.Size = new System.Drawing.Size(18, 19);
-            this.busySeatControl.TabIndex = 2;
             // 
             // freeLabel
             // 
@@ -166,15 +105,6 @@
             this.selectedLabel.Size = new System.Drawing.Size(121, 22);
             this.selectedLabel.TabIndex = 8;
             this.selectedLabel.Text = "Селектирани";
-            // 
-            // modelPanel
-            // 
-            this.modelPanel.Controls.Add(this.seatControl2);
-            this.modelPanel.Controls.Add(this.seatControl1);
-            this.modelPanel.Location = new System.Drawing.Point(33, 201);
-            this.modelPanel.Name = "modelPanel";
-            this.modelPanel.Size = new System.Drawing.Size(515, 340);
-            this.modelPanel.TabIndex = 9;
             // 
             // sumField
             // 
@@ -209,12 +139,74 @@
             this.continueBtn.UseVisualStyleBackColor = false;
             this.continueBtn.Click += new System.EventHandler(this.continueBtn_Click);
             // 
+            // sceneDemoLabel
+            // 
+            this.sceneDemoLabel.AutoSize = true;
+            this.sceneDemoLabel.Location = new System.Drawing.Point(205, 28);
+            this.sceneDemoLabel.Name = "sceneDemoLabel";
+            this.sceneDemoLabel.Size = new System.Drawing.Size(70, 22);
+            this.sceneDemoLabel.TabIndex = 13;
+            this.sceneDemoLabel.Text = "СЦЕНА";
+            // 
+            // scenePanel
+            // 
+            this.scenePanel.Controls.Add(this.sceneDemoLabel);
+            this.scenePanel.Location = new System.Drawing.Point(33, 138);
+            this.scenePanel.Name = "scenePanel";
+            this.scenePanel.Size = new System.Drawing.Size(515, 50);
+            this.scenePanel.TabIndex = 5;
+            this.scenePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.scenePanel_Paint_1);
+            // 
+            // modelPanel
+            // 
+            this.modelPanel.Location = new System.Drawing.Point(32, 206);
+            this.modelPanel.Name = "modelPanel";
+            this.modelPanel.Size = new System.Drawing.Size(516, 305);
+            this.modelPanel.TabIndex = 0;
+            this.modelPanel.WrapContents = false;
+            this.modelPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.p_Paint);
+            // 
+            // selectedSeatControl
+            // 
+            this.selectedSeatControl.BackColor = System.Drawing.Color.White;
+            this.selectedSeatControl.Enabled = false;
+            this.selectedSeatControl.Location = new System.Drawing.Point(357, 547);
+            this.selectedSeatControl.Margin = new System.Windows.Forms.Padding(5);
+            this.selectedSeatControl.Name = "selectedSeatControl";
+            this.selectedSeatControl.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.selectedSeatControl.Size = new System.Drawing.Size(18, 19);
+            this.selectedSeatControl.TabIndex = 0;
+            // 
+            // freeSeatControl
+            // 
+            this.freeSeatControl.BackColor = System.Drawing.Color.White;
+            this.freeSeatControl.Enabled = false;
+            this.freeSeatControl.Location = new System.Drawing.Point(83, 547);
+            this.freeSeatControl.Margin = new System.Windows.Forms.Padding(5);
+            this.freeSeatControl.Name = "freeSeatControl";
+            this.freeSeatControl.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.freeSeatControl.Size = new System.Drawing.Size(18, 19);
+            this.freeSeatControl.TabIndex = 1;
+            // 
+            // busySeatControl
+            // 
+            this.busySeatControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.busySeatControl.Enabled = false;
+            this.busySeatControl.Location = new System.Drawing.Point(240, 547);
+            this.busySeatControl.Margin = new System.Windows.Forms.Padding(5);
+            this.busySeatControl.Name = "busySeatControl";
+            this.busySeatControl.SeatColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.busySeatControl.Size = new System.Drawing.Size(18, 19);
+            this.busySeatControl.TabIndex = 2;
+            // 
             // Seats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
+            this.Controls.Add(this.modelPanel);
+            this.Controls.Add(this.scenePanel);
             this.Controls.Add(this.continueBtn);
             this.Controls.Add(this.sumLabel);
             this.Controls.Add(this.sumField);
@@ -224,17 +216,16 @@
             this.Controls.Add(this.selectedSeatControl);
             this.Controls.Add(this.freeSeatControl);
             this.Controls.Add(this.busySeatControl);
-            this.Controls.Add(this.scenePanel);
             this.Controls.Add(this.freeSeatsField);
             this.Controls.Add(this.sceneField);
             this.Controls.Add(this.dateField);
-            this.Controls.Add(this.modelPanel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Seats";
             this.Text = "SeatPresentaion";
-            this.modelPanel.ResumeLayout(false);
+            this.scenePanel.ResumeLayout(false);
+            this.scenePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,18 +236,17 @@
         private System.Windows.Forms.Label dateField;
         private System.Windows.Forms.Label sceneField;
         private System.Windows.Forms.Label freeSeatsField;
-        private UserControls.SeatControl seatControl1;
-        private UserControls.SeatControl seatControl2;
-        private System.Windows.Forms.Panel scenePanel;
         private UserControls.SeatControl selectedSeatControl;
         private UserControls.SeatControl freeSeatControl;
         private UserControls.SeatControl busySeatControl;
         private System.Windows.Forms.Label freeLabel;
         private System.Windows.Forms.Label busyLabel;
         private System.Windows.Forms.Label selectedLabel;
-        private System.Windows.Forms.Panel modelPanel;
         private System.Windows.Forms.Label sumField;
         private System.Windows.Forms.Label sumLabel;
         private System.Windows.Forms.Button continueBtn;
+        private System.Windows.Forms.Label sceneDemoLabel;
+        private System.Windows.Forms.Panel scenePanel;
+        private System.Windows.Forms.FlowLayoutPanel modelPanel;
     }
 }

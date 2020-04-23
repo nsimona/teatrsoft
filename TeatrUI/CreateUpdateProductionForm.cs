@@ -16,7 +16,7 @@ namespace TeatrUI
     public partial class CreateUpdateProductionForm : Form
     {
         //Added Actors List
-        private List<PersonModel> availableActors = GlobalConfig.Connection.GetMembersByCategory("Актьор");
+        private List<PersonModel> availableActors = GlobalConfig.Connection.GetAvailableActors();
         private List<PersonModel> availableDirectors = GlobalConfig.Connection.GetMembersByCategory("Режисьор");
         private List<SceneModel> availableScenes = GlobalConfig.Connection.GetScenes();
         public List<PersonModel> selectedActors = new List<PersonModel>();
@@ -48,9 +48,12 @@ namespace TeatrUI
             this.durationTextBox.Text = $"{production.Duration}";
             this.directorComboBox.SelectedValue = production.Director;
             this.posterField.Image = Utils.LoadImage("production", production.PosterFileName);
+            posterField.AccessibleName = production.PosterFileName;
+            posterField.Text = production.PosterFileName;
             this.fileNameField.Text = production.PosterFileName;
             this.selectedActors = production.Actors;
             this.addedEvents = production.Dates;
+            availableActors = GlobalConfig.Connection.GetAvailableActors(production.Id);
             WireUpActors();
             WireUpDirectors();
             WireUpDates();

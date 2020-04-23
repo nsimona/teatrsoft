@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeatrLibrary;
 using TeatrLibrary.Models;
+using static TeatrUI.Enums;
 
 namespace TeatrUI
 {
@@ -16,6 +17,7 @@ namespace TeatrUI
     {
         CreateUpdateProductionForm productionForm = new CreateUpdateProductionForm();
         ProductionModel production = new ProductionModel();
+        CrudAction action = CrudAction.create;
         public CreateUpdateProduction()
         {
             InitializeComponent();
@@ -26,6 +28,8 @@ namespace TeatrUI
         public CreateUpdateProduction(ProductionModel production)
         {
             InitializeComponent();
+            action = CrudAction.update;
+            this.production = production;
             productionForm = new CreateUpdateProductionForm(production);
             productionForm.TopLevel = false;
             addProductionPanel.Controls.Add(productionForm);
@@ -65,12 +69,28 @@ namespace TeatrUI
                 Utils.CopyImageToPhotoLibrary(sourceFile, posterFileName, "production");
             if (ValidateForm())
             {
-                GlobalConfig.Connection.AddProduction(production);
-                productionForm.ResetAllControls();
+                switch(action)
+                {
+                    case CrudAction.create:
+                        GlobalConfig.Connection.AddProduction(production);
+                        productionForm.ResetAllControls();
+                        break;
+                    case CrudAction.update:
+                        GlobalConfig.Connection.UpdateProduction(production);
+                        TeatrUIEventHandler.GoBack();
+                        break;
+                }
             }
                 
             else
                 MessageBox.Show("Полетата име и продължителност са задължителни");
+        }
+
+        private void archiveBtn_Click(object sender, EventArgs e)
+        {
+            production.Active = false;
+            GlobalConfig.Connection.UpdateProduction(production);
+            TeatrUIEventHandler.GoBack();
         }
     }
 }

@@ -18,7 +18,10 @@ namespace TeatrUI
                     Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName).Parent.FullName,
                     "PhotoLibrary\\" + directionDirectory  + "\\" + fileName
                 );
-            File.Copy(source, directionPath, true);
+            try
+            {
+                File.Copy(source, directionPath, false);
+            } catch (IOException e) { };
         }
 
         public static Image LoadImage(string directory, string fileName)

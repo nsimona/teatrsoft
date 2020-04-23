@@ -8,11 +8,14 @@ namespace TeatrLibrary.Models
 {
     public class ProductionEventModel
     {
-        public ProductionEventModel(int id, DateTime date, TimeSpan time)
+        public ProductionEventModel(int id, DateTime date, TimeSpan time, int sceneId, string sceneName, int soldTickets)
         {
             Id = id;
             Date = date;
             Time = time;
+            Scene = sceneId;
+            SceneName = sceneName;
+            SoldTickets = soldTickets;
         }
         public ProductionEventModel(){}
         public int Id { get; set; }
@@ -20,6 +23,7 @@ namespace TeatrLibrary.Models
         public TimeSpan Time { get; set; }
         public  int Scene { get; set; }
         public string SceneName { get; set; }
+        public int SoldTickets { get; set; }
         public string FullEventDescription => $"{Date:dd/MM/yyyy}\t{Time}\t\t{SceneName}";
     }
 }

@@ -30,7 +30,7 @@ namespace TeatrUI
                 productionsListPanel.Controls.Add(new ProductionItemControl(production));
                 productionsListPanel.Controls.Add(ticketsPanel);
                 foreach(ProductionEventModel productionDate in production.Dates) {
-                    ticketsPanel.Controls.Add(new ProductionDateTicketControl(productionDate));
+                    ticketsPanel.Controls.Add(new ProductionDateTicketControl(productionDate, production));
                 }
             }
         }

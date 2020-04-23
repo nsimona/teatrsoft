@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 using TeatrLibrary.Models;
+using static TeatrLibrary.Enums;
 
 namespace TeatrLibrary.DataAccess
 {
@@ -13,15 +14,15 @@ namespace TeatrLibrary.DataAccess
         void UpdateMember(PersonModel person);
         List<PersonModel> GetAllMembers(string sort = null);
         List<PersonModel> GetMembersByCategory(string category);
+        List<PersonModel> GetAvailableActors (Nullable<int> productionId = null);
         PersonModel GetMember(int id);
         //production
         ProductionModel AddProduction(ProductionModel production);
-        ProductionModel InsertProduction(IDbConnection connection, ProductionModel model);
-        List<PersonModel> AddActorsToProduction(IDbConnection connection, ProductionModel model);
-        List<ProductionEventModel> AddDatesToProduction(IDbConnection connection, ProductionModel model);
+        void UpdateProduction(ProductionModel model);
         List<ProductionModel> GetAllProductions();
         //other
         List<Position> GetPositions();
         List<SceneModel> GetScenes();
+        SceneModel GetScene(int scene_id);
     }
 }

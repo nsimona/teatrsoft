@@ -13,22 +13,26 @@ namespace TeatrUI.UserControls
 {
     public partial class ProductionDateTicketControl : UserControl
     {
+        ProductionModel production = new ProductionModel();
+        ProductionEventModel productionDate = new ProductionEventModel();
         public ProductionDateTicketControl()
         {
             InitializeComponent();
         }
-        public ProductionDateTicketControl(ProductionEventModel productionDate)
+        public ProductionDateTicketControl(ProductionEventModel productionDate, ProductionModel production)
         {
             InitializeComponent();
-            ticketsBtn.Enabled = DateTime.Compare(productionDate.Date, DateTime.Now) >= 0;
+            this.production = production;
+            this.productionDate = productionDate;
+            ticketsBtn.Enabled = DateTime.Compare(productionDate.Date, DateTime.Now) >= 0 && production.Active;
             dateLabel.Text = $"{productionDate.Date:dd.MM.yy}";
             timeField.Text = $"{productionDate.Time:hh\\:mm}";
         }
 
         private void ticketsBtn_Click(object sender, EventArgs e)
         {
-            //TeatrUIEventHandler.SetSideContent(new ProductionSideForm());
-            TeatrUIEventHandler.SetMainContent(new Seats());
+            TeatrUIEventHandler.SetSideContent(new ProductionSideForm(production));
+            TeatrUIEventHandler.SetMainContent(new Seats(production, productionDate));
         }
     }
 }

@@ -6,5 +6,12 @@ using System.Threading.Tasks;
 
 namespace TeatrLibrary
 {
-    
+    public class Enums
+    {
+        public enum CrudAction
+        {
+            create,
+            update
+        }
+    }
 }

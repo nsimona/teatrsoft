@@ -5,6 +5,7 @@ using System.Text;
 using TeatrLibrary.Models;
 using Dapper;
 using System.Linq;
+using static TeatrLibrary.Enums;
 
 namespace TeatrLibrary.DataAccess
 {
@@ -13,8 +14,8 @@ namespace TeatrLibrary.DataAccess
         readonly string db = "teatrsoft";
         public PersonModel AddMember(PersonModel person)
         {
-           using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
-           {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
                 DynamicParameters parameter = new DynamicParameters();
                 parameter.Add("@statementType", "insert");
                 parameter.Add("@name", person.Name);
@@ -29,7 +30,7 @@ namespace TeatrLibrary.DataAccess
                 person.Id = parameter.Get<int>("@createdId");
 
                 return person;
-           }
+            }
         }
         public void UpdateMember(PersonModel person)
         {
@@ -48,7 +49,7 @@ namespace TeatrLibrary.DataAccess
                 connection.Execute("dbo.spUpsertStaffMember", parameter, commandType: CommandType.StoredProcedure);
             }
         }
-        public List<PersonModel> GetAllMembers(string sort = null) 
+        public List<PersonModel> GetAllMembers(string sort = null)
         {
             List<PersonModel> staffMembers = new List<PersonModel>();
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
@@ -62,12 +63,12 @@ namespace TeatrLibrary.DataAccess
                 foreach (var member in queryMembers)
                 {
                     staffMembers.Add(new PersonModel(
-                        member.name, 
-                        position: member.position_id, 
-                        id: member.id, 
-                        phone: member.phone, 
-                        mail: member.mail, 
-                        photo: member.photo, 
+                        member.name,
+                        position: member.position_id,
+                        id: member.id,
+                        phone: member.phone,
+                        mail: member.mail,
+                        photo: member.photo,
                         active: member.active)
                     );
                 }
@@ -81,21 +82,45 @@ namespace TeatrLibrary.DataAccess
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 var queryActors = connection.Query("select * from StaffMember where active = 1 and position_id = " +
-                    "(select id from Position where name = N'" + category + "')" ).ToList();
-                foreach(var actor in queryActors)
+                    "(select id from Position where name = N'" + category + "')").ToList();
+                foreach (var actor in queryActors)
                 {
                     actors.Add(new PersonModel(
-                        actor.name, 
-                        position: actor.position_id, 
-                        id: actor.id, 
-                        phone: actor.phone, 
-                        mail: actor.mail, 
+                        actor.name,
+                        position: actor.position_id,
+                        id: actor.id,
+                        phone: actor.phone,
+                        mail: actor.mail,
                         photo: actor.photo)
                     );
                 }
             }
             return actors;
         }
+        public List<PersonModel> GetAvailableActors(Nullable<int> productionId = null)
+        {
+            List<PersonModel> actors = new List<PersonModel>();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                DynamicParameters parameter = new DynamicParameters();
+                parameter.Add("@production_id", productionId);
+                var queryActors = connection.Query("dbo.spGetAvailableActorsForProduction", parameter, commandType: CommandType.StoredProcedure).ToList();
+                foreach (var actor in queryActors)
+                {
+                    actors.Add(new PersonModel(
+                        actor.name,
+                        position: actor.position_id,
+                        id: actor.id,
+                        phone: actor.phone,
+                        mail: actor.mail,
+                        photo: actor.photo,
+                        active: actor.active)
+                    );
+                }
+            }
+            return actors;
+        }
+
         public PersonModel GetMember(int id)
         {
             PersonModel person = new PersonModel();
@@ -119,17 +144,21 @@ namespace TeatrLibrary.DataAccess
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                InsertProduction(connection, production);
-                AddActorsToProduction(connection, production);
-                AddDatesToProduction(connection, production);
+                UpsertProduction(connection, production, CrudAction.create);
                 return production;
             }
             
         }
-        public ProductionModel InsertProduction(IDbConnection connection, ProductionModel model)
+        public ProductionModel UpsertProduction(IDbConnection connection, ProductionModel model, CrudAction action)
         {
+            if (action == CrudAction.update)
+            {
+                connection.Query($"delete from ProductionActor where production_id = {model.Id}");
+                connection.Query($"delete from EventDate where production_id = {model.Id}");
+            }
             DynamicParameters parameter = new DynamicParameters();
-            parameter.Add("@statementType", "insert");
+            string statementType = action.ToString();
+            parameter.Add("@statementType", statementType);
             parameter.Add("@name", model.Name);
             parameter.Add("@premiere", model.Premiere);
             parameter.Add("@author", model.Author);
@@ -137,40 +166,38 @@ namespace TeatrLibrary.DataAccess
             parameter.Add("@description", model.Description);
             parameter.Add("@duration", model.Duration);
             parameter.Add("@poster", model.PosterFileName);
+            parameter.Add("@active", model.Active);
+            parameter.Add("@id", model.Id);
             parameter.Add("@createdId", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
             connection.Execute("dbo.spUpsertProduction", parameter, commandType: CommandType.StoredProcedure);
+            if (action == CrudAction.create) model.Id = parameter.Get<int>("@createdId");
 
-            model.Id = parameter.Get<int>("@createdId");
-            return model;
-        }
-        public List<PersonModel> AddActorsToProduction(IDbConnection connection, ProductionModel model)
-        {
             foreach (PersonModel actor in model.Actors)
             {
-                DynamicParameters parameter = new DynamicParameters();
-                parameter.Add("@statementType", "insert");
-                parameter.Add("@production_id", model.Id);
-                parameter.Add("@actor_id", actor.Id);
-                connection.Execute("dbo.spUpsertProductionActor", parameter, commandType: CommandType.StoredProcedure);
+                DynamicParameters actorsParameters = new DynamicParameters();
+                actorsParameters.Add("@production_id", model.Id);
+                actorsParameters.Add("@actor_id", actor.Id);
+                connection.Execute("dbo.spUpsertProductionActor", actorsParameters, commandType: CommandType.StoredProcedure);
             }
-            return model.Actors;
-        }
-        public List<ProductionEventModel> AddDatesToProduction(IDbConnection connection, ProductionModel model)
-        {
-            
+
             foreach (ProductionEventModel addedEvent in model.Dates)
             {
-                DynamicParameters parameter = new DynamicParameters();
-                parameter.Add("@statementType", "insert");
-                parameter.Add("@production_id", model.Id);
-                parameter.Add("@scene_id", addedEvent.Scene);
-                parameter.Add("@date", addedEvent.Date);
-                parameter.Add("@time", addedEvent.Time);
-                connection.Execute("dbo.spUpsertEventDate", parameter, commandType: CommandType.StoredProcedure);
+                DynamicParameters datesParameter = new DynamicParameters();
+                datesParameter.Add("@production_id", model.Id);
+                datesParameter.Add("@scene_id", addedEvent.Scene);
+                datesParameter.Add("@date", addedEvent.Date);
+                datesParameter.Add("@time", addedEvent.Time);
+                connection.Execute("dbo.spUpsertEventDate", datesParameter, commandType: CommandType.StoredProcedure);
             }
-            return model.Dates;
-            
+            return model;
+        }  
+        public void UpdateProduction(ProductionModel model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                UpsertProduction(connection, model, CrudAction.update);
+            }
         }
         public List<ProductionModel> GetAllProductions()
         {
@@ -180,7 +207,6 @@ namespace TeatrLibrary.DataAccess
                 var queryProductions = connection.Query("dbo.spGetAllProductions", null, commandType: CommandType.StoredProcedure).ToList();
                 foreach (var production in queryProductions)
                 {
-                    List<ProductionEventModel> events = GetAllEvenetsForProduction(connection, production.id);
                     productions.Add(new ProductionModel(
                         production.id,
                         production.name,
@@ -189,27 +215,49 @@ namespace TeatrLibrary.DataAccess
                         production.director_id,
                         production.description,
                         production.poster,
-                        new List<PersonModel>(),
-                        events,
+                        GetProductionActors(connection, production.id),
+                        GetProductionDates(connection, production.id),
                         (short)production.duration,
-                        directorName: production.directorName
+                        directorName: production.directorName,
+                        active: production.active
                     ));
                 }
 
             }
             return productions;
         }
-
-        private List<ProductionEventModel> GetAllEvenetsForProduction(IDbConnection connection, int id)
+        private List<ProductionEventModel> GetProductionDates(IDbConnection connection, int production_id)
         {
             List<ProductionEventModel> events = new List<ProductionEventModel>();
-            var queryEvents = connection.Query("select * from EventDate where production_id = " + id).ToList();
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@production_id", production_id);
+
+            var queryEvents = connection.Query("dbo.spGetAllDatesForProduction", parameters, commandType: CommandType.StoredProcedure).ToList();
             foreach(var e in queryEvents)
             {
-                events.Add(new ProductionEventModel(e.id, (DateTime)e.date, (TimeSpan)e.time));
+                events.Add(new ProductionEventModel(
+                    e.id, 
+                    (DateTime)e.date, 
+                    (TimeSpan)e.time, 
+                    e.scene_id,
+                    e.sceneName, 
+                    e.sold_tickets
+                ));
             }
             return events;
     }
+        private List<PersonModel> GetProductionActors(IDbConnection connection, int production_id)
+        {
+            List<PersonModel> actors = new List<PersonModel>();
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@production_id", production_id);
+
+            var queryActors = connection.Query("dbo.spGetAllActorsForProduction", parameters, commandType: CommandType.StoredProcedure).ToList();
+            
+            foreach (var actor in queryActors)
+                actors.Add(new PersonModel(actor.actorName, id: actor.actorId));
+            return actors;
+        }
         public List<Position> GetPositions()
         {
             List<Position> positions = new List<Position>();
@@ -241,13 +289,38 @@ namespace TeatrLibrary.DataAccess
                             scene.name,
                             scene.address,
                             scene.price,
-                            scene.seats_count
+                            scene.seats_count,
+                            scene.rows,
+                            scene.cols
                        )
                     );
                 }
-
             }
             return scenes;
+        }
+
+        public SceneModel GetScene(int scene_id)
+        {
+            SceneModel scene = new SceneModel();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+
+                var queryScene = connection.Query($"select * from Scene where id={scene_id}").ToList();
+                foreach (var s in queryScene)
+                {
+                    scene.Id = s.id;
+                    scene.Name = s.name;
+                    scene.Schema = s.model;
+                    scene.SeatsCount = s.seats_count;
+                    scene.Address = s.address;
+                    scene.TicketPrice = s.price;
+                    scene.Rows = s.rows;
+                    scene.Cols = s.cols;
+                    scene.SetModel();
+                }
+
+                return scene;
+            }
         }
     }
 }

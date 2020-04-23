@@ -35,7 +35,8 @@
             this.authorField = new System.Windows.Forms.Label();
             this.directorField = new System.Windows.Forms.Label();
             this.posterField = new System.Windows.Forms.PictureBox();
-            this.actionBtn = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
+            this.activateBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.posterField)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,26 +113,43 @@
             this.posterField.TabStop = false;
             this.posterField.Click += new System.EventHandler(this.posterField_Click);
             // 
-            // actionBtn
+            // editBtn
             // 
-            this.actionBtn.BackColor = System.Drawing.Color.White;
-            this.actionBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.actionBtn.FlatAppearance.BorderSize = 0;
-            this.actionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.actionBtn.Image = global::TeatrUI.Properties.Resources.editPerson;
-            this.actionBtn.Location = new System.Drawing.Point(76, 110);
-            this.actionBtn.Name = "actionBtn";
-            this.actionBtn.Size = new System.Drawing.Size(34, 30);
-            this.actionBtn.TabIndex = 67;
-            this.actionBtn.UseVisualStyleBackColor = false;
-            this.actionBtn.Click += new System.EventHandler(this.actionBtn_Click);
+            this.editBtn.BackColor = System.Drawing.Color.White;
+            this.editBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editBtn.FlatAppearance.BorderSize = 0;
+            this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editBtn.Image = global::TeatrUI.Properties.Resources.editPerson;
+            this.editBtn.Location = new System.Drawing.Point(78, 108);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(30, 30);
+            this.editBtn.TabIndex = 67;
+            this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // activateBtn
+            // 
+            this.activateBtn.BackColor = System.Drawing.Color.Transparent;
+            this.activateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.activateBtn.FlatAppearance.BorderSize = 0;
+            this.activateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.activateBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.activateBtn.Image = global::TeatrUI.Properties.Resources.add1;
+            this.activateBtn.Location = new System.Drawing.Point(78, 108);
+            this.activateBtn.Name = "activateBtn";
+            this.activateBtn.Size = new System.Drawing.Size(30, 30);
+            this.activateBtn.TabIndex = 68;
+            this.activateBtn.UseVisualStyleBackColor = false;
+            this.activateBtn.Visible = false;
+            this.activateBtn.Click += new System.EventHandler(this.activateBtn_Click);
             // 
             // ProductionItemControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.actionBtn);
+            this.Controls.Add(this.activateBtn);
+            this.Controls.Add(this.editBtn);
             this.Controls.Add(this.directorField);
             this.Controls.Add(this.authorField);
             this.Controls.Add(this.directorLabel);
@@ -158,6 +176,7 @@
         private System.Windows.Forms.Label directorLabel;
         private System.Windows.Forms.Label authorField;
         private System.Windows.Forms.Label directorField;
-        private System.Windows.Forms.Button actionBtn;
+        private System.Windows.Forms.Button editBtn;
+        private System.Windows.Forms.Button activateBtn;
     }
 }
