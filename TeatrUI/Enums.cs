@@ -8,12 +8,6 @@ namespace TeatrUI
 {
     class Enums
     {
-        public enum CrudAction
-        {
-            create,
-            update
-        }
-
         public enum PhotoLibraryDirectory
         {
             staff,

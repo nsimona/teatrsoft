@@ -85,10 +85,13 @@
             // productionsListPanel
             // 
             this.productionsListPanel.AutoScroll = true;
+            this.productionsListPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.productionsListPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.productionsListPanel.Location = new System.Drawing.Point(0, 90);
             this.productionsListPanel.Name = "productionsListPanel";
             this.productionsListPanel.Size = new System.Drawing.Size(590, 550);
             this.productionsListPanel.TabIndex = 14;
+            this.productionsListPanel.WrapContents = false;
             // 
             // flowLayoutPanel1
             // 

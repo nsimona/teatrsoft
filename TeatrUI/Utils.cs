@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static TeatrLibrary.Structs;
 
 namespace TeatrUI
 {
@@ -64,6 +65,12 @@ namespace TeatrUI
             }
             
             return image;
+        }
+
+        public static bool SeatIsTaken(List<Seat> taken, Seat currentSeat)
+        {
+            return taken.Any(s => s.Row == currentSeat.Row && s.Column == currentSeat.Column);
+            //return true;
         }
 
         public static string ConvertToCyrillic(string word)

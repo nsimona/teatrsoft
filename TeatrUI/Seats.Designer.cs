@@ -40,6 +40,8 @@
             this.sceneDemoLabel = new System.Windows.Forms.Label();
             this.scenePanel = new System.Windows.Forms.Panel();
             this.modelPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.reservedLabel = new System.Windows.Forms.Label();
+            this.selectedField = new System.Windows.Forms.Label();
             this.selectedSeatControl = new TeatrUI.UserControls.SeatControl();
             this.freeSeatControl = new TeatrUI.UserControls.SeatControl();
             this.busySeatControl = new TeatrUI.UserControls.SeatControl();
@@ -108,12 +110,12 @@
             // 
             // sumField
             // 
-            this.sumField.AutoSize = true;
-            this.sumField.Location = new System.Drawing.Point(474, 606);
+            this.sumField.Location = new System.Drawing.Point(443, 606);
             this.sumField.Name = "sumField";
-            this.sumField.Size = new System.Drawing.Size(50, 22);
+            this.sumField.Size = new System.Drawing.Size(81, 22);
             this.sumField.TabIndex = 10;
-            this.sumField.Text = "24лв";
+            this.sumField.Text = "0лв";
+            this.sumField.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // sumLabel
             // 
@@ -142,7 +144,7 @@
             // sceneDemoLabel
             // 
             this.sceneDemoLabel.AutoSize = true;
-            this.sceneDemoLabel.Location = new System.Drawing.Point(205, 28);
+            this.sceneDemoLabel.Location = new System.Drawing.Point(211, 28);
             this.sceneDemoLabel.Name = "sceneDemoLabel";
             this.sceneDemoLabel.Size = new System.Drawing.Size(70, 22);
             this.sceneDemoLabel.TabIndex = 13;
@@ -159,12 +161,36 @@
             // 
             // modelPanel
             // 
+            this.modelPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.modelPanel.AutoScroll = true;
+            this.modelPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.modelPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.modelPanel.Location = new System.Drawing.Point(32, 206);
             this.modelPanel.Name = "modelPanel";
-            this.modelPanel.Size = new System.Drawing.Size(516, 305);
+            this.modelPanel.Size = new System.Drawing.Size(516, 323);
             this.modelPanel.TabIndex = 0;
             this.modelPanel.WrapContents = false;
-            this.modelPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.p_Paint);
+            // 
+            // reservedLabel
+            // 
+            this.reservedLabel.AutoSize = true;
+            this.reservedLabel.Location = new System.Drawing.Point(29, 584);
+            this.reservedLabel.Name = "reservedLabel";
+            this.reservedLabel.Size = new System.Drawing.Size(177, 22);
+            this.reservedLabel.TabIndex = 13;
+            this.reservedLabel.Text = "Селектирани места:";
+            // 
+            // selectedField
+            // 
+            this.selectedField.AutoEllipsis = true;
+            this.selectedField.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectedField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(162)))), ((int)(((byte)(135)))));
+            this.selectedField.Location = new System.Drawing.Point(29, 609);
+            this.selectedField.Name = "selectedField";
+            this.selectedField.Size = new System.Drawing.Size(395, 22);
+            this.selectedField.TabIndex = 14;
             // 
             // selectedSeatControl
             // 
@@ -205,6 +231,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
+            this.Controls.Add(this.selectedField);
+            this.Controls.Add(this.reservedLabel);
             this.Controls.Add(this.modelPanel);
             this.Controls.Add(this.scenePanel);
             this.Controls.Add(this.continueBtn);
@@ -247,6 +275,8 @@
         private System.Windows.Forms.Button continueBtn;
         private System.Windows.Forms.Label sceneDemoLabel;
         private System.Windows.Forms.Panel scenePanel;
-        private System.Windows.Forms.FlowLayoutPanel modelPanel;
+        public System.Windows.Forms.FlowLayoutPanel modelPanel;
+        private System.Windows.Forms.Label reservedLabel;
+        private System.Windows.Forms.Label selectedField;
     }
 }

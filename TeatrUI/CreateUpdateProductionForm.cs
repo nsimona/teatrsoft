@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeatrLibrary;
 using TeatrLibrary.Models;
-using TeatrUI.UserControls;
 
 namespace TeatrUI
 {
@@ -46,11 +40,11 @@ namespace TeatrUI
             this.descriptionTextBox.Text = production.Description;
             this.premiereDateControl.Value = production.Premiere;
             this.durationTextBox.Text = $"{production.Duration}";
-            this.directorComboBox.SelectedValue = production.Director;
-            this.posterField.Image = Utils.LoadImage("production", production.PosterFileName);
-            posterField.AccessibleName = production.PosterFileName;
-            posterField.Text = production.PosterFileName;
-            this.fileNameField.Text = production.PosterFileName;
+            this.directorComboBox.SelectedValue = production.DirectorId;
+            this.posterField.Image = Utils.LoadImage("production", production.Poster);
+            posterField.AccessibleName = production.Poster;
+            posterField.Text = production.Poster;
+            this.fileNameField.Text = production.Poster;
             this.selectedActors = production.Actors;
             this.addedEvents = production.Dates;
             availableActors = GlobalConfig.Connection.GetAvailableActors(production.Id);
@@ -161,8 +155,8 @@ namespace TeatrUI
             ProductionEventModel productionEvent = new ProductionEventModel();
             productionEvent.Date = date;
             productionEvent.Time = time;
-            productionEvent.Scene = ((SceneModel)addSceneComboBox.SelectedItem).Id;
-            productionEvent.SceneName = availableScenes.Find(scene => scene.Id == productionEvent.Scene).Name;
+            productionEvent.SceneId = ((SceneModel)addSceneComboBox.SelectedItem).Id;
+            productionEvent.SceneName = availableScenes.Find(scene => scene.Id == productionEvent.SceneId).Name;
 
             if(durationTextBox.TextLength == 0)
             {

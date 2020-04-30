@@ -17,7 +17,7 @@ namespace TeatrUI
         {
             InitializeComponent();
             titleField.Text = production.Name;
-            posterField.Image = Utils.LoadImage("production", production.PosterFileName);
+            posterField.Image = Utils.LoadImage("production", production.Poster);
             authorField.Text = production.Author;
             directorField.Text = production.DirectorName;
             actorsField.Text = string.Join(", ", production.Actors.Select(x => x.Name));

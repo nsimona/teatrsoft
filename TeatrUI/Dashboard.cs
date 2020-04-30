@@ -56,6 +56,11 @@ namespace TeatrUI
                 }
             };
 
+            TeatrUIEventHandler.ClearMainContent = () =>
+            {
+                contentPanel.Controls.Clear();
+            };
+
             Navigation navigation = new Navigation();
             TeatrUIEventHandler.SetSideContent(navigation);
 

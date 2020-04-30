@@ -17,7 +17,7 @@ namespace TeatrUI.UserControls
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void theaterName_Click(object sender, EventArgs e)
         {
 
         }

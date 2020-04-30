@@ -13,6 +13,7 @@ namespace TeatrUI
         public static Action<Form> SetMainContent{ get; set; }
         public static Action<Form> SetSideContent{ get; set; }
         public static Action GoBack { get; set; }
+        public static Action ClearMainContent { get; set; }
 
         public static List<Form> SideHistory = new List<Form>();
         public static List<Form> ContentHistory = new List<Form>();

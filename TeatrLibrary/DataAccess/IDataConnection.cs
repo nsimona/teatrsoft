@@ -4,22 +4,23 @@ using System.Data;
 using System.Text;
 using TeatrLibrary.Models;
 using static TeatrLibrary.Enums;
+using static TeatrLibrary.Structs;
 
 namespace TeatrLibrary.DataAccess
 {
    public interface IDataConnection
     {
         //staff
-        PersonModel AddMember(PersonModel person);
-        void UpdateMember(PersonModel person);
-        List<PersonModel> GetAllMembers(string sort = null);
+        PersonModel UpsertMember(PersonModel person, CrudAction action);
+        List<PersonModel> GetAllMembers();
         List<PersonModel> GetMembersByCategory(string category);
         List<PersonModel> GetAvailableActors (Nullable<int> productionId = null);
-        PersonModel GetMember(int id);
         //production
-        ProductionModel AddProduction(ProductionModel production);
-        void UpdateProduction(ProductionModel model);
+        ProductionModel UpsertProduction(ProductionModel production, CrudAction action);
         List<ProductionModel> GetAllProductions();
+        //tickets
+        // TODO - return id
+        void ReserveTickets(ProductionEventModel model, List<Seat> seats);
         //other
         List<Position> GetPositions();
         List<SceneModel> GetScenes();

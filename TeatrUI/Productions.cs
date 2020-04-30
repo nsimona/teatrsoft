@@ -20,18 +20,32 @@ namespace TeatrUI
         {
             InitializeComponent();
             productions = GlobalConfig.Connection.GetAllProductions();
+            int i = 0;
             foreach(ProductionModel production in productions)
             {
+                int minWrapperHeight = new ProductionItemControl().Size.Height;
+                FlowLayoutPanel wrapper = new FlowLayoutPanel();
+                wrapper.Width = productionsListPanel.Width - 20;
+                wrapper.Height = Math.Max(
+                    minWrapperHeight, 
+                    production.Dates.Count *
+                    (new ProductionDateTicketControl().Size.Height + 10)
+                );
+                wrapper.Margin = new Padding(0, 0, 0, 30);
+
                 FlowLayoutPanel ticketsPanel = new FlowLayoutPanel();
                 ticketsPanel.Width = new ProductionDateTicketControl().Size.Width;
-                ticketsPanel.Height = production.Dates.Count * 
-                    new ProductionDateTicketControl().Size.Height + 30;
-
-                productionsListPanel.Controls.Add(new ProductionItemControl(production));
-                productionsListPanel.Controls.Add(ticketsPanel);
-                foreach(ProductionEventModel productionDate in production.Dates) {
+                ticketsPanel.Height = production.Dates.Count *
+                    (new ProductionDateTicketControl().Size.Height + 10);
+                foreach (ProductionEventModel productionDate in production.Dates)
                     ticketsPanel.Controls.Add(new ProductionDateTicketControl(productionDate, production));
-                }
+
+
+                wrapper.Controls.Add(new ProductionItemControl(production));
+                wrapper.Controls.Add(ticketsPanel);
+                productionsListPanel.Controls.Add(wrapper);
+                i++;
+                //productionsListPanel.Controls.Add(divider);
             }
         }
 

@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-
-public struct Plays
-{
-    public DateTime Date { get; set; }
-    public TeatrLibrary.Models.TicketModel Ticket { get; set; }
-}
 
 namespace TeatrLibrary.Models
 {
@@ -31,9 +24,9 @@ namespace TeatrLibrary.Models
             Name = name;
             Premiere = premiere;
             Author = author;
-            Director = director;
+            DirectorId = director;
             Description = description;
-            PosterFileName = posterFileName;
+            Poster = posterFileName;
             Actors = actors;
             Dates = dates;
             Duration = duration;
@@ -45,11 +38,10 @@ namespace TeatrLibrary.Models
         public string Name { get; set; }
         public DateTime Premiere { get; set; }
         public string Author { get; set; }
-        public int Director { get; set; }
+        public int DirectorId { get; set; }
         public string DirectorName { get; set; }
         public string Description { get; set; }
-        public string PosterFileName { get; set; }
-        public string Scene { get; set; }
+        public string Poster { get; set; }
         public List<PersonModel> Actors { get; set; } = new List<PersonModel>();
         public List<ProductionEventModel> Dates { get; set; } = new List<ProductionEventModel>();
         public short Duration { get; set; }

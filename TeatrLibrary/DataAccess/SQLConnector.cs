@@ -6,320 +6,187 @@ using TeatrLibrary.Models;
 using Dapper;
 using System.Linq;
 using static TeatrLibrary.Enums;
+using static TeatrLibrary.Structs;
 
 namespace TeatrLibrary.DataAccess
 {
     class SQLConnector : IDataConnection
     {
         readonly string db = "teatrsoft";
-        public PersonModel AddMember(PersonModel person)
+        public PersonModel UpsertMember(PersonModel model, CrudAction action)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 DynamicParameters parameter = new DynamicParameters();
-                parameter.Add("@statementType", "insert");
-                parameter.Add("@name", person.Name);
-                parameter.Add("@phone", person.Phone);
-                parameter.Add("@mail", person.Mail);
-                parameter.Add("@position", person.Position);
-                parameter.Add("@photo", person.Photo);
-                parameter.Add("@createdId", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+                parameter.Add("@statementType", action.ToString());
+                parameter.Add("@name", model.Name);
+                parameter.Add("@phone", model.Phone);
+                parameter.Add("@mail", model.Mail);
+                parameter.Add("@position", model.PositionId);
+                parameter.Add("@photo", model.Photo);
+                parameter.Add("@active", model.Active);
+
+                if (action == CrudAction.create)
+                    parameter.Add("@createdId", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+                else if (action == CrudAction.update)
+                    parameter.Add("@id", model.Id);
 
                 connection.Execute("dbo.spUpsertStaffMember", parameter, commandType: CommandType.StoredProcedure);
 
-                person.Id = parameter.Get<int>("@createdId");
+                if (action == CrudAction.create)
+                    model.Id = parameter.Get<int>("@createdId");
 
-                return person;
+                return model;
             }
         }
-        public void UpdateMember(PersonModel person)
+        public List<PersonModel> GetAllMembers()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                DynamicParameters parameter = new DynamicParameters();
-                parameter.Add("@statementType", "update");
-                parameter.Add("@id", person.Id);
-                parameter.Add("@name", person.Name);
-                parameter.Add("@phone", person.Phone);
-                parameter.Add("@mail", person.Mail);
-                parameter.Add("@position", person.Position);
-                parameter.Add("@photo", person.Photo);
-                parameter.Add("@active", person.Active);
-
-                connection.Execute("dbo.spUpsertStaffMember", parameter, commandType: CommandType.StoredProcedure);
+                return connection.Query<PersonModel>("select * from StaffMember").ToList();
             }
-        }
-        public List<PersonModel> GetAllMembers(string sort = null)
-        {
-            List<PersonModel> staffMembers = new List<PersonModel>();
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
-            {
-                var queryMembers = new List<dynamic>();
-                if (sort == null)
-                    queryMembers = connection.Query("select * from StaffMember").ToList();
-                else
-                    queryMembers = connection.Query("select * from StaffMember order by name " + sort).ToList();
-
-                foreach (var member in queryMembers)
-                {
-                    staffMembers.Add(new PersonModel(
-                        member.name,
-                        position: member.position_id,
-                        id: member.id,
-                        phone: member.phone,
-                        mail: member.mail,
-                        photo: member.photo,
-                        active: member.active)
-                    );
-                }
-
-            }
-            return staffMembers;
         }
         public List<PersonModel> GetMembersByCategory(string category)
         {
-            List<PersonModel> actors = new List<PersonModel>();
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                var queryActors = connection.Query("select * from StaffMember where active = 1 and position_id = " +
+                return connection.Query<PersonModel>("select * from StaffMember where Active = 1 and PositionId = " +
                     "(select id from Position where name = N'" + category + "')").ToList();
-                foreach (var actor in queryActors)
-                {
-                    actors.Add(new PersonModel(
-                        actor.name,
-                        position: actor.position_id,
-                        id: actor.id,
-                        phone: actor.phone,
-                        mail: actor.mail,
-                        photo: actor.photo)
-                    );
-                }
             }
-            return actors;
         }
         public List<PersonModel> GetAvailableActors(Nullable<int> productionId = null)
         {
-            List<PersonModel> actors = new List<PersonModel>();
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 DynamicParameters parameter = new DynamicParameters();
                 parameter.Add("@production_id", productionId);
-                var queryActors = connection.Query("dbo.spGetAvailableActorsForProduction", parameter, commandType: CommandType.StoredProcedure).ToList();
-                foreach (var actor in queryActors)
-                {
-                    actors.Add(new PersonModel(
-                        actor.name,
-                        position: actor.position_id,
-                        id: actor.id,
-                        phone: actor.phone,
-                        mail: actor.mail,
-                        photo: actor.photo,
-                        active: actor.active)
-                    );
-                }
+                return connection.Query<PersonModel>("dbo.spGetAvailableActorsForProduction", 
+                    parameter,
+                    commandType: CommandType.StoredProcedure).ToList();
             }
-            return actors;
         }
-
-        public PersonModel GetMember(int id)
-        {
-            PersonModel person = new PersonModel();
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
-            {
-                var queryMember = connection.Query("select * from StaffMember where active = 1 and id =" + id).ToList();
-                foreach (var member in queryMember)
-                {
-                    person.Name = member.name;
-                    person.Phone = member.phone;
-                    person.Mail = member.mail;
-                    person.Position = member.position_id;
-                    person.Photo = member.photo;
-                    person.Id = member.id;
-                }
-                
-            }
-            return person;
-        }
-        public ProductionModel AddProduction(ProductionModel production)
+        public ProductionModel UpsertProduction(ProductionModel model, CrudAction action)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                UpsertProduction(connection, production, CrudAction.create);
-                return production;
-            }
-            
-        }
-        public ProductionModel UpsertProduction(IDbConnection connection, ProductionModel model, CrudAction action)
-        {
-            if (action == CrudAction.update)
-            {
-                connection.Query($"delete from ProductionActor where production_id = {model.Id}");
-                connection.Query($"delete from EventDate where production_id = {model.Id}");
-            }
-            DynamicParameters parameter = new DynamicParameters();
-            string statementType = action.ToString();
-            parameter.Add("@statementType", statementType);
-            parameter.Add("@name", model.Name);
-            parameter.Add("@premiere", model.Premiere);
-            parameter.Add("@author", model.Author);
-            parameter.Add("@director_id", model.Director);
-            parameter.Add("@description", model.Description);
-            parameter.Add("@duration", model.Duration);
-            parameter.Add("@poster", model.PosterFileName);
-            parameter.Add("@active", model.Active);
-            parameter.Add("@id", model.Id);
-            parameter.Add("@createdId", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+                if (action == CrudAction.update) connection.Query($"delete from ProductionActor where production_id = {model.Id}");
 
-            connection.Execute("dbo.spUpsertProduction", parameter, commandType: CommandType.StoredProcedure);
-            if (action == CrudAction.create) model.Id = parameter.Get<int>("@createdId");
+                DynamicParameters parameter = new DynamicParameters();
+                parameter.Add("@statementType", action.ToString());
+                parameter.Add("@name", model.Name);
+                parameter.Add("@premiere", model.Premiere);
+                parameter.Add("@author", model.Author);
+                parameter.Add("@director_id", model.DirectorId);
+                parameter.Add("@description", model.Description);
+                parameter.Add("@duration", model.Duration);
+                parameter.Add("@poster", model.Poster);
+                parameter.Add("@active", model.Active);
 
-            foreach (PersonModel actor in model.Actors)
-            {
-                DynamicParameters actorsParameters = new DynamicParameters();
-                actorsParameters.Add("@production_id", model.Id);
-                actorsParameters.Add("@actor_id", actor.Id);
-                connection.Execute("dbo.spUpsertProductionActor", actorsParameters, commandType: CommandType.StoredProcedure);
-            }
+                if (action == CrudAction.create)
+                    parameter.Add("@createdId", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+                else if (action == CrudAction.update)
+                    parameter.Add("@id", model.Id);
 
-            foreach (ProductionEventModel addedEvent in model.Dates)
-            {
-                DynamicParameters datesParameter = new DynamicParameters();
-                datesParameter.Add("@production_id", model.Id);
-                datesParameter.Add("@scene_id", addedEvent.Scene);
-                datesParameter.Add("@date", addedEvent.Date);
-                datesParameter.Add("@time", addedEvent.Time);
-                connection.Execute("dbo.spUpsertEventDate", datesParameter, commandType: CommandType.StoredProcedure);
+                connection.Execute("dbo.spUpsertProduction", parameter, commandType: CommandType.StoredProcedure);
+                if (action == CrudAction.create) model.Id = parameter.Get<int>("@createdId");
+
+                foreach (PersonModel actor in model.Actors)
+                {
+                    DynamicParameters actorsParameters = new DynamicParameters();
+                    actorsParameters.Add("@production_id", model.Id);
+                    actorsParameters.Add("@actor_id", actor.Id);
+                    connection.Execute("dbo.spUpsertProductionActor", actorsParameters, commandType: CommandType.StoredProcedure);
+                }
+
+
+                List<ProductionEventModel> savedDates = GetProductionDates(connection, model.Id);
+                foreach (ProductionEventModel addedEvent in model.Dates)
+                {
+                    if (addedEvent.Id != 0)
+                    {
+                        if (savedDates.Any(d => d.Id == addedEvent.Id)) continue;
+                        else connection.Query($"delete from EventDate where Id = {addedEvent.Id}");
+                    }
+                    else
+                    {
+                        DynamicParameters datesParameter = new DynamicParameters();
+                        datesParameter.Add("@production_id", model.Id);
+                        datesParameter.Add("@scene_id", addedEvent.SceneId);
+                        datesParameter.Add("@date", addedEvent.Date);
+                        datesParameter.Add("@time", addedEvent.Time);
+                        connection.Execute("dbo.spUpsertEventDate", datesParameter, commandType: CommandType.StoredProcedure);
+                    }
+                }
             }
             return model;
-        }  
-        public void UpdateProduction(ProductionModel model)
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
-            {
-                UpsertProduction(connection, model, CrudAction.update);
-            }
         }
         public List<ProductionModel> GetAllProductions()
         {
-            List<ProductionModel> productions = new List<ProductionModel>();
+
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                var queryProductions = connection.Query("dbo.spGetAllProductions", null, commandType: CommandType.StoredProcedure).ToList();
-                foreach (var production in queryProductions)
+                List<ProductionModel> productions =  connection.Query<ProductionModel>("dbo.spGetAllProductions", null, commandType: CommandType.StoredProcedure).ToList();
+                foreach (ProductionModel production in productions)
                 {
-                    productions.Add(new ProductionModel(
-                        production.id,
-                        production.name,
-                        production.premiere,
-                        production.author,
-                        production.director_id,
-                        production.description,
-                        production.poster,
-                        GetProductionActors(connection, production.id),
-                        GetProductionDates(connection, production.id),
-                        (short)production.duration,
-                        directorName: production.directorName,
-                        active: production.active
-                    ));
+                    production.Dates = GetProductionDates(connection, production.Id);
+                    production.Actors = GetProductionActors(connection, production.Id);
                 }
-
+                return productions;
             }
-            return productions;
         }
-        private List<ProductionEventModel> GetProductionDates(IDbConnection connection, int production_id)
+        private List<ProductionEventModel> GetProductionDates(IDbConnection connection, int productionId)
         {
-            List<ProductionEventModel> events = new List<ProductionEventModel>();
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("@production_id", production_id);
+            parameters.Add("@production_id", productionId);
 
-            var queryEvents = connection.Query("dbo.spGetAllDatesForProduction", parameters, commandType: CommandType.StoredProcedure).ToList();
-            foreach(var e in queryEvents)
-            {
-                events.Add(new ProductionEventModel(
-                    e.id, 
-                    (DateTime)e.date, 
-                    (TimeSpan)e.time, 
-                    e.scene_id,
-                    e.sceneName, 
-                    e.sold_tickets
-                ));
-            }
-            return events;
-    }
-        private List<PersonModel> GetProductionActors(IDbConnection connection, int production_id)
+            return connection.Query<ProductionEventModel>("dbo.spGetAllDatesForProduction",
+                parameters,
+                commandType: CommandType.StoredProcedure).ToList();
+        }
+        private List<PersonModel> GetProductionActors(IDbConnection connection, int productionId)
         {
-            List<PersonModel> actors = new List<PersonModel>();
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("@production_id", production_id);
+            parameters.Add("@production_id", productionId);
 
-            var queryActors = connection.Query("dbo.spGetAllActorsForProduction", parameters, commandType: CommandType.StoredProcedure).ToList();
-            
-            foreach (var actor in queryActors)
-                actors.Add(new PersonModel(actor.actorName, id: actor.actorId));
-            return actors;
+            return connection.Query<PersonModel>("dbo.spGetAllActorsForProduction",
+                parameters,
+                commandType: CommandType.StoredProcedure).ToList();
         }
         public List<Position> GetPositions()
         {
-            List<Position> positions = new List<Position>();
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                var queryPositions = connection.Query("select * from Position").ToList();
-                foreach (var position in queryPositions)
-                {
-                    positions.Add(new Position(position.id, position.name));
-                }
-
+                return connection.Query<Position>("select * from Position").ToList();
             }
-            return positions;
         }
-
         public List<SceneModel> GetScenes()
         {
-            List<SceneModel> scenes = new List<SceneModel>();
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                
-                var queryScenes = connection.Query("select * from Scene").ToList();
-
-                foreach (var scene in queryScenes)
-                {
-                    scenes.Add(
-                        new SceneModel(
-                            scene.id,
-                            scene.name,
-                            scene.address,
-                            scene.price,
-                            scene.seats_count,
-                            scene.rows,
-                            scene.cols
-                       )
-                    );
-                }
+                return connection.Query<SceneModel>("select * from Scene").ToList();
             }
-            return scenes;
+        }
+        public SceneModel GetScene(int sceneId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                return connection.Query<SceneModel>($"select * from Scene where id={sceneId}").ToList()[0];
+            }
         }
 
-        public SceneModel GetScene(int scene_id)
+        public void ReserveTickets(ProductionEventModel model, List<Seat> seats)
         {
-            SceneModel scene = new SceneModel();
+            string reservedSeats = "";
+            foreach (Seat s in seats)
+                reservedSeats += s.ToString();
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-
-                var queryScene = connection.Query($"select * from Scene where id={scene_id}").ToList();
-                foreach (var s in queryScene)
-                {
-                    scene.Id = s.id;
-                    scene.Name = s.name;
-                    scene.Schema = s.model;
-                    scene.SeatsCount = s.seats_count;
-                    scene.Address = s.address;
-                    scene.TicketPrice = s.price;
-                    scene.Rows = s.rows;
-                    scene.Cols = s.cols;
-                    scene.SetModel();
-                }
-
-                return scene;
+                DynamicParameters parameter = new DynamicParameters();
+                parameter.Add("@event_id", model.Id);
+                parameter.Add("@seats", reservedSeats);
+                parameter.Add("@seats_count", seats.Count);
+                // TODO - improve SP
+                connection.Execute("dbo.spReserveTickets", parameter, commandType: CommandType.StoredProcedure);
             }
         }
     }

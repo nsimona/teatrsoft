@@ -15,7 +15,11 @@ namespace TeatrUI.UserControls
     public partial class ProductionItemControl : UserControl
     {
         ProductionModel production = new ProductionModel();
-        public ProductionItemControl(ProductionModel production)
+        public ProductionItemControl()
+        {
+            InitializeComponent();
+        }
+            public ProductionItemControl(ProductionModel production)
         {
             InitializeComponent();
             this.production = production;
@@ -23,7 +27,7 @@ namespace TeatrUI.UserControls
             authorField.Text = production.Author;
             directorField.Text = production.DirectorName;
             durationField.Text = production.Duration.ToString() + " мин";
-            posterField.Image = Utils.LoadImage("production", production.PosterFileName);
+            posterField.Image = Utils.LoadImage("production", production.Poster);
             editBtn.Visible = production.Active;
             activateBtn.Visible = !editBtn.Visible;
         }
@@ -45,7 +49,7 @@ namespace TeatrUI.UserControls
             production.Active = true;
             editBtn.Visible = production.Active;
             activateBtn.Visible = !editBtn.Visible;
-            GlobalConfig.Connection.UpdateProduction(production);
+            GlobalConfig.Connection.UpsertProduction(production, TeatrLibrary.Enums.CrudAction.update);
         }
     }
 }

@@ -31,9 +31,7 @@
             this.pageTitle = new System.Windows.Forms.Label();
             this.saveToFileBtn = new System.Windows.Forms.Button();
             this.printBtn = new System.Windows.Forms.Button();
-            this.ticketControl1 = new TeatrUI.UserControls.TicketControl();
-            this.ticketControl2 = new TeatrUI.UserControls.TicketControl();
-            this.ticketsPanel = new System.Windows.Forms.Panel();
+            this.ticketsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // pageTitle
@@ -70,33 +68,15 @@
             this.printBtn.Size = new System.Drawing.Size(30, 30);
             this.printBtn.TabIndex = 2;
             this.printBtn.UseVisualStyleBackColor = true;
-            // 
-            // ticketControl1
-            // 
-            this.ticketControl1.BackColor = System.Drawing.Color.White;
-            this.ticketControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ticketControl1.Location = new System.Drawing.Point(0, 90);
-            this.ticketControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.ticketControl1.Name = "ticketControl1";
-            this.ticketControl1.Size = new System.Drawing.Size(590, 230);
-            this.ticketControl1.TabIndex = 4;
-            // 
-            // ticketControl2
-            // 
-            this.ticketControl2.BackColor = System.Drawing.Color.White;
-            this.ticketControl2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ticketControl2.Location = new System.Drawing.Point(0, 320);
-            this.ticketControl2.Margin = new System.Windows.Forms.Padding(5);
-            this.ticketControl2.Name = "ticketControl2";
-            this.ticketControl2.Size = new System.Drawing.Size(590, 230);
-            this.ticketControl2.TabIndex = 5;
+            this.printBtn.Click += new System.EventHandler(this.printBtn_Click);
             // 
             // ticketsPanel
             // 
-            this.ticketsPanel.Location = new System.Drawing.Point(0, 90);
+            this.ticketsPanel.AutoScroll = true;
+            this.ticketsPanel.Location = new System.Drawing.Point(-1, 105);
             this.ticketsPanel.Name = "ticketsPanel";
-            this.ticketsPanel.Size = new System.Drawing.Size(590, 549);
-            this.ticketsPanel.TabIndex = 6;
+            this.ticketsPanel.Size = new System.Drawing.Size(591, 534);
+            this.ticketsPanel.TabIndex = 4;
             // 
             // Tickets
             // 
@@ -104,12 +84,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
-            this.Controls.Add(this.ticketControl2);
-            this.Controls.Add(this.ticketControl1);
+            this.Controls.Add(this.ticketsPanel);
             this.Controls.Add(this.saveToFileBtn);
             this.Controls.Add(this.printBtn);
             this.Controls.Add(this.pageTitle);
-            this.Controls.Add(this.ticketsPanel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -125,8 +103,6 @@
         private System.Windows.Forms.Label pageTitle;
         private System.Windows.Forms.Button printBtn;
         private System.Windows.Forms.Button saveToFileBtn;
-        private UserControls.TicketControl ticketControl1;
-        private UserControls.TicketControl ticketControl2;
-        private System.Windows.Forms.Panel ticketsPanel;
+        private System.Windows.Forms.FlowLayoutPanel ticketsPanel;
     }
 }

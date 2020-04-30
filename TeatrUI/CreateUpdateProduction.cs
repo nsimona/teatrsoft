@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeatrLibrary;
 using TeatrLibrary.Models;
-using static TeatrUI.Enums;
+using static TeatrLibrary.Enums;
 
 namespace TeatrUI
 {
@@ -59,29 +59,17 @@ namespace TeatrUI
             production.Premiere = premiere;
             production.Author = author;
             production.Duration = duration;
-            production.Director = director;
+            production.DirectorId = director;
             production.Description = description;
-            production.PosterFileName = posterFileName;
+            production.Poster = posterFileName;
             production.Actors = actors;
             production.Dates = dates;
                 
             if (posterFileName != null)
                 Utils.CopyImageToPhotoLibrary(sourceFile, posterFileName, "production");
+
             if (ValidateForm())
-            {
-                switch(action)
-                {
-                    case CrudAction.create:
-                        GlobalConfig.Connection.AddProduction(production);
-                        productionForm.ResetAllControls();
-                        break;
-                    case CrudAction.update:
-                        GlobalConfig.Connection.UpdateProduction(production);
-                        TeatrUIEventHandler.GoBack();
-                        break;
-                }
-            }
-                
+                GlobalConfig.Connection.UpsertProduction(production, action);
             else
                 MessageBox.Show("Полетата име и продължителност са задължителни");
         }
@@ -89,7 +77,7 @@ namespace TeatrUI
         private void archiveBtn_Click(object sender, EventArgs e)
         {
             production.Active = false;
-            GlobalConfig.Connection.UpdateProduction(production);
+            GlobalConfig.Connection.UpsertProduction(production, action);
             TeatrUIEventHandler.GoBack();
         }
     }

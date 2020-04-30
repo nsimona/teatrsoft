@@ -1,23 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeatrLibrary;
-using TeatrLibrary.DataAccess;
 using TeatrLibrary.Models;
+using static TeatrLibrary.Enums;
 
 namespace TeatrUI
 {
     public partial class CreateUpdateStaffMember : Form
     {
         bool photoAdded = false;
-        string action = "insert";
+        CrudAction action = CrudAction.create;
         PersonModel currentMember = new PersonModel();
 
         private void CustomInitialize()
@@ -32,15 +26,15 @@ namespace TeatrUI
             photoField.Image = new Bitmap(TeatrUI.Properties.Resources.default_member);
         }
 
-        public CreateUpdateStaffMember(int id)
+        public CreateUpdateStaffMember(PersonModel person)
         {
             CustomInitialize();
-            action = "update";
-            currentMember = GlobalConfig.Connection.GetMember(id);
+            currentMember = person;
+            action = CrudAction.update;
             nameTextBox.Text = currentMember.Name;
             phoneTextBox.Text = currentMember.Phone;
             mailTextBox.Text = currentMember.Mail;
-            categoryComboBox.SelectedValue = currentMember.Position;
+            categoryComboBox.SelectedValue = currentMember.PositionId;
             fileNameField.Text = currentMember.Photo;
             photoField.Image = Utils.LoadImage("staff", currentMember.Photo);
         }
@@ -54,7 +48,7 @@ namespace TeatrUI
         }
         private void nameTextBox_Leave(object sender, System.EventArgs e)
         {
-            if (nameTextBox.Text.Length > 0)
+            if (nameTextBox.Text.Length > 0 && action == CrudAction.create)
             {
                 mailTextBox.Text = Utils.ConvertToCyrillic(nameTextBox.Text)
                 .ToLower()
@@ -65,13 +59,7 @@ namespace TeatrUI
         private bool ValidateForm()
         {
             if(nameTextBox.Text == "")
-            {
                 return false;
-            }
-            if (categoryComboBox.Text == "")
-            {
-                return false;
-            }
             return true;
         }
         private void clearForm()
@@ -87,7 +75,7 @@ namespace TeatrUI
         private void archiveBtn_Click(object sender, EventArgs e)
         {
             currentMember.Active = false;
-            GlobalConfig.Connection.UpdateMember(currentMember);
+            GlobalConfig.Connection.UpsertMember(currentMember, TeatrLibrary.Enums.CrudAction.update);
             TeatrUIEventHandler.GoBack();
         }
 
@@ -115,16 +103,12 @@ namespace TeatrUI
                     Utils.CopyImageToPhotoLibrary(sourcePath, memberPhotoFileName, directionDirectory: "staff");
                 }
                 currentMember.Name = nameTextBox.Text;
-                currentMember.Position = (int)categoryComboBox.SelectedValue;
+                currentMember.PositionId = (int)categoryComboBox.SelectedValue;
                 currentMember.Phone = phoneTextBox.Text;
                 currentMember.Mail = mailTextBox.Text;
                 currentMember.Photo = memberPhotoFileName;
 
-                if (action == "insert")
-                    GlobalConfig.Connection.AddMember(currentMember);
-                else if (action == "update")
-                    GlobalConfig.Connection.UpdateMember(currentMember);
-
+                GlobalConfig.Connection.UpsertMember(currentMember, action);
                 clearForm();
             }
             else

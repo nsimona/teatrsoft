@@ -28,28 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.seatBox = new System.Windows.Forms.Button();
+            this.tooltip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // seatBox
             // 
+            this.seatBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.seatBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.seatBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.seatBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.seatBox.FlatAppearance.BorderSize = 0;
             this.seatBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seatBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seatBox.Location = new System.Drawing.Point(0, 0);
             this.seatBox.Margin = new System.Windows.Forms.Padding(5);
             this.seatBox.Name = "seatBox";
             this.seatBox.Size = new System.Drawing.Size(18, 18);
             this.seatBox.TabIndex = 0;
+            this.tooltip.SetToolTip(this.seatBox, "123");
             this.seatBox.UseVisualStyleBackColor = false;
             this.seatBox.Click += new System.EventHandler(this.seatBox_Click);
             // 
+            // tooltip
+            // 
+            this.tooltip.ToolTipTitle = "Ред | Място";
+            // 
             // SeatControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.Controls.Add(this.seatBox);
             this.Name = "SeatControl";
@@ -61,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button seatBox;
+        private System.Windows.Forms.ToolTip tooltip;
     }
 }

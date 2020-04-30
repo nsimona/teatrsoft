@@ -12,9 +12,11 @@ namespace TeatrUI.UserControls
 {
     public partial class ReservedTicketControl : UserControl
     {
-        public ReservedTicketControl()
+        public ReservedTicketControl(string seat, decimal price)
         {
             InitializeComponent();
+            seatField.Text = seat;
+            priceField.Text = $"{price:0.00}";
         }
     }
 }
