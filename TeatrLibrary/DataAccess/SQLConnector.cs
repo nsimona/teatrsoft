@@ -7,6 +7,9 @@ using Dapper;
 using System.Linq;
 using static TeatrLibrary.Enums;
 using static TeatrLibrary.Structs;
+using CsvHelper;
+using System.Globalization;
+using System.IO;
 
 namespace TeatrLibrary.DataAccess
 {
@@ -60,7 +63,7 @@ namespace TeatrLibrary.DataAccess
             {
                 DynamicParameters parameter = new DynamicParameters();
                 parameter.Add("@production_id", productionId);
-                return connection.Query<PersonModel>("dbo.spGetAvailableActorsForProduction", 
+                return connection.Query<PersonModel>("dbo.spGetAvailableActorsForProduction",
                     parameter,
                     commandType: CommandType.StoredProcedure).ToList();
             }
@@ -104,6 +107,7 @@ namespace TeatrLibrary.DataAccess
                 {
                     if (addedEvent.Id != 0)
                     {
+                        // TODO delete previously saved events
                         if (savedDates.Any(d => d.Id == addedEvent.Id)) continue;
                         else connection.Query($"delete from EventDate where Id = {addedEvent.Id}");
                     }
@@ -125,7 +129,7 @@ namespace TeatrLibrary.DataAccess
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                List<ProductionModel> productions =  connection.Query<ProductionModel>("dbo.spGetAllProductions", null, commandType: CommandType.StoredProcedure).ToList();
+                List<ProductionModel> productions = connection.Query<ProductionModel>("dbo.spGetAllProductions", null, commandType: CommandType.StoredProcedure).ToList();
                 foreach (ProductionModel production in productions)
                 {
                     production.Dates = GetProductionDates(connection, production.Id);
@@ -187,6 +191,81 @@ namespace TeatrLibrary.DataAccess
                 parameter.Add("@seats_count", seats.Count);
                 // TODO - improve SP
                 connection.Execute("dbo.spReserveTickets", parameter, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public List<DateTime> GetAllEventDates()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                return connection.Query<DateTime>($"select distinct Date from EventDate").ToList();
+            }
+        }
+
+        public List<ProductionEventModel> GetAllDatesForMonth(int month)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            { 
+
+                DynamicParameters parameter = new DynamicParameters();
+                parameter.Add("@month", month);
+                return connection.Query<ProductionEventModel>("dbo.spGetProgramForMonth", parameter, commandType: CommandType.StoredProcedure).ToList();
+            }
+        }
+
+        public List<ProductionEventModel> GetTodaysPlays(int limit = 3)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+
+                DynamicParameters parameter = new DynamicParameters();
+                parameter.Add("@limit", limit);
+                return connection.Query<ProductionEventModel>("dbo.spGetTodaysPlays", parameter, commandType: CommandType.StoredProcedure).ToList();
+            }
+        }
+
+        public List<ProductionEventModel> GetTomorrowsPlays(int limit = 3)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+
+                DynamicParameters parameter = new DynamicParameters();
+                parameter.Add("@limit", limit);
+                return connection.Query<ProductionEventModel>("dbo.spGetTomorrowsPlays", parameter, commandType: CommandType.StoredProcedure).ToList();
+            }
+        }
+
+        public List<ProductionModel> GetProductionsList()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                return connection.Query<ProductionModel>($"select Id, Name from Production").ToList();
+            }
+        }
+
+        public string GetTotal(DateTime startDate, DateTime endDate, int productionId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                DynamicParameters parameter = new DynamicParameters();
+                parameter.Add("@startdate", startDate);
+                parameter.Add("@endDate", endDate);
+                parameter.Add("@productionId", productionId);
+                var records = connection.Query("dbo.spGetTotal", parameter, commandType: CommandType.StoredProcedure).ToList();
+
+                string currentTime = DateTime.Now.ToString("ddMMyy_hhmmss");
+                string fileName = $@"teatrsoft_export{currentTime}.csv";
+                string directionPath =
+                Path.Combine(
+                    Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName).Parent.FullName,
+                    "Exports\\" + fileName
+                );
+                StreamWriter outputFile = new StreamWriter(directionPath, false, new UTF8Encoding(true));
+                using (var csv = new CsvWriter(outputFile, CultureInfo.InvariantCulture))
+                {
+                    csv.WriteRecords(records);
+                }
+                return fileName;
             }
         }
     }

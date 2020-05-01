@@ -65,6 +65,7 @@ namespace TeatrUI
 
         private void drawSeats()
         {
+            this.SuspendLayout();
             int size = calculateSeatSize();
             for (int i = 0; i < scene.Schema.GetLength(0); i++)
             {
@@ -100,6 +101,7 @@ namespace TeatrUI
                     }
                 }
             }
+        this.ResumeLayout();
         }
         private void continueBtn_Click(object sender, EventArgs e)
         {

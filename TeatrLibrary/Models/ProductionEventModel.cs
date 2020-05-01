@@ -15,6 +15,8 @@ namespace TeatrLibrary.Models
         public TimeSpan Time { get; set; }
         public  int SceneId { get; set; }
         public string SceneName { get; set; }
+        public string ProductionName { get; set; }
+        public string Poster { get; set; }
         public int SoldTickets { get; set; }
         private string ReservedSeats { get; set; }
         public List<Seat> ReservedSeatsList { 

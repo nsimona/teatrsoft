@@ -29,7 +29,7 @@ namespace TeatrUI.UserControls
         public string Poster
         {
             get { return posterField.Text; }
-            set { posterField.Text = value; }
+            set { posterField.Image = Utils.LoadImage("production", value); }
         }
         public string Start
         {

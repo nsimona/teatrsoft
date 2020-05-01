@@ -18,7 +18,7 @@ namespace TeatrUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             TeatrLibrary.GlobalConfig.InitializeConnection();
-            Application.Run(new Dashboard());
+            Application.Run(new Login());
         }
 
     }

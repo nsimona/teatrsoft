@@ -28,61 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.productionLabel = new System.Windows.Forms.Label();
-            this.sceneLabel = new System.Windows.Forms.Label();
-            this.programDateControl1 = new TeatrUI.UserControls.ProgramDateControl();
-            this.programPanel = new System.Windows.Forms.Panel();
             this.monthComboBox = new System.Windows.Forms.ComboBox();
             this.saveToFileBtn = new System.Windows.Forms.Button();
             this.printBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.programPanel.SuspendLayout();
+            this.programPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
-            // productionLabel
-            // 
-            this.productionLabel.AutoSize = true;
-            this.productionLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.productionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.productionLabel.Location = new System.Drawing.Point(24, 80);
-            this.productionLabel.Name = "productionLabel";
-            this.productionLabel.Size = new System.Drawing.Size(304, 18);
-            this.productionLabel.TabIndex = 4;
-            this.productionLabel.Text = "19:00 Ромео и Жулиета, автор: Иван Иванов";
-            // 
-            // sceneLabel
-            // 
-            this.sceneLabel.AutoSize = true;
-            this.sceneLabel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sceneLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.sceneLabel.Location = new System.Drawing.Point(24, 62);
-            this.sceneLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.sceneLabel.Name = "sceneLabel";
-            this.sceneLabel.Size = new System.Drawing.Size(123, 18);
-            this.sceneLabel.TabIndex = 5;
-            this.sceneLabel.Text = "ГОЛЯМА СЦЕНА";
-            // 
-            // programDateControl1
-            // 
-            this.programDateControl1.BackColor = System.Drawing.Color.White;
-            this.programDateControl1.Date = "03.03.2020";
-            this.programDateControl1.Day = "Вторник";
-            this.programDateControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.programDateControl1.Location = new System.Drawing.Point(0, 92);
-            this.programDateControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.programDateControl1.Name = "programDateControl1";
-            this.programDateControl1.Size = new System.Drawing.Size(212, 45);
-            this.programDateControl1.TabIndex = 3;
-            this.programDateControl1.Load += new System.EventHandler(this.programDateControl1_Load);
-            // 
-            // programPanel
-            // 
-            this.programPanel.Controls.Add(this.sceneLabel);
-            this.programPanel.Controls.Add(this.productionLabel);
-            this.programPanel.Location = new System.Drawing.Point(0, 90);
-            this.programPanel.Name = "programPanel";
-            this.programPanel.Size = new System.Drawing.Size(591, 552);
-            this.programPanel.TabIndex = 9;
             // 
             // monthComboBox
             // 
@@ -135,6 +86,16 @@
             this.saveBtn.TabIndex = 51;
             this.saveBtn.Text = "ВИЖ ПРОГРАМАТА";
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // programPanel
+            // 
+            this.programPanel.AutoScroll = true;
+            this.programPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.programPanel.Location = new System.Drawing.Point(0, 90);
+            this.programPanel.Name = "programPanel";
+            this.programPanel.Size = new System.Drawing.Size(591, 552);
+            this.programPanel.TabIndex = 0;
             // 
             // MonthProgram
             // 
@@ -142,31 +103,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
+            this.Controls.Add(this.programPanel);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.saveToFileBtn);
             this.Controls.Add(this.printBtn);
             this.Controls.Add(this.monthComboBox);
-            this.Controls.Add(this.programDateControl1);
-            this.Controls.Add(this.programPanel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MonthProgram";
             this.Text = "    ";
-            this.programPanel.ResumeLayout(false);
-            this.programPanel.PerformLayout();
+            this.Load += new System.EventHandler(this.MonthProgram_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private UserControls.ProgramDateControl programDateControl1;
-        private System.Windows.Forms.Label productionLabel;
-        private System.Windows.Forms.Label sceneLabel;
-        private System.Windows.Forms.Panel programPanel;
         private System.Windows.Forms.ComboBox monthComboBox;
         private System.Windows.Forms.Button saveToFileBtn;
         private System.Windows.Forms.Button printBtn;
         private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.FlowLayoutPanel programPanel;
     }
 }

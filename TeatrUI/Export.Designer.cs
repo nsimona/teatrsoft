@@ -37,26 +37,7 @@
             this.productionComboBox = new System.Windows.Forms.ComboBox();
             this.clearBtn = new System.Windows.Forms.Button();
             this.generatebtn = new System.Windows.Forms.Button();
-            this.soldTicketsLabel = new System.Windows.Forms.Label();
-            this.datesLabel = new System.Windows.Forms.Label();
-            this.forProductionLabel = new System.Windows.Forms.Label();
-            this.datesField = new System.Windows.Forms.Label();
-            this.forProductionField = new System.Windows.Forms.Label();
-            this.sumResultField = new System.Windows.Forms.Label();
-            this.sumResultLabel = new System.Windows.Forms.Label();
-            this.saveToFileBtn = new System.Windows.Forms.Button();
-            this.printBtn = new System.Windows.Forms.Button();
-            this.tableDateLabel = new System.Windows.Forms.Label();
-            this.tableProductionLabel = new System.Windows.Forms.Label();
-            this.tableTicketLabel = new System.Windows.Forms.Label();
-            this.tableAmountLabel = new System.Windows.Forms.Label();
-            this.tableSceneLabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.exportItemControl2 = new TeatrUI.UserControls.ExportItemControl();
-            this.exportItemControl3 = new TeatrUI.UserControls.ExportItemControl();
-            this.resultPanel = new System.Windows.Forms.Panel();
-            this.exportItemControl1 = new TeatrUI.UserControls.ExportItemControl();
-            this.resultPanel.SuspendLayout();
+            this.infoLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pageTitle
@@ -69,7 +50,6 @@
             this.pageTitle.Size = new System.Drawing.Size(262, 29);
             this.pageTitle.TabIndex = 14;
             this.pageTitle.Text = "ПРОДАДЕНИ БИЛЕТИ";
-            this.pageTitle.Click += new System.EventHandler(this.headingLabel_Click);
             // 
             // fromLabel
             // 
@@ -136,7 +116,6 @@
             // 
             this.clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearBtn.Enabled = false;
             this.clearBtn.FlatAppearance.BorderSize = 0;
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -147,6 +126,7 @@
             this.clearBtn.TabIndex = 79;
             this.clearBtn.Text = "ИЗЧИСТИ";
             this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // generatebtn
             // 
@@ -160,210 +140,16 @@
             this.generatebtn.Name = "generatebtn";
             this.generatebtn.Size = new System.Drawing.Size(111, 33);
             this.generatebtn.TabIndex = 78;
-            this.generatebtn.Text = "ОТЧЕТ";
+            this.generatebtn.Text = "СПРАВКА";
             this.generatebtn.UseVisualStyleBackColor = false;
+            this.generatebtn.Click += new System.EventHandler(this.generatebtn_Click);
             // 
-            // soldTicketsLabel
+            // infoLabel
             // 
-            this.soldTicketsLabel.AutoSize = true;
-            this.soldTicketsLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soldTicketsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.soldTicketsLabel.Location = new System.Drawing.Point(0, 236);
-            this.soldTicketsLabel.Name = "soldTicketsLabel";
-            this.soldTicketsLabel.Size = new System.Drawing.Size(201, 22);
-            this.soldTicketsLabel.TabIndex = 80;
-            this.soldTicketsLabel.Text = "ПРОДАДЕНИ БИЛЕТИ";
-            // 
-            // datesLabel
-            // 
-            this.datesLabel.AutoSize = true;
-            this.datesLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.datesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.datesLabel.Location = new System.Drawing.Point(0, 260);
-            this.datesLabel.Name = "datesLabel";
-            this.datesLabel.Size = new System.Drawing.Size(131, 22);
-            this.datesLabel.TabIndex = 81;
-            this.datesLabel.Text = "ЗА ПЕРИОДА:";
-            // 
-            // forProductionLabel
-            // 
-            this.forProductionLabel.AutoSize = true;
-            this.forProductionLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.forProductionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.forProductionLabel.Location = new System.Drawing.Point(0, 284);
-            this.forProductionLabel.Name = "forProductionLabel";
-            this.forProductionLabel.Size = new System.Drawing.Size(165, 22);
-            this.forProductionLabel.TabIndex = 82;
-            this.forProductionLabel.Text = "ЗА ПОСТАНОВКА:";
-            // 
-            // datesField
-            // 
-            this.datesField.AutoSize = true;
-            this.datesField.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.datesField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.datesField.Location = new System.Drawing.Point(137, 260);
-            this.datesField.Name = "datesField";
-            this.datesField.Size = new System.Drawing.Size(184, 22);
-            this.datesField.TabIndex = 83;
-            this.datesField.Text = "01.03.2020-31.03.2020";
-            // 
-            // forProductionField
-            // 
-            this.forProductionField.AutoSize = true;
-            this.forProductionField.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.forProductionField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.forProductionField.Location = new System.Drawing.Point(171, 284);
-            this.forProductionField.Name = "forProductionField";
-            this.forProductionField.Size = new System.Drawing.Size(212, 22);
-            this.forProductionField.TabIndex = 84;
-            this.forProductionField.Text = "ВСИЧКИ ПОСТАНОВКИ";
-            // 
-            // sumResultField
-            // 
-            this.sumResultField.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sumResultField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.sumResultField.Location = new System.Drawing.Point(407, 609);
-            this.sumResultField.Name = "sumResultField";
-            this.sumResultField.Size = new System.Drawing.Size(153, 24);
-            this.sumResultField.TabIndex = 95;
-            this.sumResultField.Text = "25,000 лв";
-            this.sumResultField.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // sumResultLabel
-            // 
-            this.sumResultLabel.AutoSize = true;
-            this.sumResultLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.sumResultLabel.Location = new System.Drawing.Point(341, 611);
-            this.sumResultLabel.Name = "sumResultLabel";
-            this.sumResultLabel.Size = new System.Drawing.Size(63, 22);
-            this.sumResultLabel.TabIndex = 94;
-            this.sumResultLabel.Text = "Общо:";
-            // 
-            // saveToFileBtn
-            // 
-            this.saveToFileBtn.FlatAppearance.BorderSize = 0;
-            this.saveToFileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveToFileBtn.Image = global::TeatrUI.Properties.Resources.save;
-            this.saveToFileBtn.Location = new System.Drawing.Point(544, 225);
-            this.saveToFileBtn.Name = "saveToFileBtn";
-            this.saveToFileBtn.Size = new System.Drawing.Size(33, 33);
-            this.saveToFileBtn.TabIndex = 86;
-            this.saveToFileBtn.UseVisualStyleBackColor = true;
-            // 
-            // printBtn
-            // 
-            this.printBtn.FlatAppearance.BorderSize = 0;
-            this.printBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.printBtn.Image = global::TeatrUI.Properties.Resources.print;
-            this.printBtn.Location = new System.Drawing.Point(504, 225);
-            this.printBtn.Name = "printBtn";
-            this.printBtn.Size = new System.Drawing.Size(33, 33);
-            this.printBtn.TabIndex = 85;
-            this.printBtn.UseVisualStyleBackColor = true;
-            // 
-            // tableDateLabel
-            // 
-            this.tableDateLabel.AutoSize = true;
-            this.tableDateLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.tableDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableDateLabel.Location = new System.Drawing.Point(10, 320);
-            this.tableDateLabel.Name = "tableDateLabel";
-            this.tableDateLabel.Size = new System.Drawing.Size(52, 22);
-            this.tableDateLabel.TabIndex = 88;
-            this.tableDateLabel.Text = "Дата";
-            // 
-            // tableProductionLabel
-            // 
-            this.tableProductionLabel.AutoSize = true;
-            this.tableProductionLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.tableProductionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableProductionLabel.Location = new System.Drawing.Point(119, 320);
-            this.tableProductionLabel.Name = "tableProductionLabel";
-            this.tableProductionLabel.Size = new System.Drawing.Size(104, 22);
-            this.tableProductionLabel.TabIndex = 90;
-            this.tableProductionLabel.Text = "Спектакъл";
-            // 
-            // tableTicketLabel
-            // 
-            this.tableTicketLabel.AutoSize = true;
-            this.tableTicketLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.tableTicketLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableTicketLabel.Location = new System.Drawing.Point(398, 320);
-            this.tableTicketLabel.Name = "tableTicketLabel";
-            this.tableTicketLabel.Size = new System.Drawing.Size(74, 22);
-            this.tableTicketLabel.TabIndex = 91;
-            this.tableTicketLabel.Text = "Билети";
-            // 
-            // tableAmountLabel
-            // 
-            this.tableAmountLabel.AutoSize = true;
-            this.tableAmountLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.tableAmountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableAmountLabel.Location = new System.Drawing.Point(505, 320);
-            this.tableAmountLabel.Name = "tableAmountLabel";
-            this.tableAmountLabel.Size = new System.Drawing.Size(55, 22);
-            this.tableAmountLabel.TabIndex = 92;
-            this.tableAmountLabel.Text = "Сума";
-            // 
-            // tableSceneLabel
-            // 
-            this.tableSceneLabel.AutoSize = true;
-            this.tableSceneLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.tableSceneLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.tableSceneLabel.Location = new System.Drawing.Point(294, 320);
-            this.tableSceneLabel.Name = "tableSceneLabel";
-            this.tableSceneLabel.Size = new System.Drawing.Size(64, 22);
-            this.tableSceneLabel.TabIndex = 93;
-            this.tableSceneLabel.Text = "Сцена";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.panel2.Location = new System.Drawing.Point(6, 351);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(565, 2);
-            this.panel2.TabIndex = 105;
-            // 
-            // exportItemControl2
-            // 
-            this.exportItemControl2.BackColor = System.Drawing.Color.White;
-            this.exportItemControl2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exportItemControl2.Location = new System.Drawing.Point(0, 87);
-            this.exportItemControl2.Margin = new System.Windows.Forms.Padding(5);
-            this.exportItemControl2.Name = "exportItemControl2";
-            this.exportItemControl2.Size = new System.Drawing.Size(556, 63);
-            this.exportItemControl2.TabIndex = 1;
-            // 
-            // exportItemControl3
-            // 
-            this.exportItemControl3.BackColor = System.Drawing.Color.White;
-            this.exportItemControl3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exportItemControl3.Location = new System.Drawing.Point(-2, 227);
-            this.exportItemControl3.Margin = new System.Windows.Forms.Padding(5);
-            this.exportItemControl3.Name = "exportItemControl3";
-            this.exportItemControl3.Size = new System.Drawing.Size(556, 63);
-            this.exportItemControl3.TabIndex = 2;
-            // 
-            // resultPanel
-            // 
-            this.resultPanel.AutoScroll = true;
-            this.resultPanel.Controls.Add(this.exportItemControl3);
-            this.resultPanel.Controls.Add(this.exportItemControl2);
-            this.resultPanel.Controls.Add(this.exportItemControl1);
-            this.resultPanel.Location = new System.Drawing.Point(6, 359);
-            this.resultPanel.Name = "resultPanel";
-            this.resultPanel.Size = new System.Drawing.Size(579, 247);
-            this.resultPanel.TabIndex = 87;
-            // 
-            // exportItemControl1
-            // 
-            this.exportItemControl1.BackColor = System.Drawing.Color.White;
-            this.exportItemControl1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exportItemControl1.Location = new System.Drawing.Point(0, 2);
-            this.exportItemControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.exportItemControl1.Name = "exportItemControl1";
-            this.exportItemControl1.Size = new System.Drawing.Size(556, 63);
-            this.exportItemControl1.TabIndex = 0;
+            this.infoLabel.Location = new System.Drawing.Point(1, 240);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Size = new System.Drawing.Size(577, 193);
+            this.infoLabel.TabIndex = 80;
             // 
             // Export
             // 
@@ -371,22 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.sumResultField);
-            this.Controls.Add(this.sumResultLabel);
-            this.Controls.Add(this.tableSceneLabel);
-            this.Controls.Add(this.tableAmountLabel);
-            this.Controls.Add(this.tableTicketLabel);
-            this.Controls.Add(this.tableProductionLabel);
-            this.Controls.Add(this.tableDateLabel);
-            this.Controls.Add(this.resultPanel);
-            this.Controls.Add(this.saveToFileBtn);
-            this.Controls.Add(this.printBtn);
-            this.Controls.Add(this.forProductionField);
-            this.Controls.Add(this.datesField);
-            this.Controls.Add(this.forProductionLabel);
-            this.Controls.Add(this.datesLabel);
-            this.Controls.Add(this.soldTicketsLabel);
+            this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.generatebtn);
             this.Controls.Add(this.productionComboBox);
@@ -402,7 +173,6 @@
             this.Name = "Export";
             this.Text = "Export";
             this.Load += new System.EventHandler(this.Export_Load);
-            this.resultPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,24 +189,6 @@
         private System.Windows.Forms.ComboBox productionComboBox;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button generatebtn;
-        private System.Windows.Forms.Label soldTicketsLabel;
-        private System.Windows.Forms.Label datesLabel;
-        private System.Windows.Forms.Label forProductionLabel;
-        private System.Windows.Forms.Label datesField;
-        private System.Windows.Forms.Label forProductionField;
-        private System.Windows.Forms.Label sumResultField;
-        private System.Windows.Forms.Label sumResultLabel;
-        private System.Windows.Forms.Button saveToFileBtn;
-        private System.Windows.Forms.Button printBtn;
-        private System.Windows.Forms.Label tableDateLabel;
-        private System.Windows.Forms.Label tableProductionLabel;
-        private System.Windows.Forms.Label tableTicketLabel;
-        private System.Windows.Forms.Label tableAmountLabel;
-        private System.Windows.Forms.Label tableSceneLabel;
-        private System.Windows.Forms.Panel panel2;
-        private UserControls.ExportItemControl exportItemControl2;
-        private UserControls.ExportItemControl exportItemControl3;
-        private System.Windows.Forms.Panel resultPanel;
-        private UserControls.ExportItemControl exportItemControl1;
+        private System.Windows.Forms.Label infoLabel;
     }
 }

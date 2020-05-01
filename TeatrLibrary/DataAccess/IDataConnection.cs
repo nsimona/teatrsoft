@@ -18,12 +18,17 @@ namespace TeatrLibrary.DataAccess
         //production
         ProductionModel UpsertProduction(ProductionModel production, CrudAction action);
         List<ProductionModel> GetAllProductions();
+        List<ProductionModel> GetProductionsList();
         //tickets
-        // TODO - return id
         void ReserveTickets(ProductionEventModel model, List<Seat> seats);
         //other
         List<Position> GetPositions();
         List<SceneModel> GetScenes();
         SceneModel GetScene(int scene_id);
+        List<DateTime> GetAllEventDates();
+        List<ProductionEventModel> GetAllDatesForMonth(int month);
+        List<ProductionEventModel> GetTodaysPlays(int limit = 3); 
+        List<ProductionEventModel> GetTomorrowsPlays(int limit = 3);
+        string GetTotal(DateTime startDate, DateTime endDate, int productionId);
     }
 }

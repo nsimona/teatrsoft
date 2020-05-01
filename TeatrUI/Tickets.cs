@@ -25,9 +25,11 @@ namespace TeatrUI
                 ticket.produtctionTitleField.Text = production.Name;
                 ticket.sceneField.Text = scene.Name;
                 ticket.sceneAddressField.Text = scene.Address;
-                ticket.rowField.Text = $"{s.Row}";
-                ticket.seatField.Text = $"{s.Column}";
-                ticket.dateField.Text = $"{productionDate.Date:dddd, dd.MM.yy}\n{productionDate.Time:hh\\:mm}";
+                ticket.rowField.Text = $"{s.ToString()[0]}";
+                ticket.seatField.Text = $"{s.Column + 1}";
+                ticket.dateField.Text = $"{Utils.MapDay((int)productionDate.Date.DayOfWeek)}, " +
+                    $"{productionDate.Date:dd.MM.yy}" +
+                    $"\n{productionDate.Time:hh\\:mm}";
                 ticket.priceField.Text = $"{scene.Price:0.00} лв";
                 ticketsPanel.Controls.Add(ticket);
             }

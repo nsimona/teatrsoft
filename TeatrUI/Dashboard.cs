@@ -13,9 +13,9 @@ using System.Runtime.InteropServices;
 
 namespace TeatrUI
 {
-    public  partial class Dashboard : Form
+    public  partial class TeatrSoft : Form
     {
-        public Dashboard()
+        public TeatrSoft()
         {
             InitializeComponent();
 

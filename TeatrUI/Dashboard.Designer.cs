@@ -1,6 +1,6 @@
 ﻿namespace TeatrUI
 {
-    partial class Dashboard
+    partial class TeatrSoft
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             this.footerControl1.Size = new System.Drawing.Size(620, 38);
             this.footerControl1.TabIndex = 2;
             // 
-            // Dashboard
+            // TeatrSoft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,7 +72,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
-            this.Name = "Dashboard";
+            this.Name = "TeatrSoft";
             this.Text = "Dashboard";
             this.ResumeLayout(false);
 

@@ -32,13 +32,9 @@
             this.todayField = new System.Windows.Forms.Label();
             this.tomorrowField = new System.Windows.Forms.Label();
             this.tomorrowLabel = new System.Windows.Forms.Label();
-            this.todayPanel = new System.Windows.Forms.Panel();
-            this.mainProductionItem1 = new TeatrUI.UserControls.ProductionHomeItem();
-            this.tomorrowPanel = new System.Windows.Forms.Panel();
-            this.mainProductionItem2 = new TeatrUI.UserControls.ProductionHomeItem();
             this.pageTitle = new System.Windows.Forms.Label();
-            this.todayPanel.SuspendLayout();
-            this.tomorrowPanel.SuspendLayout();
+            this.todayPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.tomorrowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // todayLabel
@@ -61,7 +57,6 @@
             this.todayField.Name = "todayField";
             this.todayField.Size = new System.Drawing.Size(0, 22);
             this.todayField.TabIndex = 5;
-            this.todayField.Click += new System.EventHandler(this.todayField_Click);
             // 
             // tomorrowField
             // 
@@ -84,45 +79,6 @@
             this.tomorrowLabel.TabIndex = 6;
             this.tomorrowLabel.Text = "УТРЕ";
             // 
-            // todayPanel
-            // 
-            this.todayPanel.Controls.Add(this.mainProductionItem1);
-            this.todayPanel.Location = new System.Drawing.Point(139, 99);
-            this.todayPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.todayPanel.Name = "todayPanel";
-            this.todayPanel.Size = new System.Drawing.Size(451, 264);
-            this.todayPanel.TabIndex = 9;
-            // 
-            // mainProductionItem1
-            // 
-            this.mainProductionItem1.BackColor = System.Drawing.Color.White;
-            this.mainProductionItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mainProductionItem1.Location = new System.Drawing.Point(1, 2);
-            this.mainProductionItem1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.mainProductionItem1.Name = "mainProductionItem1";
-            this.mainProductionItem1.Size = new System.Drawing.Size(139, 260);
-            this.mainProductionItem1.TabIndex = 0;
-            // 
-            // tomorrowPanel
-            // 
-            this.tomorrowPanel.Controls.Add(this.mainProductionItem2);
-            this.tomorrowPanel.Location = new System.Drawing.Point(140, 383);
-            this.tomorrowPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tomorrowPanel.Name = "tomorrowPanel";
-            this.tomorrowPanel.Size = new System.Drawing.Size(450, 260);
-            this.tomorrowPanel.TabIndex = 10;
-            // 
-            // mainProductionItem2
-            // 
-            this.mainProductionItem2.BackColor = System.Drawing.Color.White;
-            this.mainProductionItem2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mainProductionItem2.Location = new System.Drawing.Point(0, 0);
-            this.mainProductionItem2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.mainProductionItem2.Name = "mainProductionItem2";
-            this.mainProductionItem2.Size = new System.Drawing.Size(139, 260);
-            this.mainProductionItem2.TabIndex = 1;
-            this.mainProductionItem2.Load += new System.EventHandler(this.mainProductionItem2_Load);
-            // 
             // pageTitle
             // 
             this.pageTitle.AutoSize = true;
@@ -134,15 +90,29 @@
             this.pageTitle.TabIndex = 14;
             this.pageTitle.Text = "МАЛЪК ГРАДСКИ ТЕАТЪР \"ЗАД КАНАЛА\"";
             // 
+            // todayPanel
+            // 
+            this.todayPanel.Location = new System.Drawing.Point(139, 99);
+            this.todayPanel.Name = "todayPanel";
+            this.todayPanel.Size = new System.Drawing.Size(451, 264);
+            this.todayPanel.TabIndex = 0;
+            // 
+            // tomorrowPanel
+            // 
+            this.tomorrowPanel.Location = new System.Drawing.Point(140, 383);
+            this.tomorrowPanel.Name = "tomorrowPanel";
+            this.tomorrowPanel.Size = new System.Drawing.Size(450, 260);
+            this.tomorrowPanel.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
-            this.Controls.Add(this.pageTitle);
             this.Controls.Add(this.tomorrowPanel);
             this.Controls.Add(this.todayPanel);
+            this.Controls.Add(this.pageTitle);
             this.Controls.Add(this.tomorrowField);
             this.Controls.Add(this.tomorrowLabel);
             this.Controls.Add(this.todayField);
@@ -153,8 +123,6 @@
             this.Name = "Home";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
-            this.todayPanel.ResumeLayout(false);
-            this.tomorrowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,10 +133,8 @@
         private System.Windows.Forms.Label todayField;
         private System.Windows.Forms.Label tomorrowField;
         private System.Windows.Forms.Label tomorrowLabel;
-        private System.Windows.Forms.Panel todayPanel;
-        private System.Windows.Forms.Panel tomorrowPanel;
-        private UserControls.ProductionHomeItem mainProductionItem1;
-        private UserControls.ProductionHomeItem mainProductionItem2;
         private System.Windows.Forms.Label pageTitle;
+        private System.Windows.Forms.FlowLayoutPanel todayPanel;
+        private System.Windows.Forms.FlowLayoutPanel tomorrowPanel;
     }
 }

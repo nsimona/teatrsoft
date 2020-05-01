@@ -73,6 +73,18 @@ namespace TeatrUI
             //return true;
         }
 
+        public static string MapMonth(int monthIndex)
+        {
+            // TODO
+            string[] months = { "0", "Януари", "Февруари", "Март", "Април", "Май", "Юни", "Юли", "Август", "Септември", "Октомври", "Ноември", "Декември" };
+            return months[monthIndex];
+        }
+        public static string MapDay(int dayIndex)
+        {
+            // TODO
+            string[] days = { "Неделя", "Понеделник", "Вторник", "Сряда", "Четвъртък", "Петък", "Събота"};
+            return days[dayIndex];
+        }
         public static string ConvertToCyrillic(string word)
         {
             Dictionary<string, string> words = new Dictionary<string, string>();

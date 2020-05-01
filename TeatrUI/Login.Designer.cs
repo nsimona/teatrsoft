@@ -73,7 +73,7 @@
             this.teatrSoftLabel.Location = new System.Drawing.Point(19, 260);
             this.teatrSoftLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.teatrSoftLabel.Name = "teatrSoftLabel";
-            this.teatrSoftLabel.Size = new System.Drawing.Size(166, 41);
+            this.teatrSoftLabel.Size = new System.Drawing.Size(187, 48);
             this.teatrSoftLabel.TabIndex = 10;
             this.teatrSoftLabel.Text = "teatr.soft";
             // 
@@ -86,7 +86,7 @@
             this.passLabel.Location = new System.Drawing.Point(388, 375);
             this.passLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(63, 18);
+            this.passLabel.Size = new System.Drawing.Size(72, 22);
             this.passLabel.TabIndex = 14;
             this.passLabel.Text = "Парола";
             this.passLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -100,7 +100,7 @@
             this.mailLabel.Location = new System.Drawing.Point(388, 297);
             this.mailLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.mailLabel.Name = "mailLabel";
-            this.mailLabel.Size = new System.Drawing.Size(56, 18);
+            this.mailLabel.Size = new System.Drawing.Size(67, 22);
             this.mailLabel.TabIndex = 13;
             this.mailLabel.Text = "Имейл";
             this.mailLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -154,7 +154,7 @@
             this.customerName.Location = new System.Drawing.Point(547, 206);
             this.customerName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.customerName.Name = "customerName";
-            this.customerName.Size = new System.Drawing.Size(175, 16);
+            this.customerName.Size = new System.Drawing.Size(192, 18);
             this.customerName.TabIndex = 9;
             this.customerName.Text = "МАЛЪК ГРАДСКИ ТЕАТЪР";
             this.customerName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -168,14 +168,14 @@
             this.logo.Location = new System.Drawing.Point(438, 125);
             this.logo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(281, 69);
+            this.logo.Size = new System.Drawing.Size(316, 81);
             this.logo.TabIndex = 8;
             this.logo.Text = "teatr.soft";
             this.logo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 636);

@@ -37,7 +37,7 @@
             // 
             // posterField
             // 
-            this.posterField.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.posterField.Cursor = System.Windows.Forms.Cursors.Default;
             this.posterField.Location = new System.Drawing.Point(7, 25);
             this.posterField.Name = "posterField";
             this.posterField.Size = new System.Drawing.Size(110, 140);
@@ -86,7 +86,7 @@
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ProductionHomeItem";
-            this.Size = new System.Drawing.Size(125, 236);
+            this.Size = new System.Drawing.Size(129, 236);
             ((System.ComponentModel.ISupportInitialize)(this.posterField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

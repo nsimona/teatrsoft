@@ -24,7 +24,7 @@ namespace TeatrUI.UserControls
             InitializeComponent();
             this.production = production;
             this.productionDate = productionDate;
-            ticketsBtn.Enabled = DateTime.Compare(productionDate.Date, DateTime.Now) >= 0 && production.Active;
+            ticketsBtn.Enabled = DateTime.Compare(productionDate.Date, DateTime.Now.Date) >= 0 && production.Active;
             dateLabel.Text = $"{productionDate.Date:dd.MM.yy}";
             timeField.Text = $"{productionDate.Time:hh\\:mm}";
         }
