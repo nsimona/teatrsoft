@@ -347,11 +347,6 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 
-# PhotoLibrary for TeatrSoft
-PhotoLibrary/staff/
-PhotoLibrary/production/
-PhotoLibrary/user/
-
 # BeatPulse healthcheck temp database
 healthchecksdb
 
