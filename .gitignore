@@ -348,9 +348,9 @@ ASALocalRun/
 .localhistory/
 
 # PhotoLibrary for TeatrSoft
-PhotoLibrary/staff/*
-PhotoLibrary/production/*
-PhotoLibrary/user/*
+PhotoLibrary/staff/
+PhotoLibrary/production/
+PhotoLibrary/user/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
