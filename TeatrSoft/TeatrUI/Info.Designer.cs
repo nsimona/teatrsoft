@@ -44,7 +44,7 @@
             this.logo.Location = new System.Drawing.Point(14, 64);
             this.logo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(281, 69);
+            this.logo.Size = new System.Drawing.Size(316, 81);
             this.logo.TabIndex = 9;
             this.logo.Text = "teatr.soft";
             this.logo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -71,7 +71,7 @@
             this.version.Location = new System.Drawing.Point(20, 571);
             this.version.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.version.Name = "version";
-            this.version.Size = new System.Drawing.Size(114, 41);
+            this.version.Size = new System.Drawing.Size(122, 48);
             this.version.TabIndex = 11;
             this.version.Text = "v1.0.0";
             this.version.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -85,14 +85,14 @@
             this.year.Location = new System.Drawing.Point(452, 571);
             this.year.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(94, 41);
+            this.year.Size = new System.Drawing.Size(110, 48);
             this.year.TabIndex = 12;
             this.year.Text = "2020";
             this.year.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Info
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(590, 640);
