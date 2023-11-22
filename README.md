@@ -2,7 +2,7 @@
 
 ## Overview
 
-TeatrSoft is a desktop application designed for comprehensive theater management. Originally inspired by a simple[tutorial on YouTube](https://www.youtube.com/watch?v=wfWxdh-_k_4&t=27s), the project has evolved into a feature-rich tool for handling various aspects of theater management, including but not limited to adding actors, creating programs, selling tickets, managing users, customizing scene schema, defining price levels for seats, generating, and printing tickets, and much more.
+TeatrSoft is a desktop application designed for comprehensive theater management. Originally inspired by a [tutorial on YouTube](https://www.youtube.com/watch?v=wfWxdh-_k_4&t=27s), the project has evolved into a feature-rich tool for handling various aspects of theater management, including but not limited to adding actors, creating programs, selling tickets, managing users, customizing scene schema, defining price levels for seats, generating, and printing tickets, and much more.
 
 ## Features
 
